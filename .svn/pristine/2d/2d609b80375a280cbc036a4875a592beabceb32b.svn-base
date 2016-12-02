@@ -1,0 +1,132 @@
+//
+//  TMXAboutView.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/11/11.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXAboutView.h"
+
+@interface TMXAboutView ()
+@property (nonatomic, strong) UIImageView *icon;
+@property (nonatomic, strong) UILabel *describeLab;
+
+@property (nonatomic, strong) UIView *bottomView;
+@property (nonatomic, strong) UIImageView *netIcon;
+@property (nonatomic, strong) UILabel *netLab;
+@property (nonatomic, strong) UIImageView *weiboIcon;
+@property (nonatomic, strong) UILabel *weiboLab;
+@property (nonatomic, strong) UIImageView *wechatIcon;
+@property (nonatomic, strong) UILabel *wechatLab;
+@property (nonatomic, strong) UIImageView *emailIcon;
+@property (nonatomic, strong) UILabel *emailLab;
+@property (nonatomic, strong) UIView *bottomLine;
+
+@end
+
+@implementation TMXAboutView
+
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self=[super initWithFrame:frame]) {
+        [self initUI];
+    }
+    return self;
+}
+
+-(void)initUI{
+    [self addSubview:self.icon];
+    [self addSubview:self.describeLab];
+    [self addSubview:self.bottomView];
+    [self addSubview:self.netIcon];
+    [self addSubview:self.netLab];
+    [self addSubview:self.weiboIcon];
+    [self addSubview:self.weiboLab];
+    [self addSubview:self.wechatIcon];
+    [self addSubview:self.wechatLab];
+    [self addSubview:self.emailIcon];
+    [self addSubview:self.emailLab];
+}
+
+
+-(void)updateConstraints{
+    [super updateConstraints];
+    WS(weakSelf);
+    
+    [_icon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.mas_top).with.offset(104);
+        make.centerX.equalTo(weakSelf.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
+    
+    [_describeLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(20);
+        make.right.equalTo(weakSelf.mas_right).with.offset(-20);
+        make.top.equalTo(_icon.mas_bottom).with.offset(20);
+    }];
+    
+    
+    [_bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(20);
+        make.right.equalTo(weakSelf.mas_right).with.offset(-20);
+        make.bottom.equalTo(weakSelf.mas_bottom).with.offset(-30);
+        make.height.mas_equalTo(@(40));
+    }];
+    
+    [_netIcon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_bottomView.mas_left);
+        make.centerY.equalTo(_netLab.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(18, 18));
+    }];
+    
+    [_netLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_netIcon.mas_right).with.offset(5);
+        make.top.equalTo(_bottomView.mas_top);
+        make.right.equalTo(_bottomView.mas_centerX);
+        make.bottom.equalTo(_bottomView.mas_centerY);
+    }];
+    
+    [_weiboIcon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_bottomView.mas_centerX);
+        make.centerY.equalTo(_weiboLab.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(18, 18));
+    }];
+    
+    [_weiboLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_weiboIcon.mas_right).with.offset(5);
+        make.right.equalTo(_bottomView.mas_right);
+        make.top.equalTo(_bottomView.mas_top);
+        make.bottom.equalTo(_bottomView.mas_centerY);
+    }];
+    
+    [_weiboIcon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_bottomView.mas_left);
+        make.centerY.equalTo(_wechatLab.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(18, 18));
+    }];
+    
+    [_wechatLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_weiboIcon.mas_right).with.offset(5);
+        make.top.equalTo(_bottomView.mas_centerY);
+        make.bottom.equalTo(_bottomView.mas_bottom);
+        make.width.equalTo(_bottomView.mas_centerX);
+    }];
+    
+    [_emailIcon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_bottomView.mas_centerX);
+        make.centerY.equalTo(_emailLab.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(18, 18));
+    }];
+    
+    [_emailLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_emailIcon.mas_right).with.offset(5);
+        make.top.equalTo(_bottomView.mas_centerY);
+        make.bottom.equalTo(_bottomView.mas_bottom);
+        make.right.equalTo(_bottomView.mas_right);
+    }];
+    
+}
+
+
+@end

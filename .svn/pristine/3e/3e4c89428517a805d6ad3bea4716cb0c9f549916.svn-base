@@ -1,0 +1,2264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C5075EF1DD4206000948E7B /* TMXCreateQRcodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5075EE1DD4206000948E7B /* TMXCreateQRcodeView.m */; };
+		1C5075F21DD4219E00948E7B /* TMXQRContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5075F11DD4219E00948E7B /* TMXQRContentView.m */; };
+		1C5217B91DC7218800974992 /* TMXShareUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5217B81DC7218800974992 /* TMXShareUserListViewController.m */; };
+		1C5217BC1DC7283700974992 /* TMXShareUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5217BB1DC7283700974992 /* TMXShareUserListCell.m */; };
+		1C5217BF1DC7323400974992 /* TMXShareUserLisetHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5217BE1DC7323400974992 /* TMXShareUserLisetHeadView.m */; };
+		1C5217C41DC7456D00974992 /* TMXSharePrinterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5217C31DC7456D00974992 /* TMXSharePrinterView.m */; };
+		1C5616231DD2A734003104E8 /* TMXSelectUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5616221DD2A734003104E8 /* TMXSelectUserCell.m */; };
+		1C5EE10D1DC98062006AF452 /* TMXSharePrinterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EE10C1DC98062006AF452 /* TMXSharePrinterCell.m */; };
+		1C5EE1121DC9B784006AF452 /* TMXMotifyPrinterNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EE1111DC9B784006AF452 /* TMXMotifyPrinterNameView.m */; };
+		1C5EE1151DC9B834006AF452 /* TMXMotifyPrinterNameContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EE1141DC9B834006AF452 /* TMXMotifyPrinterNameContentView.m */; };
+		1C63C4FA1DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C63C4F91DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.m */; };
+		1C63C4FD1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C63C4FC1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.m */; };
+		1C63C5001DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C63C4FF1DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.m */; };
+		1C6AE9F01DD1AEE400A6AB65 /* TMXSelectUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6AE9EF1DD1AEE400A6AB65 /* TMXSelectUserView.m */; };
+		1C6AE9F31DD1B87E00A6AB65 /* TMXSelectUserHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6AE9F21DD1B87E00A6AB65 /* TMXSelectUserHeadCell.m */; };
+		1C6D82BF1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D82BE1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.m */; };
+		1C6D82C21DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D82C11DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.m */; };
+		1C70E32E1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E32D1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.m */; };
+		1C70E3311DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E3301DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.m */; };
+		1C70E3341DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E3331DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.m */; };
+		1C70E3371DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E3361DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.m */; };
+		1C7514661DC19EBA0043B055 /* TMXPrinterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7514651DC19EBA0043B055 /* TMXPrinterHeadView.m */; };
+		1C7514691DC19F670043B055 /* TMXPrinterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7514681DC19F670043B055 /* TMXPrinterListTableViewCell.m */; };
+		1C75146D1DC1D7360043B055 /* TMXBindPrinterSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75146C1DC1D7360043B055 /* TMXBindPrinterSelectionView.m */; };
+		1C7514701DC1F0540043B055 /* TMXPopMenuFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75146F1DC1F0540043B055 /* TMXPopMenuFirstCell.m */; };
+		1C863CF21DD05F49008490E6 /* TMXremoveBindPrinterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C863CF11DD05F48008490E6 /* TMXremoveBindPrinterView.m */; };
+		1C863CF51DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C863CF41DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.m */; };
+		1C863CF81DD07476008490E6 /* TMXSelectRemovePrinterObjCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C863CF71DD07476008490E6 /* TMXSelectRemovePrinterObjCell.m */; };
+		B905F7871DD2AD4D00BB83DD /* TMXHomeSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B905F7861DD2AD4D00BB83DD /* TMXHomeSearchModel.m */; };
+		B905F78E1DD2CA1300BB83DD /* TMXModelCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B905F78D1DD2CA1300BB83DD /* TMXModelCommentVC.m */; };
+		B905F7911DD2CF8A00BB83DD /* TMXCommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B905F7901DD2CF8A00BB83DD /* TMXCommentBottomView.m */; };
+		B905F7971DD3062700BB83DD /* printerCenter.gif in Resources */ = {isa = PBXBuildFile; fileRef = B905F7921DD3062700BB83DD /* printerCenter.gif */; };
+		B905F7981DD3062700BB83DD /* printerInit.gif in Resources */ = {isa = PBXBuildFile; fileRef = B905F7931DD3062700BB83DD /* printerInit.gif */; };
+		B905F7991DD3062700BB83DD /* printerLeft.gif in Resources */ = {isa = PBXBuildFile; fileRef = B905F7941DD3062700BB83DD /* printerLeft.gif */; };
+		B905F79A1DD3062700BB83DD /* printerRight.gif in Resources */ = {isa = PBXBuildFile; fileRef = B905F7951DD3062700BB83DD /* printerRight.gif */; };
+		B905F79B1DD3062700BB83DD /* printerTrail.gif in Resources */ = {isa = PBXBuildFile; fileRef = B905F7961DD3062700BB83DD /* printerTrail.gif */; };
+		B907EE161DB8758800C7A9FD /* KBDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDD31DB8758800C7A9FD /* KBDateFormatter.m */; };
+		B907EE171DB8758800C7A9FD /* KBDragTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDD51DB8758800C7A9FD /* KBDragTableView.m */; };
+		B907EE181DB8758800C7A9FD /* KBDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDD71DB8758800C7A9FD /* KBDropMenuView.m */; };
+		B907EE191DB8758800C7A9FD /* KBFetchSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDD91DB8758800C7A9FD /* KBFetchSystemInfo.m */; };
+		B907EE1A1DB8758800C7A9FD /* KBGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDDB1DB8758800C7A9FD /* KBGCDTimerManager.m */; };
+		B907EE1B1DB8758800C7A9FD /* KBGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDDD1DB8758800C7A9FD /* KBGuideViewController.m */; };
+		B907EE1C1DB8758800C7A9FD /* KBJquery.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDDF1DB8758800C7A9FD /* KBJquery.m */; };
+		B907EE1D1DB8758800C7A9FD /* KBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDE11DB8758800C7A9FD /* KBLabel.m */; };
+		B907EE1E1DB8758800C7A9FD /* KBNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDE31DB8758800C7A9FD /* KBNavigationVC.m */; };
+		B907EE1F1DB8758800C7A9FD /* KBRegexp.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDE51DB8758800C7A9FD /* KBRegexp.m */; };
+		B907EE201DB8758800C7A9FD /* KBRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDE71DB8758800C7A9FD /* KBRSA.m */; };
+		B907EE211DB8758800C7A9FD /* KBSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDE91DB8758800C7A9FD /* KBSegmentView.m */; };
+		B907EE221DB8758800C7A9FD /* KBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDEB1DB8758800C7A9FD /* KBTextView.m */; };
+		B907EE231DB8758800C7A9FD /* KBTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDED1DB8758800C7A9FD /* KBTimer.m */; };
+		B907EE241DB8758800C7A9FD /* KBtopImgBottomTextBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDEF1DB8758800C7A9FD /* KBtopImgBottomTextBtn.m */; };
+		B907EE251DB8758800C7A9FD /* MBProgressHUD+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDF11DB8758800C7A9FD /* MBProgressHUD+KBExtension.m */; };
+		B907EE261DB8758800C7A9FD /* NSArray+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDF31DB8758800C7A9FD /* NSArray+KBExtension.m */; };
+		B907EE271DB8758800C7A9FD /* NSDate+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDF51DB8758800C7A9FD /* NSDate+KBExtension.m */; };
+		B907EE281DB8758800C7A9FD /* NSObject+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDF71DB8758800C7A9FD /* NSObject+KBExtension.m */; };
+		B907EE291DB8758800C7A9FD /* NSString+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDF91DB8758800C7A9FD /* NSString+KBExtension.m */; };
+		B907EE2A1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDFB1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.m */; };
+		B907EE2B1DB8758800C7A9FD /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDFD1DB8758800C7A9FD /* UINavigationBar+Awesome.m */; };
+		B907EE2C1DB8758800C7A9FD /* UITableView+KBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EDFF1DB8758800C7A9FD /* UITableView+KBCacheHeight.m */; };
+		B907EE2D1DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EE011DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.m */; };
+		B907EE2E1DB8758800C7A9FD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EE031DB8758800C7A9FD /* UIView+Extension.m */; };
+		B907EE351DB8758800C7A9FD /* KBAnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EE0F1DB8758800C7A9FD /* KBAnimationTool.m */; };
+		B907EE361DB8758800C7A9FD /* KBLeftMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EE111DB8758800C7A9FD /* KBLeftMenuBar.m */; };
+		B907EE371DB8758800C7A9FD /* KBMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EE131DB8758800C7A9FD /* KBMenuItem.m */; };
+		B907EE381DB8758800C7A9FD /* UILabel+KBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B907EE151DB8758800C7A9FD /* UILabel+KBExtension.m */; };
+		B90DD0BF1DD94B6D00901B16 /* TMXFeedbackTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90DD0BE1DD94B6D00901B16 /* TMXFeedbackTitleCell.m */; };
+		B90DD0C21DD94B9F00901B16 /* TMXFeedbackSuggestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90DD0C11DD94B9F00901B16 /* TMXFeedbackSuggestCell.m */; };
+		B90DD0C51DD9A58D00901B16 /* TMXEditNickNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B90DD0C41DD9A58D00901B16 /* TMXEditNickNameVC.m */; };
+		B90DD0C81DD9A6CC00901B16 /* TMXEditNickNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = B90DD0C71DD9A6CC00901B16 /* TMXEditNickNameView.m */; };
+		B90E6FC21DDADF1F007977ED /* TMXCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B90E6FBF1DDADF1E007977ED /* TMXCollectModel.m */; };
+		B90E6FC31DDADF1F007977ED /* TMXLikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B90E6FC11DDADF1E007977ED /* TMXLikeModel.m */; };
+		B90E6FC61DDAF1D7007977ED /* TMXProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B90E6FC51DDAF1D7007977ED /* TMXProfileModel.m */; };
+		B91065421DCC1DF600B201B6 /* TMXRemarkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91065411DCC1DF600B201B6 /* TMXRemarkHeaderView.m */; };
+		B911D6271DD456DC0028F4DC /* TMXAddPrinterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6141DD456DC0028F4DC /* TMXAddPrinterVC.m */; };
+		B911D6281DD456DC0028F4DC /* TMXAddPrinterWifiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6161DD456DC0028F4DC /* TMXAddPrinterWifiVC.m */; };
+		B911D6291DD456DC0028F4DC /* TMXConnectWifiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6181DD456DC0028F4DC /* TMXConnectWifiVC.m */; };
+		B911D62A1DD456DC0028F4DC /* TMXStatusWifiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D61A1DD456DC0028F4DC /* TMXStatusWifiVC.m */; };
+		B911D62C1DD456DC0028F4DC /* TMXAddPrinterWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6201DD456DC0028F4DC /* TMXAddPrinterWifiView.m */; };
+		B911D62D1DD456DC0028F4DC /* TMXConnectPrinterWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6221DD456DC0028F4DC /* TMXConnectPrinterWifiView.m */; };
+		B911D62E1DD456DC0028F4DC /* TMXPrinterStatusWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6241DD456DC0028F4DC /* TMXPrinterStatusWifiView.m */; };
+		B911D62F1DD456DC0028F4DC /* TMXSelectWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B911D6261DD456DC0028F4DC /* TMXSelectWifiView.m */; };
+		B91868501DC9CB7700C0AD2D /* TMXNotLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B918684F1DC9CB7600C0AD2D /* TMXNotLoginView.m */; };
+		B91868531DC9D9A400C0AD2D /* TMXLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91868521DC9D9A400C0AD2D /* TMXLoginHeaderView.m */; };
+		B93528151DD0879F000EF459 /* TMXDetailSelectPrintView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93528141DD0879F000EF459 /* TMXDetailSelectPrintView.m */; };
+		B9820FDC1DD84FB2000B05E9 /* TMXLogoutFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9820FDB1DD84FB2000B05E9 /* TMXLogoutFooterView.m */; };
+		B98645C21DD0ACD4008EF372 /* TMXSelectPrintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B98645C11DD0ACD4008EF372 /* TMXSelectPrintCell.m */; };
+		B98645C51DD0B870008EF372 /* TMXSelectPrintHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B98645C41DD0B870008EF372 /* TMXSelectPrintHeaderView.m */; };
+		B9ACBB9F1DCABF5C006D9DD0 /* TMXUploadModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ACBB9E1DCABF5C006D9DD0 /* TMXUploadModelCell.m */; };
+		B9ACBBA21DCAD22E006D9DD0 /* TMXNullModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ACBBA11DCAD22E006D9DD0 /* TMXNullModelView.m */; };
+		B9C5028C1DB89616007A6B82 /* FetchAppPublicKeyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C502891DB89616007A6B82 /* FetchAppPublicKeyModel.m */; };
+		B9C5028D1DB89616007A6B82 /* TMXLoginInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5028B1DB89616007A6B82 /* TMXLoginInfoModel.m */; };
+		B9C502931DB89688007A6B82 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C502901DB89688007A6B82 /* BaseModel.m */; };
+		B9C502941DB89688007A6B82 /* KBHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C502921DB89688007A6B82 /* KBHttpTool.m */; };
+		B9EAE4401DC8615700026966 /* TMXClassifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EAE43F1DC8615600026966 /* TMXClassifyVC.m */; };
+		B9EAE4431DC86C9700026966 /* TMXHomeClassifyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EAE4421DC86C9700026966 /* TMXHomeClassifyListModel.m */; };
+		B9F4B3291DD5A40800923915 /* TMXAccountRegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F4B3281DD5A40800923915 /* TMXAccountRegisterModel.m */; };
+		B9F4B32C1DD5A4D800923915 /* TMXAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F4B32B1DD5A4D800923915 /* TMXAccountModel.m */; };
+		B9F4B32F1DD5CC7D00923915 /* TMXAddPrinterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F4B32E1DD5CC7D00923915 /* TMXAddPrinterModel.m */; };
+		B9F8847D1DD1611400807B0E /* TMXProblemFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F884721DD1611400807B0E /* TMXProblemFeedbackVC.m */; };
+		B9F8847E1DD1611400807B0E /* TMXFeedbackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F884751DD1611400807B0E /* TMXFeedbackModel.m */; };
+		B9F8847F1DD1611400807B0E /* TMXFeedbackBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F884781DD1611400807B0E /* TMXFeedbackBottomView.m */; };
+		B9F884801DD1611400807B0E /* TMXHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8847A1DD1611400807B0E /* TMXHeadView.m */; };
+		B9F884811DD1611400807B0E /* TMXProblemFeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8847C1DD1611400807B0E /* TMXProblemFeedbackCell.m */; };
+		B9F884841DD175B300807B0E /* TMXHomeNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F884831DD175B300807B0E /* TMXHomeNavigationView.m */; };
+		B9F8848B1DD1828300807B0E /* TMXModelSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8848A1DD1828300807B0E /* TMXModelSearchVC.m */; };
+		B9F8848E1DD1A2A200807B0E /* TMXSearchNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8848D1DD1A2A200807B0E /* TMXSearchNavigationView.m */; };
+		B9F884911DD1B39B00807B0E /* TMXSearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F884901DD1B39B00807B0E /* TMXSearchHistoryCell.m */; };
+		B9F884941DD1C3B100807B0E /* TMXSearchHistoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F884931DD1C3B100807B0E /* TMXSearchHistoryHeader.m */; };
+		CD00C5D91DCA36CF001FB8C7 /* TMXPrinterControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD00C5D81DCA36CF001FB8C7 /* TMXPrinterControlVC.m */; };
+		CD00C5DC1DCA37A1001FB8C7 /* TMXPrinterStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD00C5DB1DCA37A1001FB8C7 /* TMXPrinterStatusCell.m */; };
+		CD00C5DF1DCA37E6001FB8C7 /* TMXPrinterHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD00C5DE1DCA37E5001FB8C7 /* TMXPrinterHistoryCell.m */; };
+		CD00C5E21DCA39C0001FB8C7 /* TMXPrinterControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD00C5E11DCA39C0001FB8C7 /* TMXPrinterControlView.m */; };
+		CD35399F1DBF2EB500692682 /* TMXHomeBackHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD35399E1DBF2EB500692682 /* TMXHomeBackHeaderView.m */; };
+		CD3539A21DBF45E100692682 /* TMXTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3539A11DBF45E100692682 /* TMXTabBarVC.m */; };
+		CD35D42E1DD2A6A700D54EE8 /* TMXAppLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD35D42D1DD2A6A700D54EE8 /* TMXAppLoginView.m */; };
+		CD35D4311DD2AE3700D54EE8 /* TMXBgFixPrinterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD35D4301DD2AE3700D54EE8 /* TMXBgFixPrinterVC.m */; };
+		CD369EEB1DCC802800F74C18 /* TMXcenterSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD369EEA1DCC802800F74C18 /* TMXcenterSetupView.m */; };
+		CD406C261DC0454200ABC6FD /* TMXDesignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD406C251DC0454200ABC6FD /* TMXDesignVC.m */; };
+		CD406C291DC04A6200ABC6FD /* TMXDesignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD406C281DC04A6200ABC6FD /* TMXDesignCell.m */; };
+		CD406C2F1DC05AB100ABC6FD /* TMXProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD406C2E1DC05AB100ABC6FD /* TMXProfileHeaderView.m */; };
+		CD406C331DC0614B00ABC6FD /* TMXProfileSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD406C321DC0614B00ABC6FD /* TMXProfileSegmentCell.m */; };
+		CD406C361DC08A7F00ABC6FD /* TMXPrinterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD406C351DC08A7F00ABC6FD /* TMXPrinterVC.m */; };
+		CD4299651DC976A10043C8BA /* TMXReplyCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4299641DC976A10043C8BA /* TMXReplyCommentCell.m */; };
+		CD4299681DC977490043C8BA /* TMXSubReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4299671DC977490043C8BA /* TMXSubReplyCell.m */; };
+		CD42996B1DC977610043C8BA /* TMXMainReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD42996A1DC977610043C8BA /* TMXMainReplyCell.m */; };
+		CD4299701DC9B9D70043C8BA /* TMXHomeModelDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD42996D1DC9B9D70043C8BA /* TMXHomeModelDetailModel.m */; };
+		CD4299711DC9B9D70043C8BA /* TMXUploadByUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD42996F1DC9B9D70043C8BA /* TMXUploadByUserModel.m */; };
+		CD44866C1DC72A53005E2567 /* TMXDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD44866B1DC72A53005E2567 /* TMXDetailVC.m */; };
+		CD44866F1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD44866E1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.m */; };
+		CD4486721DC73B69005E2567 /* TMXDetailLeftSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4486711DC73B69005E2567 /* TMXDetailLeftSegmentCell.m */; };
+		CD4486751DC73F8C005E2567 /* TMXHomeDetailBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4486741DC73F8C005E2567 /* TMXHomeDetailBrowseView.m */; };
+		CD4486781DC74530005E2567 /* TMXHomeIntroductModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4486771DC74530005E2567 /* TMXHomeIntroductModelCell.m */; };
+		CD44867B1DC74614005E2567 /* TMXHomeModelListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD44867A1DC74614005E2567 /* TMXHomeModelListCell.m */; };
+		CD44867E1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD44867D1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.m */; };
+		CD4486811DC74740005E2567 /* TMXHomeModelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4486801DC74740005E2567 /* TMXHomeModelHeaderView.m */; };
+		CD4486841DC747F2005E2567 /* TMXHomeModelRemarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4486831DC747F2005E2567 /* TMXHomeModelRemarkCell.m */; };
+		CD45EAF01DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EAEF1DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.m */; };
+		CD45EAF71DD412DD00B55B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD45EAF91DD412DD00B55B11 /* InfoPlist.strings */; };
+		CD45EAFB1DD412E700B55B11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD45EAFD1DD412E700B55B11 /* Localizable.strings */; };
+		CD45EB011DD417DC00B55B11 /* TMXLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EB001DD417DC00B55B11 /* TMXLoginVC.m */; };
+		CD45EB051DD4183200B55B11 /* TMXRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EB041DD4183200B55B11 /* TMXRegisterVC.m */; };
+		CD45EB081DD4186400B55B11 /* TMXForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EB071DD4186400B55B11 /* TMXForgetVC.m */; };
+		CD45EB0B1DD41B1F00B55B11 /* TMXBgLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EB0A1DD41B1F00B55B11 /* TMXBgLoginVC.m */; };
+		CD45EB0E1DD43F6800B55B11 /* TMXRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EB0D1DD43F6800B55B11 /* TMXRegisterView.m */; };
+		CD45EB111DD43F8000B55B11 /* TMXForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EB101DD43F8000B55B11 /* TMXForgetView.m */; };
+		CD49CD781DB843D5008AD362 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD49CD771DB843D5008AD362 /* main.m */; };
+		CD49CD7B1DB843D5008AD362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD49CD7A1DB843D5008AD362 /* AppDelegate.m */; };
+		CD49CD7E1DB843D5008AD362 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD49CD7D1DB843D5008AD362 /* ViewController.m */; };
+		CD49CD811DB843D5008AD362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD49CD7F1DB843D5008AD362 /* Main.storyboard */; };
+		CD49CD831DB843D5008AD362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD49CD821DB843D5008AD362 /* Assets.xcassets */; };
+		CD49CD861DB843D5008AD362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD49CD841DB843D5008AD362 /* LaunchScreen.storyboard */; };
+		CD49CD911DB843D5008AD362 /* TMX3DPrinterHDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD49CD901DB843D5008AD362 /* TMX3DPrinterHDTests.m */; };
+		CD49CD9C1DB843D6008AD362 /* TMX3DPrinterHDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD49CD9B1DB843D6008AD362 /* TMX3DPrinterHDUITests.m */; };
+		CD4DAF6E1DD59C57001964EC /* TMXBgSetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF6D1DD59C57001964EC /* TMXBgSetupVC.m */; };
+		CD4DAF711DD59C74001964EC /* TMXSetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF701DD59C74001964EC /* TMXSetupVC.m */; };
+		CD4DAF741DD5A75E001964EC /* TMXSetupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF731DD5A75E001964EC /* TMXSetupCell.m */; };
+		CD4DAF771DD5B150001964EC /* TMXFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF761DD5B150001964EC /* TMXFeedBackVC.m */; };
+		CD4DAF7A1DD5B1DE001964EC /* TMXFeedBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF791DD5B1DE001964EC /* TMXFeedBackView.m */; };
+		CD4DAF7D1DD5C693001964EC /* TMXAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF7C1DD5C693001964EC /* TMXAboutVC.m */; };
+		CD4DAF801DD5C6B6001964EC /* TMXAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAF7F1DD5C6B6001964EC /* TMXAboutView.m */; };
+		CD4FE3BC1DB860110087DDD2 /* TMXConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE3BB1DB860110087DDD2 /* TMXConst.m */; };
+		CD4FE3C41DB86A150087DDD2 /* TMXBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE3C31DB86A150087DDD2 /* TMXBaseVC.m */; };
+		CD4FE3C71DB8CE020087DDD2 /* TMXHomLeftTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE3C61DB8CE020087DDD2 /* TMXHomLeftTabBar.m */; };
+		CD4FE3CA1DB8CE3B0087DDD2 /* TMXHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE3C91DB8CE3B0087DDD2 /* TMXHomeVC.m */; };
+		CD64C4331DC197B8009073CA /* TMXAdvertiseWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64C4321DC197B8009073CA /* TMXAdvertiseWebVC.m */; };
+		CD7CADF81DCB420200C7F033 /* TMXProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7CADF71DCB420200C7F033 /* TMXProfileVC.m */; };
+		CD814C2F1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C2E1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.m */; };
+		CD814C321DBD97EC0018AFE7 /* TMXHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C311DBD97EC0018AFE7 /* TMXHomeHeaderView.m */; };
+		CD814C351DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C341DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.m */; };
+		CD814C381DBD98590018AFE7 /* TMXHomeScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C371DBD98590018AFE7 /* TMXHomeScrollViewCell.m */; };
+		CD814C3B1DBD989C0018AFE7 /* TMXHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C3A1DBD989C0018AFE7 /* TMXHomeModel.m */; };
+		CD814C3E1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C3D1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.m */; };
+		CD814C411DBDA0650018AFE7 /* TMXHome3DCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C401DBDA0650018AFE7 /* TMXHome3DCustomView.m */; };
+		CD814C441DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD814C431DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.m */; };
+		CDD535D01DCABC7E002E4379 /* TMXPrinterStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD00C5DB1DCA37A1001FB8C7 /* TMXPrinterStatusCell.m */; };
+		CDD535D41DCB1291002E4379 /* TMXPrinterStatusHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD535D31DCB1291002E4379 /* TMXPrinterStatusHeader.m */; };
+		CDD79CC01DD40C9100424852 /* TMXmyMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD79CBD1DD40C9100424852 /* TMXmyMessageController.m */; };
+		CDD79CC11DD40C9100424852 /* TMXcommentFromMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD79CBF1DD40C9100424852 /* TMXcommentFromMessageCell.m */; };
+		CDD79CC41DD40CE300424852 /* TMXleftViewFromMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD79CC31DD40CE300424852 /* TMXleftViewFromMessageCell.m */; };
+		CDE84B351DCC2483001C60A6 /* TMXpersonalSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE84B341DCC2483001C60A6 /* TMXpersonalSetupView.m */; };
+		CDEF78061DD2160600F9CCF5 /* TMXFixPrinterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF78051DD2160600F9CCF5 /* TMXFixPrinterView.m */; };
+		CDEF78091DD217FC00F9CCF5 /* TMXFixPrinterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF78081DD217FC00F9CCF5 /* TMXFixPrinterVC.m */; };
+		CDF0DA351DD6051E00865139 /* TMXBgInfoSetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0DA341DD6051E00865139 /* TMXBgInfoSetupVC.m */; };
+		CDF0DA381DD6053C00865139 /* TMXInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0DA371DD6053C00865139 /* TMXInfoVC.m */; };
+		CDF0DA3B1DD6245200865139 /* TMXInfoPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0DA3A1DD6245200865139 /* TMXInfoPhotoCell.m */; };
+		E130915BC2EEE68C50C06E18 /* libPods-TMX3DPrinterHD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87317D62EC1174B5863C3D95 /* libPods-TMX3DPrinterHD.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD49CD8D1DB843D5008AD362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD49CD6B1DB843D5008AD362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD49CD721DB843D5008AD362;
+			remoteInfo = TMX3DPrinterHD;
+		};
+		CD49CD981DB843D6008AD362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD49CD6B1DB843D5008AD362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD49CD721DB843D5008AD362;
+			remoteInfo = TMX3DPrinterHD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		141D3B2C1D978B1184475F8C /* Pods-TMX3DPrinterHD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMX3DPrinterHD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMX3DPrinterHD/Pods-TMX3DPrinterHD.release.xcconfig"; sourceTree = "<group>"; };
+		1C5075ED1DD4206000948E7B /* TMXCreateQRcodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXCreateQRcodeView.h; sourceTree = "<group>"; };
+		1C5075EE1DD4206000948E7B /* TMXCreateQRcodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXCreateQRcodeView.m; sourceTree = "<group>"; };
+		1C5075F01DD4219E00948E7B /* TMXQRContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXQRContentView.h; sourceTree = "<group>"; };
+		1C5075F11DD4219E00948E7B /* TMXQRContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXQRContentView.m; sourceTree = "<group>"; };
+		1C5217B71DC7218800974992 /* TMXShareUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXShareUserListViewController.h; sourceTree = "<group>"; };
+		1C5217B81DC7218800974992 /* TMXShareUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXShareUserListViewController.m; sourceTree = "<group>"; };
+		1C5217BA1DC7283700974992 /* TMXShareUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXShareUserListCell.h; sourceTree = "<group>"; };
+		1C5217BB1DC7283700974992 /* TMXShareUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXShareUserListCell.m; sourceTree = "<group>"; };
+		1C5217BD1DC7323400974992 /* TMXShareUserLisetHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXShareUserLisetHeadView.h; sourceTree = "<group>"; };
+		1C5217BE1DC7323400974992 /* TMXShareUserLisetHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXShareUserLisetHeadView.m; sourceTree = "<group>"; };
+		1C5217C21DC7456D00974992 /* TMXSharePrinterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSharePrinterView.h; sourceTree = "<group>"; };
+		1C5217C31DC7456D00974992 /* TMXSharePrinterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSharePrinterView.m; sourceTree = "<group>"; };
+		1C5616211DD2A734003104E8 /* TMXSelectUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectUserCell.h; sourceTree = "<group>"; };
+		1C5616221DD2A734003104E8 /* TMXSelectUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectUserCell.m; sourceTree = "<group>"; };
+		1C5EE10B1DC98061006AF452 /* TMXSharePrinterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSharePrinterCell.h; sourceTree = "<group>"; };
+		1C5EE10C1DC98062006AF452 /* TMXSharePrinterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSharePrinterCell.m; sourceTree = "<group>"; };
+		1C5EE1101DC9B784006AF452 /* TMXMotifyPrinterNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXMotifyPrinterNameView.h; sourceTree = "<group>"; };
+		1C5EE1111DC9B784006AF452 /* TMXMotifyPrinterNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMotifyPrinterNameView.m; sourceTree = "<group>"; };
+		1C5EE1131DC9B834006AF452 /* TMXMotifyPrinterNameContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXMotifyPrinterNameContentView.h; sourceTree = "<group>"; };
+		1C5EE1141DC9B834006AF452 /* TMXMotifyPrinterNameContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMotifyPrinterNameContentView.m; sourceTree = "<group>"; };
+		1C63C4F81DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBindPrintingTaskListTableViewCell.h; sourceTree = "<group>"; };
+		1C63C4F91DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBindPrintingTaskListTableViewCell.m; sourceTree = "<group>"; };
+		1C63C4FB1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrintedAndCancelPrintTableViewCell.h; sourceTree = "<group>"; };
+		1C63C4FC1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrintedAndCancelPrintTableViewCell.m; sourceTree = "<group>"; };
+		1C63C4FE1DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTaskSaveTableViewCell.h; sourceTree = "<group>"; };
+		1C63C4FF1DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTaskSaveTableViewCell.m; sourceTree = "<group>"; };
+		1C6AE9EE1DD1AEE400A6AB65 /* TMXSelectUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectUserView.h; sourceTree = "<group>"; };
+		1C6AE9EF1DD1AEE400A6AB65 /* TMXSelectUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectUserView.m; sourceTree = "<group>"; };
+		1C6AE9F11DD1B87E00A6AB65 /* TMXSelectUserHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectUserHeadCell.h; sourceTree = "<group>"; };
+		1C6AE9F21DD1B87E00A6AB65 /* TMXSelectUserHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectUserHeadCell.m; sourceTree = "<group>"; };
+		1C6D82BD1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBindPrinterSwitchCell.h; sourceTree = "<group>"; };
+		1C6D82BE1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBindPrinterSwitchCell.m; sourceTree = "<group>"; };
+		1C6D82C01DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXUnBindPrinterSelectionView.h; sourceTree = "<group>"; };
+		1C6D82C11DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXUnBindPrinterSelectionView.m; sourceTree = "<group>"; };
+		1C70E32C1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSharePrinterTaskListViewController.h; sourceTree = "<group>"; };
+		1C70E32D1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSharePrinterTaskListViewController.m; sourceTree = "<group>"; };
+		1C70E32F1DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBindPrinterTaskListViewController.h; sourceTree = "<group>"; };
+		1C70E3301DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBindPrinterTaskListViewController.m; sourceTree = "<group>"; };
+		1C70E3321DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSharePrinterTaskListTableViewCell.h; sourceTree = "<group>"; };
+		1C70E3331DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSharePrinterTaskListTableViewCell.m; sourceTree = "<group>"; };
+		1C70E3351DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBindPrinterTaskListTableViewCell.h; sourceTree = "<group>"; };
+		1C70E3361DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBindPrinterTaskListTableViewCell.m; sourceTree = "<group>"; };
+		1C7514641DC19EBA0043B055 /* TMXPrinterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterHeadView.h; sourceTree = "<group>"; };
+		1C7514651DC19EBA0043B055 /* TMXPrinterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterHeadView.m; sourceTree = "<group>"; };
+		1C7514671DC19F670043B055 /* TMXPrinterListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterListTableViewCell.h; sourceTree = "<group>"; };
+		1C7514681DC19F670043B055 /* TMXPrinterListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterListTableViewCell.m; sourceTree = "<group>"; };
+		1C75146B1DC1D7360043B055 /* TMXBindPrinterSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBindPrinterSelectionView.h; sourceTree = "<group>"; };
+		1C75146C1DC1D7360043B055 /* TMXBindPrinterSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBindPrinterSelectionView.m; sourceTree = "<group>"; };
+		1C75146E1DC1F0540043B055 /* TMXPopMenuFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPopMenuFirstCell.h; sourceTree = "<group>"; };
+		1C75146F1DC1F0540043B055 /* TMXPopMenuFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPopMenuFirstCell.m; sourceTree = "<group>"; };
+		1C863CF01DD05F48008490E6 /* TMXremoveBindPrinterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXremoveBindPrinterView.h; sourceTree = "<group>"; };
+		1C863CF11DD05F48008490E6 /* TMXremoveBindPrinterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXremoveBindPrinterView.m; sourceTree = "<group>"; };
+		1C863CF31DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXRemoveBindPrinterDescribeCell.h; sourceTree = "<group>"; };
+		1C863CF41DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXRemoveBindPrinterDescribeCell.m; sourceTree = "<group>"; };
+		1C863CF61DD07476008490E6 /* TMXSelectRemovePrinterObjCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectRemovePrinterObjCell.h; sourceTree = "<group>"; };
+		1C863CF71DD07476008490E6 /* TMXSelectRemovePrinterObjCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectRemovePrinterObjCell.m; sourceTree = "<group>"; };
+		5486E1D783779F7B559AF2C1 /* Pods-TMX3DPrinterHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMX3DPrinterHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMX3DPrinterHD/Pods-TMX3DPrinterHD.debug.xcconfig"; sourceTree = "<group>"; };
+		87317D62EC1174B5863C3D95 /* libPods-TMX3DPrinterHD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TMX3DPrinterHD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B905F7851DD2AD4D00BB83DD /* TMXHomeSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeSearchModel.h; sourceTree = "<group>"; };
+		B905F7861DD2AD4D00BB83DD /* TMXHomeSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeSearchModel.m; sourceTree = "<group>"; };
+		B905F78C1DD2CA1300BB83DD /* TMXModelCommentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXModelCommentVC.h; sourceTree = "<group>"; };
+		B905F78D1DD2CA1300BB83DD /* TMXModelCommentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXModelCommentVC.m; sourceTree = "<group>"; };
+		B905F78F1DD2CF8A00BB83DD /* TMXCommentBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXCommentBottomView.h; sourceTree = "<group>"; };
+		B905F7901DD2CF8A00BB83DD /* TMXCommentBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXCommentBottomView.m; sourceTree = "<group>"; };
+		B905F7921DD3062700BB83DD /* printerCenter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = printerCenter.gif; sourceTree = "<group>"; };
+		B905F7931DD3062700BB83DD /* printerInit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = printerInit.gif; sourceTree = "<group>"; };
+		B905F7941DD3062700BB83DD /* printerLeft.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = printerLeft.gif; sourceTree = "<group>"; };
+		B905F7951DD3062700BB83DD /* printerRight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = printerRight.gif; sourceTree = "<group>"; };
+		B905F7961DD3062700BB83DD /* printerTrail.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = printerTrail.gif; sourceTree = "<group>"; };
+		B907EDD21DB8758800C7A9FD /* KBDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDateFormatter.h; sourceTree = "<group>"; };
+		B907EDD31DB8758800C7A9FD /* KBDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDateFormatter.m; sourceTree = "<group>"; };
+		B907EDD41DB8758800C7A9FD /* KBDragTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDragTableView.h; sourceTree = "<group>"; };
+		B907EDD51DB8758800C7A9FD /* KBDragTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDragTableView.m; sourceTree = "<group>"; };
+		B907EDD61DB8758800C7A9FD /* KBDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDropMenuView.h; sourceTree = "<group>"; };
+		B907EDD71DB8758800C7A9FD /* KBDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDropMenuView.m; sourceTree = "<group>"; };
+		B907EDD81DB8758800C7A9FD /* KBFetchSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFetchSystemInfo.h; sourceTree = "<group>"; };
+		B907EDD91DB8758800C7A9FD /* KBFetchSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFetchSystemInfo.m; sourceTree = "<group>"; };
+		B907EDDA1DB8758800C7A9FD /* KBGCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBGCDTimerManager.h; sourceTree = "<group>"; };
+		B907EDDB1DB8758800C7A9FD /* KBGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBGCDTimerManager.m; sourceTree = "<group>"; };
+		B907EDDC1DB8758800C7A9FD /* KBGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBGuideViewController.h; sourceTree = "<group>"; };
+		B907EDDD1DB8758800C7A9FD /* KBGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBGuideViewController.m; sourceTree = "<group>"; };
+		B907EDDE1DB8758800C7A9FD /* KBJquery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBJquery.h; sourceTree = "<group>"; };
+		B907EDDF1DB8758800C7A9FD /* KBJquery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBJquery.m; sourceTree = "<group>"; };
+		B907EDE01DB8758800C7A9FD /* KBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLabel.h; sourceTree = "<group>"; };
+		B907EDE11DB8758800C7A9FD /* KBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBLabel.m; sourceTree = "<group>"; };
+		B907EDE21DB8758800C7A9FD /* KBNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBNavigationVC.h; sourceTree = "<group>"; };
+		B907EDE31DB8758800C7A9FD /* KBNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBNavigationVC.m; sourceTree = "<group>"; };
+		B907EDE41DB8758800C7A9FD /* KBRegexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBRegexp.h; sourceTree = "<group>"; };
+		B907EDE51DB8758800C7A9FD /* KBRegexp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBRegexp.m; sourceTree = "<group>"; };
+		B907EDE61DB8758800C7A9FD /* KBRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBRSA.h; sourceTree = "<group>"; };
+		B907EDE71DB8758800C7A9FD /* KBRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBRSA.m; sourceTree = "<group>"; };
+		B907EDE81DB8758800C7A9FD /* KBSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSegmentView.h; sourceTree = "<group>"; };
+		B907EDE91DB8758800C7A9FD /* KBSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSegmentView.m; sourceTree = "<group>"; };
+		B907EDEA1DB8758800C7A9FD /* KBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTextView.h; sourceTree = "<group>"; };
+		B907EDEB1DB8758800C7A9FD /* KBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTextView.m; sourceTree = "<group>"; };
+		B907EDEC1DB8758800C7A9FD /* KBTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTimer.h; sourceTree = "<group>"; };
+		B907EDED1DB8758800C7A9FD /* KBTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTimer.m; sourceTree = "<group>"; };
+		B907EDEE1DB8758800C7A9FD /* KBtopImgBottomTextBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBtopImgBottomTextBtn.h; sourceTree = "<group>"; };
+		B907EDEF1DB8758800C7A9FD /* KBtopImgBottomTextBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBtopImgBottomTextBtn.m; sourceTree = "<group>"; };
+		B907EDF01DB8758800C7A9FD /* MBProgressHUD+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+KBExtension.h"; sourceTree = "<group>"; };
+		B907EDF11DB8758800C7A9FD /* MBProgressHUD+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+KBExtension.m"; sourceTree = "<group>"; };
+		B907EDF21DB8758800C7A9FD /* NSArray+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KBExtension.h"; sourceTree = "<group>"; };
+		B907EDF31DB8758800C7A9FD /* NSArray+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KBExtension.m"; sourceTree = "<group>"; };
+		B907EDF41DB8758800C7A9FD /* NSDate+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KBExtension.h"; sourceTree = "<group>"; };
+		B907EDF51DB8758800C7A9FD /* NSDate+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KBExtension.m"; sourceTree = "<group>"; };
+		B907EDF61DB8758800C7A9FD /* NSObject+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KBExtension.h"; sourceTree = "<group>"; };
+		B907EDF71DB8758800C7A9FD /* NSObject+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KBExtension.m"; sourceTree = "<group>"; };
+		B907EDF81DB8758800C7A9FD /* NSString+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KBExtension.h"; sourceTree = "<group>"; };
+		B907EDF91DB8758800C7A9FD /* NSString+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KBExtension.m"; sourceTree = "<group>"; };
+		B907EDFA1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KBExtension.h"; sourceTree = "<group>"; };
+		B907EDFB1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KBExtension.m"; sourceTree = "<group>"; };
+		B907EDFC1DB8758800C7A9FD /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		B907EDFD1DB8758800C7A9FD /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		B907EDFE1DB8758800C7A9FD /* UITableView+KBCacheHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+KBCacheHeight.h"; sourceTree = "<group>"; };
+		B907EDFF1DB8758800C7A9FD /* UITableView+KBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+KBCacheHeight.m"; sourceTree = "<group>"; };
+		B907EE001DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KBMasonryCellHeight.h"; sourceTree = "<group>"; };
+		B907EE011DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KBMasonryCellHeight.m"; sourceTree = "<group>"; };
+		B907EE021DB8758800C7A9FD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		B907EE031DB8758800C7A9FD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		B907EE0E1DB8758800C7A9FD /* KBAnimationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAnimationTool.h; sourceTree = "<group>"; };
+		B907EE0F1DB8758800C7A9FD /* KBAnimationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAnimationTool.m; sourceTree = "<group>"; };
+		B907EE101DB8758800C7A9FD /* KBLeftMenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLeftMenuBar.h; sourceTree = "<group>"; };
+		B907EE111DB8758800C7A9FD /* KBLeftMenuBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBLeftMenuBar.m; sourceTree = "<group>"; };
+		B907EE121DB8758800C7A9FD /* KBMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBMenuItem.h; sourceTree = "<group>"; };
+		B907EE131DB8758800C7A9FD /* KBMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBMenuItem.m; sourceTree = "<group>"; };
+		B907EE141DB8758800C7A9FD /* UILabel+KBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+KBExtension.h"; sourceTree = "<group>"; };
+		B907EE151DB8758800C7A9FD /* UILabel+KBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KBExtension.m"; sourceTree = "<group>"; };
+		B90DD0BD1DD94B6D00901B16 /* TMXFeedbackTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFeedbackTitleCell.h; sourceTree = "<group>"; };
+		B90DD0BE1DD94B6D00901B16 /* TMXFeedbackTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFeedbackTitleCell.m; sourceTree = "<group>"; };
+		B90DD0C01DD94B9F00901B16 /* TMXFeedbackSuggestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFeedbackSuggestCell.h; sourceTree = "<group>"; };
+		B90DD0C11DD94B9F00901B16 /* TMXFeedbackSuggestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFeedbackSuggestCell.m; sourceTree = "<group>"; };
+		B90DD0C31DD9A58D00901B16 /* TMXEditNickNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXEditNickNameVC.h; sourceTree = "<group>"; };
+		B90DD0C41DD9A58D00901B16 /* TMXEditNickNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXEditNickNameVC.m; sourceTree = "<group>"; };
+		B90DD0C61DD9A6CC00901B16 /* TMXEditNickNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXEditNickNameView.h; sourceTree = "<group>"; };
+		B90DD0C71DD9A6CC00901B16 /* TMXEditNickNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXEditNickNameView.m; sourceTree = "<group>"; };
+		B90E6FBE1DDADF1E007977ED /* TMXCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXCollectModel.h; sourceTree = "<group>"; };
+		B90E6FBF1DDADF1E007977ED /* TMXCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXCollectModel.m; sourceTree = "<group>"; };
+		B90E6FC01DDADF1E007977ED /* TMXLikeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXLikeModel.h; sourceTree = "<group>"; };
+		B90E6FC11DDADF1E007977ED /* TMXLikeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXLikeModel.m; sourceTree = "<group>"; };
+		B90E6FC41DDAF1D7007977ED /* TMXProfileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXProfileModel.h; sourceTree = "<group>"; };
+		B90E6FC51DDAF1D7007977ED /* TMXProfileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXProfileModel.m; sourceTree = "<group>"; };
+		B91065401DCC1DF600B201B6 /* TMXRemarkHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXRemarkHeaderView.h; sourceTree = "<group>"; };
+		B91065411DCC1DF600B201B6 /* TMXRemarkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXRemarkHeaderView.m; sourceTree = "<group>"; };
+		B911D6131DD456DC0028F4DC /* TMXAddPrinterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAddPrinterVC.h; sourceTree = "<group>"; };
+		B911D6141DD456DC0028F4DC /* TMXAddPrinterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAddPrinterVC.m; sourceTree = "<group>"; };
+		B911D6151DD456DC0028F4DC /* TMXAddPrinterWifiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAddPrinterWifiVC.h; sourceTree = "<group>"; };
+		B911D6161DD456DC0028F4DC /* TMXAddPrinterWifiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAddPrinterWifiVC.m; sourceTree = "<group>"; };
+		B911D6171DD456DC0028F4DC /* TMXConnectWifiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXConnectWifiVC.h; sourceTree = "<group>"; };
+		B911D6181DD456DC0028F4DC /* TMXConnectWifiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXConnectWifiVC.m; sourceTree = "<group>"; };
+		B911D6191DD456DC0028F4DC /* TMXStatusWifiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXStatusWifiVC.h; sourceTree = "<group>"; };
+		B911D61A1DD456DC0028F4DC /* TMXStatusWifiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXStatusWifiVC.m; sourceTree = "<group>"; };
+		B911D61F1DD456DC0028F4DC /* TMXAddPrinterWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAddPrinterWifiView.h; sourceTree = "<group>"; };
+		B911D6201DD456DC0028F4DC /* TMXAddPrinterWifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAddPrinterWifiView.m; sourceTree = "<group>"; };
+		B911D6211DD456DC0028F4DC /* TMXConnectPrinterWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXConnectPrinterWifiView.h; sourceTree = "<group>"; };
+		B911D6221DD456DC0028F4DC /* TMXConnectPrinterWifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXConnectPrinterWifiView.m; sourceTree = "<group>"; };
+		B911D6231DD456DC0028F4DC /* TMXPrinterStatusWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterStatusWifiView.h; sourceTree = "<group>"; };
+		B911D6241DD456DC0028F4DC /* TMXPrinterStatusWifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterStatusWifiView.m; sourceTree = "<group>"; };
+		B911D6251DD456DC0028F4DC /* TMXSelectWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectWifiView.h; sourceTree = "<group>"; };
+		B911D6261DD456DC0028F4DC /* TMXSelectWifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectWifiView.m; sourceTree = "<group>"; };
+		B918684E1DC9CB7600C0AD2D /* TMXNotLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXNotLoginView.h; sourceTree = "<group>"; };
+		B918684F1DC9CB7600C0AD2D /* TMXNotLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXNotLoginView.m; sourceTree = "<group>"; };
+		B91868511DC9D9A400C0AD2D /* TMXLoginHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXLoginHeaderView.h; sourceTree = "<group>"; };
+		B91868521DC9D9A400C0AD2D /* TMXLoginHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXLoginHeaderView.m; sourceTree = "<group>"; };
+		B93528131DD0879F000EF459 /* TMXDetailSelectPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXDetailSelectPrintView.h; sourceTree = "<group>"; };
+		B93528141DD0879F000EF459 /* TMXDetailSelectPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXDetailSelectPrintView.m; sourceTree = "<group>"; };
+		B9820FDA1DD84FB2000B05E9 /* TMXLogoutFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXLogoutFooterView.h; sourceTree = "<group>"; };
+		B9820FDB1DD84FB2000B05E9 /* TMXLogoutFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXLogoutFooterView.m; sourceTree = "<group>"; };
+		B98645C01DD0ACD4008EF372 /* TMXSelectPrintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectPrintCell.h; sourceTree = "<group>"; };
+		B98645C11DD0ACD4008EF372 /* TMXSelectPrintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectPrintCell.m; sourceTree = "<group>"; };
+		B98645C31DD0B870008EF372 /* TMXSelectPrintHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSelectPrintHeaderView.h; sourceTree = "<group>"; };
+		B98645C41DD0B870008EF372 /* TMXSelectPrintHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSelectPrintHeaderView.m; sourceTree = "<group>"; };
+		B9ACBB9D1DCABF5C006D9DD0 /* TMXUploadModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXUploadModelCell.h; sourceTree = "<group>"; };
+		B9ACBB9E1DCABF5C006D9DD0 /* TMXUploadModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXUploadModelCell.m; sourceTree = "<group>"; };
+		B9ACBBA01DCAD22E006D9DD0 /* TMXNullModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXNullModelView.h; sourceTree = "<group>"; };
+		B9ACBBA11DCAD22E006D9DD0 /* TMXNullModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXNullModelView.m; sourceTree = "<group>"; };
+		B9C502881DB89616007A6B82 /* FetchAppPublicKeyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAppPublicKeyModel.h; sourceTree = "<group>"; };
+		B9C502891DB89616007A6B82 /* FetchAppPublicKeyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAppPublicKeyModel.m; sourceTree = "<group>"; };
+		B9C5028A1DB89616007A6B82 /* TMXLoginInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXLoginInfoModel.h; sourceTree = "<group>"; };
+		B9C5028B1DB89616007A6B82 /* TMXLoginInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXLoginInfoModel.m; sourceTree = "<group>"; };
+		B9C5028F1DB89688007A6B82 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		B9C502901DB89688007A6B82 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		B9C502911DB89688007A6B82 /* KBHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBHttpTool.h; sourceTree = "<group>"; };
+		B9C502921DB89688007A6B82 /* KBHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBHttpTool.m; sourceTree = "<group>"; };
+		B9C502951DB8980A007A6B82 /* HeaderUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderUrl.h; sourceTree = "<group>"; };
+		B9EAE43E1DC8615600026966 /* TMXClassifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXClassifyVC.h; sourceTree = "<group>"; };
+		B9EAE43F1DC8615600026966 /* TMXClassifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXClassifyVC.m; sourceTree = "<group>"; };
+		B9EAE4411DC86C9700026966 /* TMXHomeClassifyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeClassifyListModel.h; sourceTree = "<group>"; };
+		B9EAE4421DC86C9700026966 /* TMXHomeClassifyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeClassifyListModel.m; sourceTree = "<group>"; };
+		B9F4B3271DD5A40800923915 /* TMXAccountRegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAccountRegisterModel.h; sourceTree = "<group>"; };
+		B9F4B3281DD5A40800923915 /* TMXAccountRegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAccountRegisterModel.m; sourceTree = "<group>"; };
+		B9F4B32A1DD5A4D800923915 /* TMXAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAccountModel.h; sourceTree = "<group>"; };
+		B9F4B32B1DD5A4D800923915 /* TMXAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAccountModel.m; sourceTree = "<group>"; };
+		B9F4B32D1DD5CC7D00923915 /* TMXAddPrinterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAddPrinterModel.h; sourceTree = "<group>"; };
+		B9F4B32E1DD5CC7D00923915 /* TMXAddPrinterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAddPrinterModel.m; sourceTree = "<group>"; };
+		B9F884711DD1611400807B0E /* TMXProblemFeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXProblemFeedbackVC.h; sourceTree = "<group>"; };
+		B9F884721DD1611400807B0E /* TMXProblemFeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXProblemFeedbackVC.m; sourceTree = "<group>"; };
+		B9F884741DD1611400807B0E /* TMXFeedbackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFeedbackModel.h; sourceTree = "<group>"; };
+		B9F884751DD1611400807B0E /* TMXFeedbackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFeedbackModel.m; sourceTree = "<group>"; };
+		B9F884771DD1611400807B0E /* TMXFeedbackBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFeedbackBottomView.h; sourceTree = "<group>"; };
+		B9F884781DD1611400807B0E /* TMXFeedbackBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFeedbackBottomView.m; sourceTree = "<group>"; };
+		B9F884791DD1611400807B0E /* TMXHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHeadView.h; sourceTree = "<group>"; };
+		B9F8847A1DD1611400807B0E /* TMXHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHeadView.m; sourceTree = "<group>"; };
+		B9F8847B1DD1611400807B0E /* TMXProblemFeedbackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXProblemFeedbackCell.h; sourceTree = "<group>"; };
+		B9F8847C1DD1611400807B0E /* TMXProblemFeedbackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXProblemFeedbackCell.m; sourceTree = "<group>"; };
+		B9F884821DD175B300807B0E /* TMXHomeNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeNavigationView.h; sourceTree = "<group>"; };
+		B9F884831DD175B300807B0E /* TMXHomeNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeNavigationView.m; sourceTree = "<group>"; };
+		B9F884891DD1828300807B0E /* TMXModelSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXModelSearchVC.h; sourceTree = "<group>"; };
+		B9F8848A1DD1828300807B0E /* TMXModelSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXModelSearchVC.m; sourceTree = "<group>"; };
+		B9F8848C1DD1A2A200807B0E /* TMXSearchNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSearchNavigationView.h; sourceTree = "<group>"; };
+		B9F8848D1DD1A2A200807B0E /* TMXSearchNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSearchNavigationView.m; sourceTree = "<group>"; };
+		B9F8848F1DD1B39B00807B0E /* TMXSearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSearchHistoryCell.h; sourceTree = "<group>"; };
+		B9F884901DD1B39B00807B0E /* TMXSearchHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSearchHistoryCell.m; sourceTree = "<group>"; };
+		B9F884921DD1C3B100807B0E /* TMXSearchHistoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSearchHistoryHeader.h; sourceTree = "<group>"; };
+		B9F884931DD1C3B100807B0E /* TMXSearchHistoryHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSearchHistoryHeader.m; sourceTree = "<group>"; };
+		CD00C5D71DCA36CF001FB8C7 /* TMXPrinterControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterControlVC.h; sourceTree = "<group>"; };
+		CD00C5D81DCA36CF001FB8C7 /* TMXPrinterControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterControlVC.m; sourceTree = "<group>"; };
+		CD00C5DA1DCA37A1001FB8C7 /* TMXPrinterStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterStatusCell.h; sourceTree = "<group>"; };
+		CD00C5DB1DCA37A1001FB8C7 /* TMXPrinterStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterStatusCell.m; sourceTree = "<group>"; };
+		CD00C5DD1DCA37E5001FB8C7 /* TMXPrinterHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterHistoryCell.h; sourceTree = "<group>"; };
+		CD00C5DE1DCA37E5001FB8C7 /* TMXPrinterHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterHistoryCell.m; sourceTree = "<group>"; };
+		CD00C5E01DCA39C0001FB8C7 /* TMXPrinterControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterControlView.h; sourceTree = "<group>"; };
+		CD00C5E11DCA39C0001FB8C7 /* TMXPrinterControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterControlView.m; sourceTree = "<group>"; };
+		CD35399D1DBF2EB500692682 /* TMXHomeBackHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeBackHeaderView.h; sourceTree = "<group>"; };
+		CD35399E1DBF2EB500692682 /* TMXHomeBackHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeBackHeaderView.m; sourceTree = "<group>"; };
+		CD3539A01DBF45E100692682 /* TMXTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTabBarVC.h; sourceTree = "<group>"; };
+		CD3539A11DBF45E100692682 /* TMXTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTabBarVC.m; sourceTree = "<group>"; };
+		CD35D42C1DD2A6A700D54EE8 /* TMXAppLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAppLoginView.h; sourceTree = "<group>"; };
+		CD35D42D1DD2A6A700D54EE8 /* TMXAppLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAppLoginView.m; sourceTree = "<group>"; };
+		CD35D42F1DD2AE3700D54EE8 /* TMXBgFixPrinterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBgFixPrinterVC.h; sourceTree = "<group>"; };
+		CD35D4301DD2AE3700D54EE8 /* TMXBgFixPrinterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBgFixPrinterVC.m; sourceTree = "<group>"; };
+		CD369EE91DCC802800F74C18 /* TMXcenterSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXcenterSetupView.h; sourceTree = "<group>"; };
+		CD369EEA1DCC802800F74C18 /* TMXcenterSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXcenterSetupView.m; sourceTree = "<group>"; };
+		CD406C241DC0454200ABC6FD /* TMXDesignVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXDesignVC.h; sourceTree = "<group>"; };
+		CD406C251DC0454200ABC6FD /* TMXDesignVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXDesignVC.m; sourceTree = "<group>"; };
+		CD406C271DC04A6200ABC6FD /* TMXDesignCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXDesignCell.h; sourceTree = "<group>"; };
+		CD406C281DC04A6200ABC6FD /* TMXDesignCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXDesignCell.m; sourceTree = "<group>"; };
+		CD406C2D1DC05AB100ABC6FD /* TMXProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXProfileHeaderView.h; sourceTree = "<group>"; };
+		CD406C2E1DC05AB100ABC6FD /* TMXProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXProfileHeaderView.m; sourceTree = "<group>"; };
+		CD406C311DC0614B00ABC6FD /* TMXProfileSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXProfileSegmentCell.h; sourceTree = "<group>"; };
+		CD406C321DC0614B00ABC6FD /* TMXProfileSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXProfileSegmentCell.m; sourceTree = "<group>"; };
+		CD406C341DC08A7F00ABC6FD /* TMXPrinterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterVC.h; sourceTree = "<group>"; };
+		CD406C351DC08A7F00ABC6FD /* TMXPrinterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterVC.m; sourceTree = "<group>"; };
+		CD4299631DC976A10043C8BA /* TMXReplyCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXReplyCommentCell.h; sourceTree = "<group>"; };
+		CD4299641DC976A10043C8BA /* TMXReplyCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXReplyCommentCell.m; sourceTree = "<group>"; };
+		CD4299661DC977490043C8BA /* TMXSubReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSubReplyCell.h; sourceTree = "<group>"; };
+		CD4299671DC977490043C8BA /* TMXSubReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSubReplyCell.m; sourceTree = "<group>"; };
+		CD4299691DC977610043C8BA /* TMXMainReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXMainReplyCell.h; sourceTree = "<group>"; };
+		CD42996A1DC977610043C8BA /* TMXMainReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMainReplyCell.m; sourceTree = "<group>"; };
+		CD42996C1DC9B9D70043C8BA /* TMXHomeModelDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeModelDetailModel.h; sourceTree = "<group>"; };
+		CD42996D1DC9B9D70043C8BA /* TMXHomeModelDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeModelDetailModel.m; sourceTree = "<group>"; };
+		CD42996E1DC9B9D70043C8BA /* TMXUploadByUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXUploadByUserModel.h; sourceTree = "<group>"; };
+		CD42996F1DC9B9D70043C8BA /* TMXUploadByUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXUploadByUserModel.m; sourceTree = "<group>"; };
+		CD44866A1DC72A53005E2567 /* TMXDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXDetailVC.h; sourceTree = "<group>"; };
+		CD44866B1DC72A53005E2567 /* TMXDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXDetailVC.m; sourceTree = "<group>"; };
+		CD44866D1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXDetailLeftJqueryHeader.h; sourceTree = "<group>"; };
+		CD44866E1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXDetailLeftJqueryHeader.m; sourceTree = "<group>"; };
+		CD4486701DC73B69005E2567 /* TMXDetailLeftSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXDetailLeftSegmentCell.h; sourceTree = "<group>"; };
+		CD4486711DC73B69005E2567 /* TMXDetailLeftSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXDetailLeftSegmentCell.m; sourceTree = "<group>"; };
+		CD4486731DC73F8C005E2567 /* TMXHomeDetailBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeDetailBrowseView.h; sourceTree = "<group>"; };
+		CD4486741DC73F8C005E2567 /* TMXHomeDetailBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeDetailBrowseView.m; sourceTree = "<group>"; };
+		CD4486761DC74530005E2567 /* TMXHomeIntroductModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeIntroductModelCell.h; sourceTree = "<group>"; };
+		CD4486771DC74530005E2567 /* TMXHomeIntroductModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeIntroductModelCell.m; sourceTree = "<group>"; };
+		CD4486791DC74614005E2567 /* TMXHomeModelListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeModelListCell.h; sourceTree = "<group>"; };
+		CD44867A1DC74614005E2567 /* TMXHomeModelListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeModelListCell.m; sourceTree = "<group>"; };
+		CD44867C1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeUpLoadUserInfoCell.h; sourceTree = "<group>"; };
+		CD44867D1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeUpLoadUserInfoCell.m; sourceTree = "<group>"; };
+		CD44867F1DC74740005E2567 /* TMXHomeModelHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeModelHeaderView.h; sourceTree = "<group>"; };
+		CD4486801DC74740005E2567 /* TMXHomeModelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeModelHeaderView.m; sourceTree = "<group>"; };
+		CD4486821DC747F2005E2567 /* TMXHomeModelRemarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeModelRemarkCell.h; sourceTree = "<group>"; };
+		CD4486831DC747F2005E2567 /* TMXHomeModelRemarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeModelRemarkCell.m; sourceTree = "<group>"; };
+		CD45EAEE1DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAccountPrinterCommandModel.h; sourceTree = "<group>"; };
+		CD45EAEF1DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAccountPrinterCommandModel.m; sourceTree = "<group>"; };
+		CD45EAF51DD412D000B55B11 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		CD45EAF61DD412D000B55B11 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CD45EAF81DD412DD00B55B11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD45EAFA1DD412DF00B55B11 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CD45EAFC1DD412E700B55B11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD45EAFE1DD412E800B55B11 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CD45EAFF1DD417DC00B55B11 /* TMXLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXLoginVC.h; sourceTree = "<group>"; };
+		CD45EB001DD417DC00B55B11 /* TMXLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXLoginVC.m; sourceTree = "<group>"; };
+		CD45EB031DD4183200B55B11 /* TMXRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXRegisterVC.h; sourceTree = "<group>"; };
+		CD45EB041DD4183200B55B11 /* TMXRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXRegisterVC.m; sourceTree = "<group>"; };
+		CD45EB061DD4186400B55B11 /* TMXForgetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXForgetVC.h; sourceTree = "<group>"; };
+		CD45EB071DD4186400B55B11 /* TMXForgetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXForgetVC.m; sourceTree = "<group>"; };
+		CD45EB091DD41B1F00B55B11 /* TMXBgLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBgLoginVC.h; sourceTree = "<group>"; };
+		CD45EB0A1DD41B1F00B55B11 /* TMXBgLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBgLoginVC.m; sourceTree = "<group>"; };
+		CD45EB0C1DD43F6800B55B11 /* TMXRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXRegisterView.h; sourceTree = "<group>"; };
+		CD45EB0D1DD43F6800B55B11 /* TMXRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXRegisterView.m; sourceTree = "<group>"; };
+		CD45EB0F1DD43F8000B55B11 /* TMXForgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXForgetView.h; sourceTree = "<group>"; };
+		CD45EB101DD43F8000B55B11 /* TMXForgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXForgetView.m; sourceTree = "<group>"; };
+		CD49CD731DB843D5008AD362 /* TMX3DPrinterHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMX3DPrinterHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD49CD771DB843D5008AD362 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD49CD791DB843D5008AD362 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD49CD7A1DB843D5008AD362 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD49CD7C1DB843D5008AD362 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD49CD7D1DB843D5008AD362 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD49CD801DB843D5008AD362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD49CD821DB843D5008AD362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD49CD851DB843D5008AD362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD49CD871DB843D5008AD362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD49CD8C1DB843D5008AD362 /* TMX3DPrinterHDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMX3DPrinterHDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD49CD901DB843D5008AD362 /* TMX3DPrinterHDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMX3DPrinterHDTests.m; sourceTree = "<group>"; };
+		CD49CD921DB843D5008AD362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD49CD971DB843D6008AD362 /* TMX3DPrinterHDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMX3DPrinterHDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD49CD9B1DB843D6008AD362 /* TMX3DPrinterHDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMX3DPrinterHDUITests.m; sourceTree = "<group>"; };
+		CD49CD9D1DB843D6008AD362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4DAF6C1DD59C57001964EC /* TMXBgSetupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBgSetupVC.h; sourceTree = "<group>"; };
+		CD4DAF6D1DD59C57001964EC /* TMXBgSetupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBgSetupVC.m; sourceTree = "<group>"; };
+		CD4DAF6F1DD59C74001964EC /* TMXSetupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSetupVC.h; sourceTree = "<group>"; };
+		CD4DAF701DD59C74001964EC /* TMXSetupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSetupVC.m; sourceTree = "<group>"; };
+		CD4DAF721DD5A75E001964EC /* TMXSetupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXSetupCell.h; sourceTree = "<group>"; };
+		CD4DAF731DD5A75E001964EC /* TMXSetupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXSetupCell.m; sourceTree = "<group>"; };
+		CD4DAF751DD5B150001964EC /* TMXFeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFeedBackVC.h; sourceTree = "<group>"; };
+		CD4DAF761DD5B150001964EC /* TMXFeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFeedBackVC.m; sourceTree = "<group>"; };
+		CD4DAF781DD5B1DE001964EC /* TMXFeedBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFeedBackView.h; sourceTree = "<group>"; };
+		CD4DAF791DD5B1DE001964EC /* TMXFeedBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFeedBackView.m; sourceTree = "<group>"; };
+		CD4DAF7B1DD5C693001964EC /* TMXAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAboutVC.h; sourceTree = "<group>"; };
+		CD4DAF7C1DD5C693001964EC /* TMXAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAboutVC.m; sourceTree = "<group>"; };
+		CD4DAF7E1DD5C6B6001964EC /* TMXAboutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAboutView.h; sourceTree = "<group>"; };
+		CD4DAF7F1DD5C6B6001964EC /* TMXAboutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAboutView.m; sourceTree = "<group>"; };
+		CD4FE3B21DB85ABF0087DDD2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CD4FE3BA1DB860110087DDD2 /* TMXConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXConst.h; sourceTree = "<group>"; };
+		CD4FE3BB1DB860110087DDD2 /* TMXConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXConst.m; sourceTree = "<group>"; };
+		CD4FE3C21DB86A150087DDD2 /* TMXBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBaseVC.h; sourceTree = "<group>"; };
+		CD4FE3C31DB86A150087DDD2 /* TMXBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBaseVC.m; sourceTree = "<group>"; };
+		CD4FE3C51DB8CE020087DDD2 /* TMXHomLeftTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomLeftTabBar.h; sourceTree = "<group>"; };
+		CD4FE3C61DB8CE020087DDD2 /* TMXHomLeftTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomLeftTabBar.m; sourceTree = "<group>"; };
+		CD4FE3C81DB8CE3B0087DDD2 /* TMXHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeVC.h; sourceTree = "<group>"; };
+		CD4FE3C91DB8CE3B0087DDD2 /* TMXHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeVC.m; sourceTree = "<group>"; };
+		CD5173CE1DD9AB4900AA7702 /* TMX3DPrinterHD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TMX3DPrinterHD.entitlements; sourceTree = "<group>"; };
+		CD64C4311DC197B8009073CA /* TMXAdvertiseWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXAdvertiseWebVC.h; sourceTree = "<group>"; };
+		CD64C4321DC197B8009073CA /* TMXAdvertiseWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXAdvertiseWebVC.m; sourceTree = "<group>"; };
+		CD7CADF61DCB420200C7F033 /* TMXProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXProfileVC.h; sourceTree = "<group>"; };
+		CD7CADF71DCB420200C7F033 /* TMXProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXProfileVC.m; sourceTree = "<group>"; };
+		CD814C2D1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeJqueryHeaderView.h; sourceTree = "<group>"; };
+		CD814C2E1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeJqueryHeaderView.m; sourceTree = "<group>"; };
+		CD814C301DBD97EC0018AFE7 /* TMXHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeHeaderView.h; sourceTree = "<group>"; };
+		CD814C311DBD97EC0018AFE7 /* TMXHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeHeaderView.m; sourceTree = "<group>"; };
+		CD814C331DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeDisplayAdvertCell.h; sourceTree = "<group>"; };
+		CD814C341DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeDisplayAdvertCell.m; sourceTree = "<group>"; };
+		CD814C361DBD98590018AFE7 /* TMXHomeScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeScrollViewCell.h; sourceTree = "<group>"; };
+		CD814C371DBD98590018AFE7 /* TMXHomeScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeScrollViewCell.m; sourceTree = "<group>"; };
+		CD814C391DBD989C0018AFE7 /* TMXHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeModel.h; sourceTree = "<group>"; };
+		CD814C3A1DBD989C0018AFE7 /* TMXHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeModel.m; sourceTree = "<group>"; };
+		CD814C3C1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeDisplayModelCell.h; sourceTree = "<group>"; };
+		CD814C3D1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeDisplayModelCell.m; sourceTree = "<group>"; };
+		CD814C3F1DBDA0650018AFE7 /* TMXHome3DCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHome3DCustomView.h; sourceTree = "<group>"; };
+		CD814C401DBDA0650018AFE7 /* TMXHome3DCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHome3DCustomView.m; sourceTree = "<group>"; };
+		CD814C421DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXHomeScrollView3DCell.h; sourceTree = "<group>"; };
+		CD814C431DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXHomeScrollView3DCell.m; sourceTree = "<group>"; };
+		CDD535D21DCB1291002E4379 /* TMXPrinterStatusHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXPrinterStatusHeader.h; sourceTree = "<group>"; };
+		CDD535D31DCB1291002E4379 /* TMXPrinterStatusHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXPrinterStatusHeader.m; sourceTree = "<group>"; };
+		CDD79CBC1DD40C9100424852 /* TMXmyMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXmyMessageController.h; path = ../Views/TMXmyMessageController.h; sourceTree = "<group>"; };
+		CDD79CBD1DD40C9100424852 /* TMXmyMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXmyMessageController.m; path = ../Views/TMXmyMessageController.m; sourceTree = "<group>"; };
+		CDD79CBE1DD40C9100424852 /* TMXcommentFromMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXcommentFromMessageCell.h; sourceTree = "<group>"; };
+		CDD79CBF1DD40C9100424852 /* TMXcommentFromMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXcommentFromMessageCell.m; sourceTree = "<group>"; };
+		CDD79CC21DD40CE300424852 /* TMXleftViewFromMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXleftViewFromMessageCell.h; sourceTree = "<group>"; };
+		CDD79CC31DD40CE300424852 /* TMXleftViewFromMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXleftViewFromMessageCell.m; sourceTree = "<group>"; };
+		CDE84B331DCC2483001C60A6 /* TMXpersonalSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXpersonalSetupView.h; sourceTree = "<group>"; };
+		CDE84B341DCC2483001C60A6 /* TMXpersonalSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXpersonalSetupView.m; sourceTree = "<group>"; };
+		CDEF78041DD2160600F9CCF5 /* TMXFixPrinterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFixPrinterView.h; sourceTree = "<group>"; };
+		CDEF78051DD2160600F9CCF5 /* TMXFixPrinterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFixPrinterView.m; sourceTree = "<group>"; };
+		CDEF78071DD217FC00F9CCF5 /* TMXFixPrinterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXFixPrinterVC.h; sourceTree = "<group>"; };
+		CDEF78081DD217FC00F9CCF5 /* TMXFixPrinterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXFixPrinterVC.m; sourceTree = "<group>"; };
+		CDF0DA331DD6051E00865139 /* TMXBgInfoSetupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBgInfoSetupVC.h; sourceTree = "<group>"; };
+		CDF0DA341DD6051E00865139 /* TMXBgInfoSetupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXBgInfoSetupVC.m; sourceTree = "<group>"; };
+		CDF0DA361DD6053C00865139 /* TMXInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXInfoVC.h; sourceTree = "<group>"; };
+		CDF0DA371DD6053C00865139 /* TMXInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXInfoVC.m; sourceTree = "<group>"; };
+		CDF0DA391DD6245200865139 /* TMXInfoPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXInfoPhotoCell.h; sourceTree = "<group>"; };
+		CDF0DA3A1DD6245200865139 /* TMXInfoPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXInfoPhotoCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD49CD701DB843D5008AD362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E130915BC2EEE68C50C06E18 /* libPods-TMX3DPrinterHD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD49CD891DB843D5008AD362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD49CD941DB843D6008AD362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C5075EB1DD41FC300948E7B /* 生成二维码 */ = {
+			isa = PBXGroup;
+			children = (
+				1C5075EC1DD4200100948E7B /* Views */,
+			);
+			path = "生成二维码";
+			sourceTree = "<group>";
+		};
+		1C5075EC1DD4200100948E7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C5075ED1DD4206000948E7B /* TMXCreateQRcodeView.h */,
+				1C5075EE1DD4206000948E7B /* TMXCreateQRcodeView.m */,
+				1C5075F01DD4219E00948E7B /* TMXQRContentView.h */,
+				1C5075F11DD4219E00948E7B /* TMXQRContentView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C5217B31DC71F7F00974992 /* 共享用户列表 */ = {
+			isa = PBXGroup;
+			children = (
+				1C5217B61DC720A800974992 /* Views */,
+				1C5217B51DC7204800974992 /* Models */,
+				1C5217B41DC7202D00974992 /* Controllers */,
+			);
+			path = "共享用户列表";
+			sourceTree = "<group>";
+		};
+		1C5217B41DC7202D00974992 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C5217B71DC7218800974992 /* TMXShareUserListViewController.h */,
+				1C5217B81DC7218800974992 /* TMXShareUserListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1C5217B51DC7204800974992 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C5217B61DC720A800974992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C5217BA1DC7283700974992 /* TMXShareUserListCell.h */,
+				1C5217BB1DC7283700974992 /* TMXShareUserListCell.m */,
+				1C5217BD1DC7323400974992 /* TMXShareUserLisetHeadView.h */,
+				1C5217BE1DC7323400974992 /* TMXShareUserLisetHeadView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C5217C01DC7452B00974992 /* 分享打印机 */ = {
+			isa = PBXGroup;
+			children = (
+				1C5075EB1DD41FC300948E7B /* 生成二维码 */,
+				1C5217C11DC7454000974992 /* Views */,
+			);
+			path = "分享打印机";
+			sourceTree = "<group>";
+		};
+		1C5217C11DC7454000974992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C5217C21DC7456D00974992 /* TMXSharePrinterView.h */,
+				1C5217C31DC7456D00974992 /* TMXSharePrinterView.m */,
+				1C5EE10B1DC98061006AF452 /* TMXSharePrinterCell.h */,
+				1C5EE10C1DC98062006AF452 /* TMXSharePrinterCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C5EE10E1DC9B63B006AF452 /* 修改备注名称 */ = {
+			isa = PBXGroup;
+			children = (
+				1C5EE10F1DC9B64F006AF452 /* Views */,
+			);
+			path = "修改备注名称";
+			sourceTree = "<group>";
+		};
+		1C5EE10F1DC9B64F006AF452 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C5EE1101DC9B784006AF452 /* TMXMotifyPrinterNameView.h */,
+				1C5EE1111DC9B784006AF452 /* TMXMotifyPrinterNameView.m */,
+				1C5EE1131DC9B834006AF452 /* TMXMotifyPrinterNameContentView.h */,
+				1C5EE1141DC9B834006AF452 /* TMXMotifyPrinterNameContentView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C70E3281DCAE0090087ADA1 /* 任务列表 */ = {
+			isa = PBXGroup;
+			children = (
+				1C70E32B1DCAE0A90087ADA1 /* Views */,
+				1C70E32A1DCAE09B0087ADA1 /* Models */,
+				1C70E3291DCAE0690087ADA1 /* Controllers */,
+			);
+			path = "任务列表";
+			sourceTree = "<group>";
+		};
+		1C70E3291DCAE0690087ADA1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C70E32C1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.h */,
+				1C70E32D1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.m */,
+				1C70E32F1DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.h */,
+				1C70E3301DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1C70E32A1DCAE09B0087ADA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C70E32B1DCAE0A90087ADA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C70E3321DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.h */,
+				1C70E3331DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.m */,
+				1C70E3351DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.h */,
+				1C70E3361DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.m */,
+				1C63C4F81DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.h */,
+				1C63C4F91DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.m */,
+				1C63C4FB1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.h */,
+				1C63C4FC1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.m */,
+				1C63C4FE1DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.h */,
+				1C63C4FF1DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5671AE75C9185F65393C7B56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5486E1D783779F7B559AF2C1 /* Pods-TMX3DPrinterHD.debug.xcconfig */,
+				141D3B2C1D978B1184475F8C /* Pods-TMX3DPrinterHD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B905F7881DD2C92600BB83DD /* Remark(模型评论) */ = {
+			isa = PBXGroup;
+			children = (
+				B905F7891DD2C92600BB83DD /* Controllers */,
+				B905F78A1DD2C92600BB83DD /* Models */,
+				B905F78B1DD2C92600BB83DD /* Views */,
+			);
+			path = "Remark(模型评论)";
+			sourceTree = "<group>";
+		};
+		B905F7891DD2C92600BB83DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B905F78C1DD2CA1300BB83DD /* TMXModelCommentVC.h */,
+				B905F78D1DD2CA1300BB83DD /* TMXModelCommentVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B905F78A1DD2C92600BB83DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B905F78B1DD2C92600BB83DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B905F78F1DD2CF8A00BB83DD /* TMXCommentBottomView.h */,
+				B905F7901DD2CF8A00BB83DD /* TMXCommentBottomView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B907EDD11DB8758800C7A9FD /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				B907EDD21DB8758800C7A9FD /* KBDateFormatter.h */,
+				B907EDD31DB8758800C7A9FD /* KBDateFormatter.m */,
+				B907EDD41DB8758800C7A9FD /* KBDragTableView.h */,
+				B907EDD51DB8758800C7A9FD /* KBDragTableView.m */,
+				B907EDD61DB8758800C7A9FD /* KBDropMenuView.h */,
+				B907EDD71DB8758800C7A9FD /* KBDropMenuView.m */,
+				B907EDD81DB8758800C7A9FD /* KBFetchSystemInfo.h */,
+				B907EDD91DB8758800C7A9FD /* KBFetchSystemInfo.m */,
+				B907EDDA1DB8758800C7A9FD /* KBGCDTimerManager.h */,
+				B907EDDB1DB8758800C7A9FD /* KBGCDTimerManager.m */,
+				B907EDDC1DB8758800C7A9FD /* KBGuideViewController.h */,
+				B907EDDD1DB8758800C7A9FD /* KBGuideViewController.m */,
+				B907EDDE1DB8758800C7A9FD /* KBJquery.h */,
+				B907EDDF1DB8758800C7A9FD /* KBJquery.m */,
+				B907EDE01DB8758800C7A9FD /* KBLabel.h */,
+				B907EDE11DB8758800C7A9FD /* KBLabel.m */,
+				B907EDE21DB8758800C7A9FD /* KBNavigationVC.h */,
+				B907EDE31DB8758800C7A9FD /* KBNavigationVC.m */,
+				B907EDE41DB8758800C7A9FD /* KBRegexp.h */,
+				B907EDE51DB8758800C7A9FD /* KBRegexp.m */,
+				B907EDE61DB8758800C7A9FD /* KBRSA.h */,
+				B907EDE71DB8758800C7A9FD /* KBRSA.m */,
+				B907EDE81DB8758800C7A9FD /* KBSegmentView.h */,
+				B907EDE91DB8758800C7A9FD /* KBSegmentView.m */,
+				B907EDEA1DB8758800C7A9FD /* KBTextView.h */,
+				B907EDEB1DB8758800C7A9FD /* KBTextView.m */,
+				B907EDEC1DB8758800C7A9FD /* KBTimer.h */,
+				B907EDED1DB8758800C7A9FD /* KBTimer.m */,
+				B907EDEE1DB8758800C7A9FD /* KBtopImgBottomTextBtn.h */,
+				B907EDEF1DB8758800C7A9FD /* KBtopImgBottomTextBtn.m */,
+				B907EDF01DB8758800C7A9FD /* MBProgressHUD+KBExtension.h */,
+				B907EDF11DB8758800C7A9FD /* MBProgressHUD+KBExtension.m */,
+				B907EDF21DB8758800C7A9FD /* NSArray+KBExtension.h */,
+				B907EDF31DB8758800C7A9FD /* NSArray+KBExtension.m */,
+				B907EDF41DB8758800C7A9FD /* NSDate+KBExtension.h */,
+				B907EDF51DB8758800C7A9FD /* NSDate+KBExtension.m */,
+				B907EDF61DB8758800C7A9FD /* NSObject+KBExtension.h */,
+				B907EDF71DB8758800C7A9FD /* NSObject+KBExtension.m */,
+				B907EDF81DB8758800C7A9FD /* NSString+KBExtension.h */,
+				B907EDF91DB8758800C7A9FD /* NSString+KBExtension.m */,
+				B907EDFA1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.h */,
+				B907EDFB1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.m */,
+				B907EDFC1DB8758800C7A9FD /* UINavigationBar+Awesome.h */,
+				B907EDFD1DB8758800C7A9FD /* UINavigationBar+Awesome.m */,
+				B907EDFE1DB8758800C7A9FD /* UITableView+KBCacheHeight.h */,
+				B907EDFF1DB8758800C7A9FD /* UITableView+KBCacheHeight.m */,
+				B907EE001DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.h */,
+				B907EE011DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.m */,
+				B907EE021DB8758800C7A9FD /* UIView+Extension.h */,
+				B907EE031DB8758800C7A9FD /* UIView+Extension.m */,
+				B907EE0D1DB8758800C7A9FD /* 悬浮菜单 */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		B907EE0D1DB8758800C7A9FD /* 悬浮菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				B907EE0E1DB8758800C7A9FD /* KBAnimationTool.h */,
+				B907EE0F1DB8758800C7A9FD /* KBAnimationTool.m */,
+				B907EE101DB8758800C7A9FD /* KBLeftMenuBar.h */,
+				B907EE111DB8758800C7A9FD /* KBLeftMenuBar.m */,
+				B907EE121DB8758800C7A9FD /* KBMenuItem.h */,
+				B907EE131DB8758800C7A9FD /* KBMenuItem.m */,
+				B907EE141DB8758800C7A9FD /* UILabel+KBExtension.h */,
+				B907EE151DB8758800C7A9FD /* UILabel+KBExtension.m */,
+			);
+			path = "悬浮菜单";
+			sourceTree = "<group>";
+		};
+		B911D6111DD456DC0028F4DC /* AddPrinter(添加打印机) */ = {
+			isa = PBXGroup;
+			children = (
+				B911D6121DD456DC0028F4DC /* Controllers */,
+				B911D61B1DD456DC0028F4DC /* Models */,
+				B911D61E1DD456DC0028F4DC /* Views */,
+			);
+			path = "AddPrinter(添加打印机)";
+			sourceTree = "<group>";
+		};
+		B911D6121DD456DC0028F4DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B911D6131DD456DC0028F4DC /* TMXAddPrinterVC.h */,
+				B911D6141DD456DC0028F4DC /* TMXAddPrinterVC.m */,
+				B911D6151DD456DC0028F4DC /* TMXAddPrinterWifiVC.h */,
+				B911D6161DD456DC0028F4DC /* TMXAddPrinterWifiVC.m */,
+				B911D6171DD456DC0028F4DC /* TMXConnectWifiVC.h */,
+				B911D6181DD456DC0028F4DC /* TMXConnectWifiVC.m */,
+				B911D6191DD456DC0028F4DC /* TMXStatusWifiVC.h */,
+				B911D61A1DD456DC0028F4DC /* TMXStatusWifiVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B911D61B1DD456DC0028F4DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9F4B32D1DD5CC7D00923915 /* TMXAddPrinterModel.h */,
+				B9F4B32E1DD5CC7D00923915 /* TMXAddPrinterModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B911D61E1DD456DC0028F4DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B911D61F1DD456DC0028F4DC /* TMXAddPrinterWifiView.h */,
+				B911D6201DD456DC0028F4DC /* TMXAddPrinterWifiView.m */,
+				B911D6211DD456DC0028F4DC /* TMXConnectPrinterWifiView.h */,
+				B911D6221DD456DC0028F4DC /* TMXConnectPrinterWifiView.m */,
+				B911D6231DD456DC0028F4DC /* TMXPrinterStatusWifiView.h */,
+				B911D6241DD456DC0028F4DC /* TMXPrinterStatusWifiView.m */,
+				B911D6251DD456DC0028F4DC /* TMXSelectWifiView.h */,
+				B911D6261DD456DC0028F4DC /* TMXSelectWifiView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9C5028E1DB89688007A6B82 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				B9C5028F1DB89688007A6B82 /* BaseModel.h */,
+				B9C502901DB89688007A6B82 /* BaseModel.m */,
+				B9C502911DB89688007A6B82 /* KBHttpTool.h */,
+				B9C502921DB89688007A6B82 /* KBHttpTool.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		B9EAE43A1DC843D600026966 /* Classify(分类列表) */ = {
+			isa = PBXGroup;
+			children = (
+				B9EAE43B1DC843D600026966 /* Controllers */,
+				B9EAE43C1DC843D600026966 /* Models */,
+				B9EAE43D1DC843D600026966 /* Views */,
+			);
+			path = "Classify(分类列表)";
+			sourceTree = "<group>";
+		};
+		B9EAE43B1DC843D600026966 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9EAE43E1DC8615600026966 /* TMXClassifyVC.h */,
+				B9EAE43F1DC8615600026966 /* TMXClassifyVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9EAE43C1DC843D600026966 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9EAE4411DC86C9700026966 /* TMXHomeClassifyListModel.h */,
+				B9EAE4421DC86C9700026966 /* TMXHomeClassifyListModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9EAE43D1DC843D600026966 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9F8846F1DD1611400807B0E /* Feedback(模型反馈) */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884701DD1611400807B0E /* Controllers */,
+				B9F884731DD1611400807B0E /* Models */,
+				B9F884761DD1611400807B0E /* Views */,
+			);
+			path = "Feedback(模型反馈)";
+			sourceTree = "<group>";
+		};
+		B9F884701DD1611400807B0E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884711DD1611400807B0E /* TMXProblemFeedbackVC.h */,
+				B9F884721DD1611400807B0E /* TMXProblemFeedbackVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9F884731DD1611400807B0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884741DD1611400807B0E /* TMXFeedbackModel.h */,
+				B9F884751DD1611400807B0E /* TMXFeedbackModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9F884761DD1611400807B0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884771DD1611400807B0E /* TMXFeedbackBottomView.h */,
+				B9F884781DD1611400807B0E /* TMXFeedbackBottomView.m */,
+				B9F884791DD1611400807B0E /* TMXHeadView.h */,
+				B9F8847A1DD1611400807B0E /* TMXHeadView.m */,
+				B9F8847B1DD1611400807B0E /* TMXProblemFeedbackCell.h */,
+				B9F8847C1DD1611400807B0E /* TMXProblemFeedbackCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9F884851DD1825200807B0E /* Search(搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884861DD1825200807B0E /* Controllers */,
+				B9F884871DD1825200807B0E /* Models */,
+				B9F884881DD1825200807B0E /* Views */,
+			);
+			path = "Search(搜索)";
+			sourceTree = "<group>";
+		};
+		B9F884861DD1825200807B0E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884891DD1828300807B0E /* TMXModelSearchVC.h */,
+				B9F8848A1DD1828300807B0E /* TMXModelSearchVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9F884871DD1825200807B0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B905F7851DD2AD4D00BB83DD /* TMXHomeSearchModel.h */,
+				B905F7861DD2AD4D00BB83DD /* TMXHomeSearchModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9F884881DD1825200807B0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8848C1DD1A2A200807B0E /* TMXSearchNavigationView.h */,
+				B9F8848D1DD1A2A200807B0E /* TMXSearchNavigationView.m */,
+				B9F8848F1DD1B39B00807B0E /* TMXSearchHistoryCell.h */,
+				B9F884901DD1B39B00807B0E /* TMXSearchHistoryCell.m */,
+				B9F884921DD1C3B100807B0E /* TMXSearchHistoryHeader.h */,
+				B9F884931DD1C3B100807B0E /* TMXSearchHistoryHeader.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDBA1BEE79545F53A475C3D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87317D62EC1174B5863C3D95 /* libPods-TMX3DPrinterHD.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD00C5D31DCA32F1001FB8C7 /* Pinter(打印机) */ = {
+			isa = PBXGroup;
+			children = (
+				CD00C5D61DCA3410001FB8C7 /* Models */,
+				CD00C5D51DCA33F9001FB8C7 /* Views */,
+				CD00C5D41DCA33DC001FB8C7 /* Controllers */,
+			);
+			name = "Pinter(打印机)";
+			path = "Printer(打印机)";
+			sourceTree = "<group>";
+		};
+		CD00C5D41DCA33DC001FB8C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD00C5D71DCA36CF001FB8C7 /* TMXPrinterControlVC.h */,
+				CD00C5D81DCA36CF001FB8C7 /* TMXPrinterControlVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD00C5D51DCA33F9001FB8C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD00C5DA1DCA37A1001FB8C7 /* TMXPrinterStatusCell.h */,
+				CD00C5DB1DCA37A1001FB8C7 /* TMXPrinterStatusCell.m */,
+				CD00C5DD1DCA37E5001FB8C7 /* TMXPrinterHistoryCell.h */,
+				CD00C5DE1DCA37E5001FB8C7 /* TMXPrinterHistoryCell.m */,
+				CD00C5E01DCA39C0001FB8C7 /* TMXPrinterControlView.h */,
+				CD00C5E11DCA39C0001FB8C7 /* TMXPrinterControlView.m */,
+				CDD535D21DCB1291002E4379 /* TMXPrinterStatusHeader.h */,
+				CDD535D31DCB1291002E4379 /* TMXPrinterStatusHeader.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD00C5D61DCA3410001FB8C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD406C181DC0401300ABC6FD /* Printer(打印机) */ = {
+			isa = PBXGroup;
+			children = (
+				B911D6111DD456DC0028F4DC /* AddPrinter(添加打印机) */,
+				CDEF77FD1DD205D500F9CCF5 /* FixPrinter(打印机调频) */,
+				1C70E3281DCAE0090087ADA1 /* 任务列表 */,
+				1C5EE10E1DC9B63B006AF452 /* 修改备注名称 */,
+				1C5217C01DC7452B00974992 /* 分享打印机 */,
+				1C5217B31DC71F7F00974992 /* 共享用户列表 */,
+				CD406C1B1DC0407B00ABC6FD /* Views */,
+				CD406C1A1DC0406900ABC6FD /* Models */,
+				CD406C191DC0405000ABC6FD /* Controllers */,
+			);
+			path = "Printer(打印机)";
+			sourceTree = "<group>";
+		};
+		CD406C191DC0405000ABC6FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C341DC08A7F00ABC6FD /* TMXPrinterVC.h */,
+				CD406C351DC08A7F00ABC6FD /* TMXPrinterVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD406C1A1DC0406900ABC6FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD406C1B1DC0407B00ABC6FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C7514671DC19F670043B055 /* TMXPrinterListTableViewCell.h */,
+				1C7514681DC19F670043B055 /* TMXPrinterListTableViewCell.m */,
+				1C7514641DC19EBA0043B055 /* TMXPrinterHeadView.h */,
+				1C7514651DC19EBA0043B055 /* TMXPrinterHeadView.m */,
+				1C75146B1DC1D7360043B055 /* TMXBindPrinterSelectionView.h */,
+				1C75146C1DC1D7360043B055 /* TMXBindPrinterSelectionView.m */,
+				1C75146E1DC1F0540043B055 /* TMXPopMenuFirstCell.h */,
+				1C75146F1DC1F0540043B055 /* TMXPopMenuFirstCell.m */,
+				1C6D82BD1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.h */,
+				1C6D82BE1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.m */,
+				1C6D82C01DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.h */,
+				1C6D82C11DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.m */,
+				1C863CF01DD05F48008490E6 /* TMXremoveBindPrinterView.h */,
+				1C863CF11DD05F48008490E6 /* TMXremoveBindPrinterView.m */,
+				1C863CF31DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.h */,
+				1C863CF41DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.m */,
+				1C863CF61DD07476008490E6 /* TMXSelectRemovePrinterObjCell.h */,
+				1C863CF71DD07476008490E6 /* TMXSelectRemovePrinterObjCell.m */,
+				1C6AE9EE1DD1AEE400A6AB65 /* TMXSelectUserView.h */,
+				1C6AE9EF1DD1AEE400A6AB65 /* TMXSelectUserView.m */,
+				1C6AE9F11DD1B87E00A6AB65 /* TMXSelectUserHeadCell.h */,
+				1C6AE9F21DD1B87E00A6AB65 /* TMXSelectUserHeadCell.m */,
+				1C5616211DD2A734003104E8 /* TMXSelectUserCell.h */,
+				1C5616221DD2A734003104E8 /* TMXSelectUserCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD406C1C1DC0409400ABC6FD /* Design(创作) */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C1F1DC040EE00ABC6FD /* Models */,
+				CD406C1E1DC040DD00ABC6FD /* Views */,
+				CD406C1D1DC040C100ABC6FD /* Controllers */,
+			);
+			path = "Design(创作)";
+			sourceTree = "<group>";
+		};
+		CD406C1D1DC040C100ABC6FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C241DC0454200ABC6FD /* TMXDesignVC.h */,
+				CD406C251DC0454200ABC6FD /* TMXDesignVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD406C1E1DC040DD00ABC6FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C271DC04A6200ABC6FD /* TMXDesignCell.h */,
+				CD406C281DC04A6200ABC6FD /* TMXDesignCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD406C1F1DC040EE00ABC6FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD406C201DC0410100ABC6FD /* Profile(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C231DC041A100ABC6FD /* Models */,
+				CD406C221DC0418E00ABC6FD /* Views */,
+				CD406C211DC0416E00ABC6FD /* Controllers */,
+			);
+			path = "Profile(我的)";
+			sourceTree = "<group>";
+		};
+		CD406C211DC0416E00ABC6FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CADF61DCB420200C7F033 /* TMXProfileVC.h */,
+				CD7CADF71DCB420200C7F033 /* TMXProfileVC.m */,
+				CDD79CBC1DD40C9100424852 /* TMXmyMessageController.h */,
+				CDD79CBD1DD40C9100424852 /* TMXmyMessageController.m */,
+				CD45EAFF1DD417DC00B55B11 /* TMXLoginVC.h */,
+				CD45EB001DD417DC00B55B11 /* TMXLoginVC.m */,
+				CD45EB031DD4183200B55B11 /* TMXRegisterVC.h */,
+				CD45EB041DD4183200B55B11 /* TMXRegisterVC.m */,
+				CD45EB061DD4186400B55B11 /* TMXForgetVC.h */,
+				CD45EB071DD4186400B55B11 /* TMXForgetVC.m */,
+				CD45EB091DD41B1F00B55B11 /* TMXBgLoginVC.h */,
+				CD45EB0A1DD41B1F00B55B11 /* TMXBgLoginVC.m */,
+				CD4DAF6C1DD59C57001964EC /* TMXBgSetupVC.h */,
+				CD4DAF6D1DD59C57001964EC /* TMXBgSetupVC.m */,
+				CD4DAF6F1DD59C74001964EC /* TMXSetupVC.h */,
+				CD4DAF701DD59C74001964EC /* TMXSetupVC.m */,
+				CD4DAF751DD5B150001964EC /* TMXFeedBackVC.h */,
+				CD4DAF761DD5B150001964EC /* TMXFeedBackVC.m */,
+				CD4DAF7B1DD5C693001964EC /* TMXAboutVC.h */,
+				CD4DAF7C1DD5C693001964EC /* TMXAboutVC.m */,
+				CDF0DA331DD6051E00865139 /* TMXBgInfoSetupVC.h */,
+				CDF0DA341DD6051E00865139 /* TMXBgInfoSetupVC.m */,
+				CDF0DA361DD6053C00865139 /* TMXInfoVC.h */,
+				CDF0DA371DD6053C00865139 /* TMXInfoVC.m */,
+				B90DD0C31DD9A58D00901B16 /* TMXEditNickNameVC.h */,
+				B90DD0C41DD9A58D00901B16 /* TMXEditNickNameVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD406C221DC0418E00ABC6FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C2D1DC05AB100ABC6FD /* TMXProfileHeaderView.h */,
+				CD406C2E1DC05AB100ABC6FD /* TMXProfileHeaderView.m */,
+				B91868511DC9D9A400C0AD2D /* TMXLoginHeaderView.h */,
+				B91868521DC9D9A400C0AD2D /* TMXLoginHeaderView.m */,
+				CD406C311DC0614B00ABC6FD /* TMXProfileSegmentCell.h */,
+				CD406C321DC0614B00ABC6FD /* TMXProfileSegmentCell.m */,
+				B918684E1DC9CB7600C0AD2D /* TMXNotLoginView.h */,
+				B918684F1DC9CB7600C0AD2D /* TMXNotLoginView.m */,
+				B9ACBB9D1DCABF5C006D9DD0 /* TMXUploadModelCell.h */,
+				B9ACBB9E1DCABF5C006D9DD0 /* TMXUploadModelCell.m */,
+				B9ACBBA01DCAD22E006D9DD0 /* TMXNullModelView.h */,
+				B9ACBBA11DCAD22E006D9DD0 /* TMXNullModelView.m */,
+				CDE84B331DCC2483001C60A6 /* TMXpersonalSetupView.h */,
+				CDE84B341DCC2483001C60A6 /* TMXpersonalSetupView.m */,
+				CD369EE91DCC802800F74C18 /* TMXcenterSetupView.h */,
+				CD369EEA1DCC802800F74C18 /* TMXcenterSetupView.m */,
+				CD35D42C1DD2A6A700D54EE8 /* TMXAppLoginView.h */,
+				CD35D42D1DD2A6A700D54EE8 /* TMXAppLoginView.m */,
+				CD45EB0C1DD43F6800B55B11 /* TMXRegisterView.h */,
+				CD45EB0D1DD43F6800B55B11 /* TMXRegisterView.m */,
+				CD45EB0F1DD43F8000B55B11 /* TMXForgetView.h */,
+				CD45EB101DD43F8000B55B11 /* TMXForgetView.m */,
+				CDD79CBE1DD40C9100424852 /* TMXcommentFromMessageCell.h */,
+				CDD79CBF1DD40C9100424852 /* TMXcommentFromMessageCell.m */,
+				CDD79CC21DD40CE300424852 /* TMXleftViewFromMessageCell.h */,
+				CDD79CC31DD40CE300424852 /* TMXleftViewFromMessageCell.m */,
+				CD4DAF721DD5A75E001964EC /* TMXSetupCell.h */,
+				CD4DAF731DD5A75E001964EC /* TMXSetupCell.m */,
+				CD4DAF781DD5B1DE001964EC /* TMXFeedBackView.h */,
+				CD4DAF791DD5B1DE001964EC /* TMXFeedBackView.m */,
+				CD4DAF7E1DD5C6B6001964EC /* TMXAboutView.h */,
+				CD4DAF7F1DD5C6B6001964EC /* TMXAboutView.m */,
+				CDF0DA391DD6245200865139 /* TMXInfoPhotoCell.h */,
+				CDF0DA3A1DD6245200865139 /* TMXInfoPhotoCell.m */,
+				B9820FDA1DD84FB2000B05E9 /* TMXLogoutFooterView.h */,
+				B9820FDB1DD84FB2000B05E9 /* TMXLogoutFooterView.m */,
+				B90DD0BD1DD94B6D00901B16 /* TMXFeedbackTitleCell.h */,
+				B90DD0BE1DD94B6D00901B16 /* TMXFeedbackTitleCell.m */,
+				B90DD0C01DD94B9F00901B16 /* TMXFeedbackSuggestCell.h */,
+				B90DD0C11DD94B9F00901B16 /* TMXFeedbackSuggestCell.m */,
+				B90DD0C61DD9A6CC00901B16 /* TMXEditNickNameView.h */,
+				B90DD0C71DD9A6CC00901B16 /* TMXEditNickNameView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD406C231DC041A100ABC6FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B90E6FC41DDAF1D7007977ED /* TMXProfileModel.h */,
+				B90E6FC51DDAF1D7007977ED /* TMXProfileModel.m */,
+				B90E6FBE1DDADF1E007977ED /* TMXCollectModel.h */,
+				B90E6FBF1DDADF1E007977ED /* TMXCollectModel.m */,
+				B90E6FC01DDADF1E007977ED /* TMXLikeModel.h */,
+				B90E6FC11DDADF1E007977ED /* TMXLikeModel.m */,
+				B9F4B3271DD5A40800923915 /* TMXAccountRegisterModel.h */,
+				B9F4B3281DD5A40800923915 /* TMXAccountRegisterModel.m */,
+				B9F4B32A1DD5A4D800923915 /* TMXAccountModel.h */,
+				B9F4B32B1DD5A4D800923915 /* TMXAccountModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD4486661DC72836005E2567 /* Detail(详情页) */ = {
+			isa = PBXGroup;
+			children = (
+				CD4486691DC7289A005E2567 /* Views */,
+				CD4486681DC72888005E2567 /* Models */,
+				CD4486671DC72866005E2567 /* Controllers */,
+			);
+			path = "Detail(详情页)";
+			sourceTree = "<group>";
+		};
+		CD4486671DC72866005E2567 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD44866A1DC72A53005E2567 /* TMXDetailVC.h */,
+				CD44866B1DC72A53005E2567 /* TMXDetailVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD4486681DC72888005E2567 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD42996C1DC9B9D70043C8BA /* TMXHomeModelDetailModel.h */,
+				CD42996D1DC9B9D70043C8BA /* TMXHomeModelDetailModel.m */,
+				CD42996E1DC9B9D70043C8BA /* TMXUploadByUserModel.h */,
+				CD42996F1DC9B9D70043C8BA /* TMXUploadByUserModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD4486691DC7289A005E2567 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD522A831DC8954A003EDF04 /* Remark(评论) */,
+				CD4486821DC747F2005E2567 /* TMXHomeModelRemarkCell.h */,
+				CD4486831DC747F2005E2567 /* TMXHomeModelRemarkCell.m */,
+				CD44867F1DC74740005E2567 /* TMXHomeModelHeaderView.h */,
+				CD4486801DC74740005E2567 /* TMXHomeModelHeaderView.m */,
+				CD44867C1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.h */,
+				CD44867D1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.m */,
+				CD4486791DC74614005E2567 /* TMXHomeModelListCell.h */,
+				CD44867A1DC74614005E2567 /* TMXHomeModelListCell.m */,
+				CD4486761DC74530005E2567 /* TMXHomeIntroductModelCell.h */,
+				CD4486771DC74530005E2567 /* TMXHomeIntroductModelCell.m */,
+				CD4486731DC73F8C005E2567 /* TMXHomeDetailBrowseView.h */,
+				CD4486741DC73F8C005E2567 /* TMXHomeDetailBrowseView.m */,
+				CD44866D1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.h */,
+				CD44866E1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.m */,
+				CD4486701DC73B69005E2567 /* TMXDetailLeftSegmentCell.h */,
+				CD4486711DC73B69005E2567 /* TMXDetailLeftSegmentCell.m */,
+				B91065401DCC1DF600B201B6 /* TMXRemarkHeaderView.h */,
+				B91065411DCC1DF600B201B6 /* TMXRemarkHeaderView.m */,
+				B93528131DD0879F000EF459 /* TMXDetailSelectPrintView.h */,
+				B93528141DD0879F000EF459 /* TMXDetailSelectPrintView.m */,
+				B98645C01DD0ACD4008EF372 /* TMXSelectPrintCell.h */,
+				B98645C11DD0ACD4008EF372 /* TMXSelectPrintCell.m */,
+				B98645C31DD0B870008EF372 /* TMXSelectPrintHeaderView.h */,
+				B98645C41DD0B870008EF372 /* TMXSelectPrintHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD49CD6A1DB843D5008AD362 = {
+			isa = PBXGroup;
+			children = (
+				CD49CD751DB843D5008AD362 /* TMX3DPrinterHD */,
+				CD49CD8F1DB843D5008AD362 /* TMX3DPrinterHDTests */,
+				CD49CD9A1DB843D6008AD362 /* TMX3DPrinterHDUITests */,
+				CD49CD741DB843D5008AD362 /* Products */,
+				5671AE75C9185F65393C7B56 /* Pods */,
+				BDBA1BEE79545F53A475C3D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD49CD741DB843D5008AD362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD49CD731DB843D5008AD362 /* TMX3DPrinterHD.app */,
+				CD49CD8C1DB843D5008AD362 /* TMX3DPrinterHDTests.xctest */,
+				CD49CD971DB843D6008AD362 /* TMX3DPrinterHDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD49CD751DB843D5008AD362 /* TMX3DPrinterHD */ = {
+			isa = PBXGroup;
+			children = (
+				CD5173CE1DD9AB4900AA7702 /* TMX3DPrinterHD.entitlements */,
+				CD406C201DC0410100ABC6FD /* Profile(我的) */,
+				CD406C1C1DC0409400ABC6FD /* Design(创作) */,
+				CD406C181DC0401300ABC6FD /* Printer(打印机) */,
+				CD4FE3BD1DB868C00087DDD2 /* Home(首页) */,
+				CD4FE3C11DB8698D0087DDD2 /* Main(主要) */,
+				B9C5028E1DB89688007A6B82 /* Http */,
+				B907EDD11DB8758800C7A9FD /* Others */,
+				CD4FE3B11DB85ABF0087DDD2 /* Configuration */,
+				CD49CD791DB843D5008AD362 /* AppDelegate.h */,
+				CD49CD7A1DB843D5008AD362 /* AppDelegate.m */,
+				CD49CD7C1DB843D5008AD362 /* ViewController.h */,
+				CD49CD7D1DB843D5008AD362 /* ViewController.m */,
+				CD49CD7F1DB843D5008AD362 /* Main.storyboard */,
+				CD49CD821DB843D5008AD362 /* Assets.xcassets */,
+				CD49CD841DB843D5008AD362 /* LaunchScreen.storyboard */,
+				CD49CD871DB843D5008AD362 /* Info.plist */,
+				CD49CD761DB843D5008AD362 /* Supporting Files */,
+			);
+			path = TMX3DPrinterHD;
+			sourceTree = "<group>";
+		};
+		CD49CD761DB843D5008AD362 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD49CD771DB843D5008AD362 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD49CD8F1DB843D5008AD362 /* TMX3DPrinterHDTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD49CD901DB843D5008AD362 /* TMX3DPrinterHDTests.m */,
+				CD49CD921DB843D5008AD362 /* Info.plist */,
+			);
+			path = TMX3DPrinterHDTests;
+			sourceTree = "<group>";
+		};
+		CD49CD9A1DB843D6008AD362 /* TMX3DPrinterHDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD49CD9B1DB843D6008AD362 /* TMX3DPrinterHDUITests.m */,
+				CD49CD9D1DB843D6008AD362 /* Info.plist */,
+			);
+			path = TMX3DPrinterHDUITests;
+			sourceTree = "<group>";
+		};
+		CD4FE3B11DB85ABF0087DDD2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B9C502951DB8980A007A6B82 /* HeaderUrl.h */,
+				B9C502881DB89616007A6B82 /* FetchAppPublicKeyModel.h */,
+				B9C502891DB89616007A6B82 /* FetchAppPublicKeyModel.m */,
+				B9C5028A1DB89616007A6B82 /* TMXLoginInfoModel.h */,
+				B9C5028B1DB89616007A6B82 /* TMXLoginInfoModel.m */,
+				CD4FE3B21DB85ABF0087DDD2 /* PrefixHeader.pch */,
+				CD4FE3BA1DB860110087DDD2 /* TMXConst.h */,
+				CD4FE3BB1DB860110087DDD2 /* TMXConst.m */,
+				CD45EAF91DD412DD00B55B11 /* InfoPlist.strings */,
+				CD45EAFD1DD412E700B55B11 /* Localizable.strings */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CD4FE3BD1DB868C00087DDD2 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				B905F7881DD2C92600BB83DD /* Remark(模型评论) */,
+				B9F884851DD1825200807B0E /* Search(搜索) */,
+				B9F8846F1DD1611400807B0E /* Feedback(模型反馈) */,
+				CD00C5D31DCA32F1001FB8C7 /* Pinter(打印机) */,
+				B9EAE43A1DC843D600026966 /* Classify(分类列表) */,
+				CD4486661DC72836005E2567 /* Detail(详情页) */,
+				CD4FE3C01DB869600087DDD2 /* Models */,
+				CD4FE3BF1DB869160087DDD2 /* Views */,
+				CD4FE3BE1DB868F30087DDD2 /* Controllers */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		CD4FE3BE1DB868F30087DDD2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD64C4311DC197B8009073CA /* TMXAdvertiseWebVC.h */,
+				CD64C4321DC197B8009073CA /* TMXAdvertiseWebVC.m */,
+				CD4FE3C81DB8CE3B0087DDD2 /* TMXHomeVC.h */,
+				CD4FE3C91DB8CE3B0087DDD2 /* TMXHomeVC.m */,
+				CD3539A01DBF45E100692682 /* TMXTabBarVC.h */,
+				CD3539A11DBF45E100692682 /* TMXTabBarVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD4FE3BF1DB869160087DDD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9F884821DD175B300807B0E /* TMXHomeNavigationView.h */,
+				B9F884831DD175B300807B0E /* TMXHomeNavigationView.m */,
+				CD814C361DBD98590018AFE7 /* TMXHomeScrollViewCell.h */,
+				CD814C371DBD98590018AFE7 /* TMXHomeScrollViewCell.m */,
+				CD814C331DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.h */,
+				CD814C341DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.m */,
+				CD814C301DBD97EC0018AFE7 /* TMXHomeHeaderView.h */,
+				CD814C311DBD97EC0018AFE7 /* TMXHomeHeaderView.m */,
+				CD814C2D1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.h */,
+				CD814C2E1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.m */,
+				CD4FE3C51DB8CE020087DDD2 /* TMXHomLeftTabBar.h */,
+				CD4FE3C61DB8CE020087DDD2 /* TMXHomLeftTabBar.m */,
+				CD814C3C1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.h */,
+				CD814C3D1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.m */,
+				CD814C3F1DBDA0650018AFE7 /* TMXHome3DCustomView.h */,
+				CD814C401DBDA0650018AFE7 /* TMXHome3DCustomView.m */,
+				CD814C421DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.h */,
+				CD814C431DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.m */,
+				CD35399D1DBF2EB500692682 /* TMXHomeBackHeaderView.h */,
+				CD35399E1DBF2EB500692682 /* TMXHomeBackHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4FE3C01DB869600087DDD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD814C391DBD989C0018AFE7 /* TMXHomeModel.h */,
+				CD814C3A1DBD989C0018AFE7 /* TMXHomeModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD4FE3C11DB8698D0087DDD2 /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FE3C21DB86A150087DDD2 /* TMXBaseVC.h */,
+				CD4FE3C31DB86A150087DDD2 /* TMXBaseVC.m */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		CD522A831DC8954A003EDF04 /* Remark(评论) */ = {
+			isa = PBXGroup;
+			children = (
+				CD4299631DC976A10043C8BA /* TMXReplyCommentCell.h */,
+				CD4299641DC976A10043C8BA /* TMXReplyCommentCell.m */,
+				CD4299661DC977490043C8BA /* TMXSubReplyCell.h */,
+				CD4299671DC977490043C8BA /* TMXSubReplyCell.m */,
+				CD4299691DC977610043C8BA /* TMXMainReplyCell.h */,
+				CD42996A1DC977610043C8BA /* TMXMainReplyCell.m */,
+			);
+			path = "Remark(评论)";
+			sourceTree = "<group>";
+		};
+		CDEF77FD1DD205D500F9CCF5 /* FixPrinter(打印机调频) */ = {
+			isa = PBXGroup;
+			children = (
+				CDEF78001DD2070F00F9CCF5 /* Models */,
+				CDEF77FF1DD206FE00F9CCF5 /* Views */,
+				CDEF77FE1DD206E500F9CCF5 /* Controllers */,
+			);
+			path = "FixPrinter(打印机调频)";
+			sourceTree = "<group>";
+		};
+		CDEF77FE1DD206E500F9CCF5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDEF78071DD217FC00F9CCF5 /* TMXFixPrinterVC.h */,
+				CDEF78081DD217FC00F9CCF5 /* TMXFixPrinterVC.m */,
+				CD35D42F1DD2AE3700D54EE8 /* TMXBgFixPrinterVC.h */,
+				CD35D4301DD2AE3700D54EE8 /* TMXBgFixPrinterVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CDEF77FF1DD206FE00F9CCF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B905F7921DD3062700BB83DD /* printerCenter.gif */,
+				B905F7931DD3062700BB83DD /* printerInit.gif */,
+				B905F7941DD3062700BB83DD /* printerLeft.gif */,
+				B905F7951DD3062700BB83DD /* printerRight.gif */,
+				B905F7961DD3062700BB83DD /* printerTrail.gif */,
+				CDEF78041DD2160600F9CCF5 /* TMXFixPrinterView.h */,
+				CDEF78051DD2160600F9CCF5 /* TMXFixPrinterView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDEF78001DD2070F00F9CCF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EAEE1DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.h */,
+				CD45EAEF1DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD49CD721DB843D5008AD362 /* TMX3DPrinterHD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD49CDA01DB843D6008AD362 /* Build configuration list for PBXNativeTarget "TMX3DPrinterHD" */;
+			buildPhases = (
+				39EB2FA812E8C74B2ED473CB /* [CP] Check Pods Manifest.lock */,
+				CD49CD6F1DB843D5008AD362 /* Sources */,
+				CD49CD701DB843D5008AD362 /* Frameworks */,
+				CD49CD711DB843D5008AD362 /* Resources */,
+				B45996FD9ED83C61D98FEEB5 /* [CP] Embed Pods Frameworks */,
+				7427E0511143B826D14988E4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMX3DPrinterHD;
+			productName = TMX3DPrinterHD;
+			productReference = CD49CD731DB843D5008AD362 /* TMX3DPrinterHD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD49CD8B1DB843D5008AD362 /* TMX3DPrinterHDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD49CDA31DB843D6008AD362 /* Build configuration list for PBXNativeTarget "TMX3DPrinterHDTests" */;
+			buildPhases = (
+				CD49CD881DB843D5008AD362 /* Sources */,
+				CD49CD891DB843D5008AD362 /* Frameworks */,
+				CD49CD8A1DB843D5008AD362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD49CD8E1DB843D5008AD362 /* PBXTargetDependency */,
+			);
+			name = TMX3DPrinterHDTests;
+			productName = TMX3DPrinterHDTests;
+			productReference = CD49CD8C1DB843D5008AD362 /* TMX3DPrinterHDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD49CD961DB843D6008AD362 /* TMX3DPrinterHDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD49CDA61DB843D6008AD362 /* Build configuration list for PBXNativeTarget "TMX3DPrinterHDUITests" */;
+			buildPhases = (
+				CD49CD931DB843D6008AD362 /* Sources */,
+				CD49CD941DB843D6008AD362 /* Frameworks */,
+				CD49CD951DB843D6008AD362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD49CD991DB843D6008AD362 /* PBXTargetDependency */,
+			);
+			name = TMX3DPrinterHDUITests;
+			productName = TMX3DPrinterHDUITests;
+			productReference = CD49CD971DB843D6008AD362 /* TMX3DPrinterHDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD49CD6B1DB843D5008AD362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TMX;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = kobe;
+				TargetAttributes = {
+					CD49CD721DB843D5008AD362 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3R2H3395EZ;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					CD49CD8B1DB843D5008AD362 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8Z8YC3Y3RH;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD49CD721DB843D5008AD362;
+					};
+					CD49CD961DB843D6008AD362 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8Z8YC3Y3RH;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD49CD721DB843D5008AD362;
+					};
+				};
+			};
+			buildConfigurationList = CD49CD6E1DB843D5008AD362 /* Build configuration list for PBXProject "TMX3DPrinterHD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = CD49CD6A1DB843D5008AD362;
+			productRefGroup = CD49CD741DB843D5008AD362 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD49CD721DB843D5008AD362 /* TMX3DPrinterHD */,
+				CD49CD8B1DB843D5008AD362 /* TMX3DPrinterHDTests */,
+				CD49CD961DB843D6008AD362 /* TMX3DPrinterHDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD49CD711DB843D5008AD362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD49CD861DB843D5008AD362 /* LaunchScreen.storyboard in Resources */,
+				CD49CD831DB843D5008AD362 /* Assets.xcassets in Resources */,
+				B905F7971DD3062700BB83DD /* printerCenter.gif in Resources */,
+				CD49CD811DB843D5008AD362 /* Main.storyboard in Resources */,
+				B905F79B1DD3062700BB83DD /* printerTrail.gif in Resources */,
+				CD45EAFB1DD412E700B55B11 /* Localizable.strings in Resources */,
+				B905F7991DD3062700BB83DD /* printerLeft.gif in Resources */,
+				B905F79A1DD3062700BB83DD /* printerRight.gif in Resources */,
+				CD45EAF71DD412DD00B55B11 /* InfoPlist.strings in Resources */,
+				B905F7981DD3062700BB83DD /* printerInit.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD49CD8A1DB843D5008AD362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD49CD951DB843D6008AD362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39EB2FA812E8C74B2ED473CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7427E0511143B826D14988E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMX3DPrinterHD/Pods-TMX3DPrinterHD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B45996FD9ED83C61D98FEEB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMX3DPrinterHD/Pods-TMX3DPrinterHD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD49CD6F1DB843D5008AD362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B911D6291DD456DC0028F4DC /* TMXConnectWifiVC.m in Sources */,
+				1C863CF51DD06622008490E6 /* TMXRemoveBindPrinterDescribeCell.m in Sources */,
+				1C70E3371DCB41C40087ADA1 /* TMXBindPrinterTaskListTableViewCell.m in Sources */,
+				B98645C21DD0ACD4008EF372 /* TMXSelectPrintCell.m in Sources */,
+				B907EE2E1DB8758800C7A9FD /* UIView+Extension.m in Sources */,
+				CD45EB011DD417DC00B55B11 /* TMXLoginVC.m in Sources */,
+				B9F8847D1DD1611400807B0E /* TMXProblemFeedbackVC.m in Sources */,
+				B9C5028D1DB89616007A6B82 /* TMXLoginInfoModel.m in Sources */,
+				1C5217B91DC7218800974992 /* TMXShareUserListViewController.m in Sources */,
+				CD49CD7E1DB843D5008AD362 /* ViewController.m in Sources */,
+				B9F884811DD1611400807B0E /* TMXProblemFeedbackCell.m in Sources */,
+				B9F884801DD1611400807B0E /* TMXHeadView.m in Sources */,
+				CD814C3E1DBD9B460018AFE7 /* TMXHomeDisplayModelCell.m in Sources */,
+				B90E6FC31DDADF1F007977ED /* TMXLikeModel.m in Sources */,
+				CD4DAF6E1DD59C57001964EC /* TMXBgSetupVC.m in Sources */,
+				CD814C411DBDA0650018AFE7 /* TMXHome3DCustomView.m in Sources */,
+				1C7514701DC1F0540043B055 /* TMXPopMenuFirstCell.m in Sources */,
+				CD00C5D91DCA36CF001FB8C7 /* TMXPrinterControlVC.m in Sources */,
+				B9ACBB9F1DCABF5C006D9DD0 /* TMXUploadModelCell.m in Sources */,
+				B93528151DD0879F000EF459 /* TMXDetailSelectPrintView.m in Sources */,
+				1C70E3311DCAE11C0087ADA1 /* TMXBindPrinterTaskListViewController.m in Sources */,
+				B90DD0C51DD9A58D00901B16 /* TMXEditNickNameVC.m in Sources */,
+				B9ACBBA21DCAD22E006D9DD0 /* TMXNullModelView.m in Sources */,
+				B907EE351DB8758800C7A9FD /* KBAnimationTool.m in Sources */,
+				CD45EB111DD43F8000B55B11 /* TMXForgetView.m in Sources */,
+				B9F884841DD175B300807B0E /* TMXHomeNavigationView.m in Sources */,
+				B9C502941DB89688007A6B82 /* KBHttpTool.m in Sources */,
+				CD814C441DBDA0AB0018AFE7 /* TMXHomeScrollView3DCell.m in Sources */,
+				B907EE371DB8758800C7A9FD /* KBMenuItem.m in Sources */,
+				B90DD0C21DD94B9F00901B16 /* TMXFeedbackSuggestCell.m in Sources */,
+				B9F4B32C1DD5A4D800923915 /* TMXAccountModel.m in Sources */,
+				CD4299701DC9B9D70043C8BA /* TMXHomeModelDetailModel.m in Sources */,
+				CD4299681DC977490043C8BA /* TMXSubReplyCell.m in Sources */,
+				CD4DAF741DD5A75E001964EC /* TMXSetupCell.m in Sources */,
+				B907EE271DB8758800C7A9FD /* NSDate+KBExtension.m in Sources */,
+				1C5075F21DD4219E00948E7B /* TMXQRContentView.m in Sources */,
+				CD4DAF771DD5B150001964EC /* TMXFeedBackVC.m in Sources */,
+				B907EE1E1DB8758800C7A9FD /* KBNavigationVC.m in Sources */,
+				CD4FE3BC1DB860110087DDD2 /* TMXConst.m in Sources */,
+				CDF0DA3B1DD6245200865139 /* TMXInfoPhotoCell.m in Sources */,
+				B9EAE4401DC8615700026966 /* TMXClassifyVC.m in Sources */,
+				CD44866C1DC72A53005E2567 /* TMXDetailVC.m in Sources */,
+				B9F8848E1DD1A2A200807B0E /* TMXSearchNavigationView.m in Sources */,
+				B90E6FC61DDAF1D7007977ED /* TMXProfileModel.m in Sources */,
+				CD4FE3CA1DB8CE3B0087DDD2 /* TMXHomeVC.m in Sources */,
+				B91065421DCC1DF600B201B6 /* TMXRemarkHeaderView.m in Sources */,
+				CD4DAF7A1DD5B1DE001964EC /* TMXFeedBackView.m in Sources */,
+				B911D62E1DD456DC0028F4DC /* TMXPrinterStatusWifiView.m in Sources */,
+				B905F7871DD2AD4D00BB83DD /* TMXHomeSearchModel.m in Sources */,
+				B907EE2C1DB8758800C7A9FD /* UITableView+KBCacheHeight.m in Sources */,
+				CD814C3B1DBD989C0018AFE7 /* TMXHomeModel.m in Sources */,
+				CD814C2F1DBD976B0018AFE7 /* TMXHomeJqueryHeaderView.m in Sources */,
+				CD49CD7B1DB843D5008AD362 /* AppDelegate.m in Sources */,
+				B9C502931DB89688007A6B82 /* BaseModel.m in Sources */,
+				1C70E32E1DCAE1010087ADA1 /* TMXSharePrinterTaskListViewController.m in Sources */,
+				1C5616231DD2A734003104E8 /* TMXSelectUserCell.m in Sources */,
+				B911D62F1DD456DC0028F4DC /* TMXSelectWifiView.m in Sources */,
+				1C5EE1121DC9B784006AF452 /* TMXMotifyPrinterNameView.m in Sources */,
+				B9F884911DD1B39B00807B0E /* TMXSearchHistoryCell.m in Sources */,
+				1C70E3341DCAE7DC0087ADA1 /* TMXSharePrinterTaskListTableViewCell.m in Sources */,
+				B911D6281DD456DC0028F4DC /* TMXAddPrinterWifiVC.m in Sources */,
+				CD4DAF801DD5C6B6001964EC /* TMXAboutView.m in Sources */,
+				CD4DAF7D1DD5C693001964EC /* TMXAboutVC.m in Sources */,
+				1C7514661DC19EBA0043B055 /* TMXPrinterHeadView.m in Sources */,
+				1C863CF81DD07476008490E6 /* TMXSelectRemovePrinterObjCell.m in Sources */,
+				B907EE1F1DB8758800C7A9FD /* KBRegexp.m in Sources */,
+				B905F7911DD2CF8A00BB83DD /* TMXCommentBottomView.m in Sources */,
+				CD00C5E21DCA39C0001FB8C7 /* TMXPrinterControlView.m in Sources */,
+				B9C5028C1DB89616007A6B82 /* FetchAppPublicKeyModel.m in Sources */,
+				CD4486751DC73F8C005E2567 /* TMXHomeDetailBrowseView.m in Sources */,
+				CD3539A21DBF45E100692682 /* TMXTabBarVC.m in Sources */,
+				CD7CADF81DCB420200C7F033 /* TMXProfileVC.m in Sources */,
+				CD00C5DC1DCA37A1001FB8C7 /* TMXPrinterStatusCell.m in Sources */,
+				B907EE201DB8758800C7A9FD /* KBRSA.m in Sources */,
+				CD44866F1DC72F1A005E2567 /* TMXDetailLeftJqueryHeader.m in Sources */,
+				1C863CF21DD05F49008490E6 /* TMXremoveBindPrinterView.m in Sources */,
+				B907EE2A1DB8758800C7A9FD /* UIBarButtonItem+KBExtension.m in Sources */,
+				B907EE1B1DB8758800C7A9FD /* KBGuideViewController.m in Sources */,
+				1C63C5001DCC2EF10086BDFD /* TMXTaskSaveTableViewCell.m in Sources */,
+				B907EE1D1DB8758800C7A9FD /* KBLabel.m in Sources */,
+				B9F884941DD1C3B100807B0E /* TMXSearchHistoryHeader.m in Sources */,
+				CD4486811DC74740005E2567 /* TMXHomeModelHeaderView.m in Sources */,
+				1C7514691DC19F670043B055 /* TMXPrinterListTableViewCell.m in Sources */,
+				1C5217C41DC7456D00974992 /* TMXSharePrinterView.m in Sources */,
+				1C5217BC1DC7283700974992 /* TMXShareUserListCell.m in Sources */,
+				1C6D82BF1DC2F04500E9ABDD /* TMXBindPrinterSwitchCell.m in Sources */,
+				B907EE251DB8758800C7A9FD /* MBProgressHUD+KBExtension.m in Sources */,
+				1C6D82C21DC31C4500E9ABDD /* TMXUnBindPrinterSelectionView.m in Sources */,
+				B907EE2D1DB8758800C7A9FD /* UITableViewCell+KBMasonryCellHeight.m in Sources */,
+				CD406C261DC0454200ABC6FD /* TMXDesignVC.m in Sources */,
+				B907EE161DB8758800C7A9FD /* KBDateFormatter.m in Sources */,
+				B907EE171DB8758800C7A9FD /* KBDragTableView.m in Sources */,
+				CD35D42E1DD2A6A700D54EE8 /* TMXAppLoginView.m in Sources */,
+				B90DD0BF1DD94B6D00901B16 /* TMXFeedbackTitleCell.m in Sources */,
+				B90DD0C81DD9A6CC00901B16 /* TMXEditNickNameView.m in Sources */,
+				B9F8848B1DD1828300807B0E /* TMXModelSearchVC.m in Sources */,
+				1C5075EF1DD4206000948E7B /* TMXCreateQRcodeView.m in Sources */,
+				CD45EB0B1DD41B1F00B55B11 /* TMXBgLoginVC.m in Sources */,
+				B907EE381DB8758800C7A9FD /* UILabel+KBExtension.m in Sources */,
+				B9F8847E1DD1611400807B0E /* TMXFeedbackModel.m in Sources */,
+				1C75146D1DC1D7360043B055 /* TMXBindPrinterSelectionView.m in Sources */,
+				B907EE2B1DB8758800C7A9FD /* UINavigationBar+Awesome.m in Sources */,
+				B907EE221DB8758800C7A9FD /* KBTextView.m in Sources */,
+				B911D62D1DD456DC0028F4DC /* TMXConnectPrinterWifiView.m in Sources */,
+				CDF0DA351DD6051E00865139 /* TMXBgInfoSetupVC.m in Sources */,
+				B907EE361DB8758800C7A9FD /* KBLeftMenuBar.m in Sources */,
+				B907EE1C1DB8758800C7A9FD /* KBJquery.m in Sources */,
+				1C6AE9F01DD1AEE400A6AB65 /* TMXSelectUserView.m in Sources */,
+				B907EE281DB8758800C7A9FD /* NSObject+KBExtension.m in Sources */,
+				B911D62A1DD456DC0028F4DC /* TMXStatusWifiVC.m in Sources */,
+				B907EE261DB8758800C7A9FD /* NSArray+KBExtension.m in Sources */,
+				B907EE181DB8758800C7A9FD /* KBDropMenuView.m in Sources */,
+				1C6AE9F31DD1B87E00A6AB65 /* TMXSelectUserHeadCell.m in Sources */,
+				B9820FDC1DD84FB2000B05E9 /* TMXLogoutFooterView.m in Sources */,
+				CD45EB081DD4186400B55B11 /* TMXForgetVC.m in Sources */,
+				CD4299711DC9B9D70043C8BA /* TMXUploadByUserModel.m in Sources */,
+				CD00C5DF1DCA37E6001FB8C7 /* TMXPrinterHistoryCell.m in Sources */,
+				B911D62C1DD456DC0028F4DC /* TMXAddPrinterWifiView.m in Sources */,
+				B907EE241DB8758800C7A9FD /* KBtopImgBottomTextBtn.m in Sources */,
+				CD35D4311DD2AE3700D54EE8 /* TMXBgFixPrinterVC.m in Sources */,
+				1C5217BF1DC7323400974992 /* TMXShareUserLisetHeadView.m in Sources */,
+				CDD79CC11DD40C9100424852 /* TMXcommentFromMessageCell.m in Sources */,
+				B91868531DC9D9A400C0AD2D /* TMXLoginHeaderView.m in Sources */,
+				CD4299651DC976A10043C8BA /* TMXReplyCommentCell.m in Sources */,
+				CDF0DA381DD6053C00865139 /* TMXInfoVC.m in Sources */,
+				B907EE231DB8758800C7A9FD /* KBTimer.m in Sources */,
+				CD814C381DBD98590018AFE7 /* TMXHomeScrollViewCell.m in Sources */,
+				CDEF78091DD217FC00F9CCF5 /* TMXFixPrinterVC.m in Sources */,
+				B9F8847F1DD1611400807B0E /* TMXFeedbackBottomView.m in Sources */,
+				1C5EE1151DC9B834006AF452 /* TMXMotifyPrinterNameContentView.m in Sources */,
+				1C63C4FA1DCC28820086BDFD /* TMXBindPrintingTaskListTableViewCell.m in Sources */,
+				B9EAE4431DC86C9700026966 /* TMXHomeClassifyListModel.m in Sources */,
+				CD406C291DC04A6200ABC6FD /* TMXDesignCell.m in Sources */,
+				B91868501DC9CB7700C0AD2D /* TMXNotLoginView.m in Sources */,
+				B907EE191DB8758800C7A9FD /* KBFetchSystemInfo.m in Sources */,
+				B907EE1A1DB8758800C7A9FD /* KBGCDTimerManager.m in Sources */,
+				CD369EEB1DCC802800F74C18 /* TMXcenterSetupView.m in Sources */,
+				CDD79CC41DD40CE300424852 /* TMXleftViewFromMessageCell.m in Sources */,
+				B907EE211DB8758800C7A9FD /* KBSegmentView.m in Sources */,
+				CD42996B1DC977610043C8BA /* TMXMainReplyCell.m in Sources */,
+				1C63C4FD1DCC2D020086BDFD /* TMXPrintedAndCancelPrintTableViewCell.m in Sources */,
+				CD45EB0E1DD43F6800B55B11 /* TMXRegisterView.m in Sources */,
+				CD64C4331DC197B8009073CA /* TMXAdvertiseWebVC.m in Sources */,
+				CD45EB051DD4183200B55B11 /* TMXRegisterVC.m in Sources */,
+				CD4486841DC747F2005E2567 /* TMXHomeModelRemarkCell.m in Sources */,
+				B9F4B3291DD5A40800923915 /* TMXAccountRegisterModel.m in Sources */,
+				CDD79CC01DD40C9100424852 /* TMXmyMessageController.m in Sources */,
+				CD4FE3C71DB8CE020087DDD2 /* TMXHomLeftTabBar.m in Sources */,
+				CD35399F1DBF2EB500692682 /* TMXHomeBackHeaderView.m in Sources */,
+				CDD535D41DCB1291002E4379 /* TMXPrinterStatusHeader.m in Sources */,
+				CD406C361DC08A7F00ABC6FD /* TMXPrinterVC.m in Sources */,
+				CD44867E1DC746CB005E2567 /* TMXHomeUpLoadUserInfoCell.m in Sources */,
+				CD406C331DC0614B00ABC6FD /* TMXProfileSegmentCell.m in Sources */,
+				1C5EE10D1DC98062006AF452 /* TMXSharePrinterCell.m in Sources */,
+				CD814C321DBD97EC0018AFE7 /* TMXHomeHeaderView.m in Sources */,
+				CD44867B1DC74614005E2567 /* TMXHomeModelListCell.m in Sources */,
+				B911D6271DD456DC0028F4DC /* TMXAddPrinterVC.m in Sources */,
+				CD406C2F1DC05AB100ABC6FD /* TMXProfileHeaderView.m in Sources */,
+				B90E6FC21DDADF1F007977ED /* TMXCollectModel.m in Sources */,
+				CDEF78061DD2160600F9CCF5 /* TMXFixPrinterView.m in Sources */,
+				B9F4B32F1DD5CC7D00923915 /* TMXAddPrinterModel.m in Sources */,
+				CD4486721DC73B69005E2567 /* TMXDetailLeftSegmentCell.m in Sources */,
+				CD49CD781DB843D5008AD362 /* main.m in Sources */,
+				CD814C351DBD98280018AFE7 /* TMXHomeDisplayAdvertCell.m in Sources */,
+				CD4486781DC74530005E2567 /* TMXHomeIntroductModelCell.m in Sources */,
+				B907EE291DB8758800C7A9FD /* NSString+KBExtension.m in Sources */,
+				B905F78E1DD2CA1300BB83DD /* TMXModelCommentVC.m in Sources */,
+				CD4FE3C41DB86A150087DDD2 /* TMXBaseVC.m in Sources */,
+				B98645C51DD0B870008EF372 /* TMXSelectPrintHeaderView.m in Sources */,
+				CD45EAF01DD40BAD00B55B11 /* TMXAccountPrinterCommandModel.m in Sources */,
+				CD4DAF711DD59C74001964EC /* TMXSetupVC.m in Sources */,
+				CDE84B351DCC2483001C60A6 /* TMXpersonalSetupView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD49CD881DB843D5008AD362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD535D01DCABC7E002E4379 /* TMXPrinterStatusCell.m in Sources */,
+				CD49CD911DB843D5008AD362 /* TMX3DPrinterHDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD49CD931DB843D6008AD362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD49CD9C1DB843D6008AD362 /* TMX3DPrinterHDUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD49CD8E1DB843D5008AD362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD49CD721DB843D5008AD362 /* TMX3DPrinterHD */;
+			targetProxy = CD49CD8D1DB843D5008AD362 /* PBXContainerItemProxy */;
+		};
+		CD49CD991DB843D6008AD362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD49CD721DB843D5008AD362 /* TMX3DPrinterHD */;
+			targetProxy = CD49CD981DB843D6008AD362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD45EAF91DD412DD00B55B11 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD45EAF81DD412DD00B55B11 /* en */,
+				CD45EAFA1DD412DF00B55B11 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CD45EAFD1DD412E700B55B11 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD45EAFC1DD412E700B55B11 /* en */,
+				CD45EAFE1DD412E800B55B11 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CD49CD7F1DB843D5008AD362 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD49CD801DB843D5008AD362 /* Base */,
+				CD45EAF51DD412D000B55B11 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD49CD841DB843D5008AD362 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD49CD851DB843D5008AD362 /* Base */,
+				CD45EAF61DD412D000B55B11 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD49CD9E1DB843D6008AD362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8Z8YC3Y3RH;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "798b442a-b5e5-4ff0-afc4-50250b0d6a50";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CD49CD9F1DB843D6008AD362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8Z8YC3Y3RH;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "798b442a-b5e5-4ff0-afc4-50250b0d6a50";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD49CDA11DB843D6008AD362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5486E1D783779F7B559AF2C1 /* Pods-TMX3DPrinterHD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TMX3DPrinterHD/TMX3DPrinterHD.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3R2H3395EZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TMX3DPrinterHD/Configuration/PrefixHeader.pch";
+				INFOPLIST_FILE = TMX3DPrinterHD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.madun.Yeehaw3DHDGlobal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		CD49CDA21DB843D6008AD362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 141D3B2C1D978B1184475F8C /* Pods-TMX3DPrinterHD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TMX3DPrinterHD/TMX3DPrinterHD.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3R2H3395EZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TMX3DPrinterHD/Configuration/PrefixHeader.pch";
+				INFOPLIST_FILE = TMX3DPrinterHD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.madun.Yeehaw3DHDGlobal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		CD49CDA41DB843D6008AD362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TMX3DPrinterHDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobe.TMX3DPrinterHDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMX3DPrinterHD.app/TMX3DPrinterHD";
+			};
+			name = Debug;
+		};
+		CD49CDA51DB843D6008AD362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TMX3DPrinterHDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobe.TMX3DPrinterHDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMX3DPrinterHD.app/TMX3DPrinterHD";
+			};
+			name = Release;
+		};
+		CD49CDA71DB843D6008AD362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TMX3DPrinterHDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobe.TMX3DPrinterHDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TMX3DPrinterHD;
+			};
+			name = Debug;
+		};
+		CD49CDA81DB843D6008AD362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TMX3DPrinterHDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobe.TMX3DPrinterHDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TMX3DPrinterHD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD49CD6E1DB843D5008AD362 /* Build configuration list for PBXProject "TMX3DPrinterHD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD49CD9E1DB843D6008AD362 /* Debug */,
+				CD49CD9F1DB843D6008AD362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD49CDA01DB843D6008AD362 /* Build configuration list for PBXNativeTarget "TMX3DPrinterHD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD49CDA11DB843D6008AD362 /* Debug */,
+				CD49CDA21DB843D6008AD362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD49CDA31DB843D6008AD362 /* Build configuration list for PBXNativeTarget "TMX3DPrinterHDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD49CDA41DB843D6008AD362 /* Debug */,
+				CD49CDA51DB843D6008AD362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD49CDA61DB843D6008AD362 /* Build configuration list for PBXNativeTarget "TMX3DPrinterHDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD49CDA71DB843D6008AD362 /* Debug */,
+				CD49CDA81DB843D6008AD362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD49CD6B1DB843D5008AD362 /* Project object */;
+}

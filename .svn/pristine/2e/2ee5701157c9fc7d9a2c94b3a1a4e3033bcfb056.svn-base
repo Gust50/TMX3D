@@ -1,0 +1,271 @@
+//
+//  TMXProfileSegmentCell.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/10/26.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXProfileSegmentCell.h"
+#import "KBtopImgBottomTextBtn.h"
+
+@interface TMXProfileSegmentCell()<KBtopImgBottomTextBtnDelegate>
+@property (nonatomic, strong) UIView *backView;
+@property (nonatomic, strong) KBtopImgBottomTextBtn *upLoadBtn;
+@property (nonatomic, strong) KBtopImgBottomTextBtn *likeBtn;
+@property (nonatomic, strong) KBtopImgBottomTextBtn *collectBtn;
+@property (nonatomic, strong) UIView *lineOne;
+@property (nonatomic, strong) UIView *lineTwo;
+@property (nonatomic, strong) UIView *bottomLineOne;
+@property (nonatomic, strong) UIView *bottomLineTwo;
+@property (nonatomic, strong) UIView *bottomLineThree;
+@end
+
+@implementation TMXProfileSegmentCell
+
+-(UIView *)backView
+{
+    if (!_backView) {
+        _backView = [UIView new];
+        _backView.backgroundColor = [UIColor whiteColor];
+    }
+    return _backView;
+}
+
+-(KBtopImgBottomTextBtn *)upLoadBtn
+{
+    if (!_upLoadBtn) {
+        _upLoadBtn = [KBtopImgBottomTextBtn new];
+        _upLoadBtn.iconUrl = @"UploadModel";
+        _upLoadBtn.textFont = [UIFont systemFontOfSize:12];
+        _upLoadBtn.textColor = RGBColor(143, 143, 143);
+        _upLoadBtn.nameContent = @"我上传的模型";
+        _upLoadBtn.btnTag = 1;
+        _upLoadBtn.delegate = self;
+    }
+    return _upLoadBtn;
+}
+
+-(KBtopImgBottomTextBtn *)likeBtn
+{
+    if (!_likeBtn) {
+        _likeBtn = [KBtopImgBottomTextBtn new];
+        _likeBtn.iconUrl = @"LikeModel";
+        _likeBtn.textFont = [UIFont systemFontOfSize:12];
+        _likeBtn.textColor = RGBColor(143, 143, 143);
+        _likeBtn.nameContent = @"我喜欢的模型";
+        _likeBtn.btnTag = 2;
+        _likeBtn.delegate = self;
+    }
+    return _likeBtn;
+}
+
+-(KBtopImgBottomTextBtn *)collectBtn
+{
+    if (!_collectBtn) {
+        _collectBtn = [KBtopImgBottomTextBtn new];
+        _collectBtn.iconUrl = @"CollectModel";
+        _collectBtn.textFont = [UIFont systemFontOfSize:12];
+        _collectBtn.textColor = RGBColor(143, 143, 143);
+        _collectBtn.nameContent = @"我收藏的模型";
+        _collectBtn.btnTag = 3;
+        _collectBtn.delegate = self;
+    }
+    return _collectBtn;
+}
+
+-(UIView *)lineOne
+{
+    if (!_lineOne) {
+        _lineOne = [UIView new];
+        _lineOne.backgroundColor = RGBColor(245, 245, 245);
+    }
+    return _lineOne;
+}
+
+-(UIView *)lineTwo
+{
+    if (!_lineTwo) {
+        _lineTwo = [UIView new];
+        _lineTwo.backgroundColor = RGBColor(245, 245, 245);
+    }
+    return _lineTwo;
+}
+
+-(UIView *)bottomLineOne
+{
+    if (!_bottomLineOne) {
+        _bottomLineOne = [UIView new];
+        _bottomLineOne.backgroundColor = systemColor;
+    }
+    return _bottomLineOne;
+}
+
+-(UIView *)bottomLineTwo
+{
+    if (!_bottomLineTwo) {
+        _bottomLineTwo = [UIView new];
+        _bottomLineTwo.backgroundColor = systemColor;
+    }
+    return _bottomLineTwo;
+}
+
+-(UIView *)bottomLineThree
+{
+    if (!_bottomLineThree) {
+        _bottomLineThree = [UIView new];
+        _bottomLineThree.backgroundColor = systemColor;
+    }
+    return _bottomLineThree;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    if (self == [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor blueColor];
+        [self initUI];
+        if ([FetchAppPublicKeyModel shareAppPublicKeyManager].isLogin) {
+            self.bottomLineOne.hidden = NO;
+            self.bottomLineTwo.hidden = YES;
+            self.bottomLineThree.hidden = YES;
+            self.bottomLineOne.userInteractionEnabled = YES;
+            self.bottomLineTwo.userInteractionEnabled = YES;
+            self.bottomLineThree.userInteractionEnabled = YES;
+        }else
+        {
+            self.bottomLineOne.hidden = YES;
+            self.bottomLineTwo.hidden = YES;
+            self.bottomLineThree.hidden = YES;
+            self.bottomLineOne.userInteractionEnabled = NO;
+            self.bottomLineTwo.userInteractionEnabled = NO;
+            self.bottomLineThree.userInteractionEnabled = NO;
+        }
+        
+    }
+    return self;
+}
+
+-(void)initUI{
+    
+    [self addSubview:self.backView];
+    [self addSubview:self.upLoadBtn];
+    [self addSubview:self.likeBtn];
+    [self addSubview:self.collectBtn];
+    [self addSubview:self.lineOne];
+    [self addSubview:self.lineTwo];
+    [self.backView addSubview:self.bottomLineOne];
+    [self.backView addSubview:self.bottomLineThree];
+    [self.backView addSubview:self.bottomLineTwo];
+}
+
+-(void)updateConstraints{
+    [super updateConstraints];
+    
+    WS(weakSelf);
+    
+    [_backView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left);
+        make.top.equalTo(weakSelf.mas_top);
+        make.right.equalTo(weakSelf.mas_right);
+        make.bottom.equalTo(weakSelf.mas_bottom);
+    }];
+    
+    [_upLoadBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left);
+        make.top.equalTo(weakSelf.mas_top).offset(5);
+        make.width.mas_equalTo((weakSelf.width-2)/3);
+        make.bottom.equalTo(weakSelf.mas_bottom).offset(-5);
+    }];
+    
+    [_lineOne mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(_likeBtn.mas_left);
+        make.top.equalTo(weakSelf.mas_top).with.offset(5);
+        make.bottom.equalTo(weakSelf.mas_bottom).with.offset(-5);
+        make.width.mas_equalTo(@(1));
+    }];
+    
+    [_likeBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakSelf.mas_centerX);
+        make.top.equalTo(weakSelf.mas_top).offset(5);
+        make.bottom.equalTo(weakSelf.mas_bottom).offset(-5);
+        make.width.mas_equalTo((weakSelf.width-2)/3);
+    }];
+    
+    [_lineTwo mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_likeBtn.mas_right);
+        make.top.equalTo(weakSelf.mas_top).with.offset(5);
+        make.bottom.equalTo(weakSelf.mas_bottom).with.offset(-5);
+        make.width.mas_equalTo(@(1));
+    }];
+    
+    [_collectBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(weakSelf.mas_right);
+        make.top.equalTo(weakSelf.mas_top).offset(5);
+        make.bottom.equalTo(weakSelf.mas_bottom).offset(-5);
+        make.width.mas_equalTo((weakSelf.width-2)/3);
+    }];
+    
+    [_bottomLineOne mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left);
+        make.right.equalTo(_lineOne.mas_centerX);
+        make.bottom.equalTo(_backView.mas_bottom);
+        make.height.mas_equalTo(@(1));
+    }];
+    
+    [_bottomLineTwo mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_likeBtn.mas_left);
+        make.right.equalTo(_lineTwo.mas_centerX);
+        make.bottom.equalTo(_backView.mas_bottom);
+        make.height.mas_equalTo(@(1));
+    }];
+    [_bottomLineThree mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_lineTwo.mas_centerX);
+        make.right.equalTo(weakSelf.mas_right);
+        make.bottom.equalTo(_backView.mas_bottom);
+        make.height.mas_equalTo(@(1));
+    }];
+}
+
+#pragma mark <KBtopImgBottomTextBtnDelegate>
+-(void)clickBtnTag:(NSInteger)btnTag
+{
+    if ([FetchAppPublicKeyModel shareAppPublicKeyManager].isLogin) {
+        if (btnTag == 1) {
+            self.bottomLineOne.hidden = NO;
+            self.bottomLineTwo.hidden = YES;
+            self.bottomLineThree.hidden = YES;
+        }else if (btnTag == 2)
+        {
+            self.bottomLineOne.hidden = YES;
+            self.bottomLineTwo.hidden = NO;
+            self.bottomLineThree.hidden = YES;
+        }else if (btnTag == 3)
+        {
+            self.bottomLineOne.hidden = YES;
+            self.bottomLineTwo.hidden = YES;
+            self.bottomLineThree.hidden = NO;
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(clickTag:)]) {
+            [self.delegate clickTag:btnTag];
+        }
+    }else
+    {
+        self.bottomLineOne.hidden = YES;
+        self.bottomLineTwo.hidden = YES;
+        self.bottomLineThree.hidden = YES;
+        self.bottomLineOne.userInteractionEnabled = NO;
+        self.bottomLineTwo.userInteractionEnabled = NO;
+        self.bottomLineThree.userInteractionEnabled = NO;
+    }
+    
+}
+
+-(void)setIsUpdateUI:(BOOL)isUpdateUI{
+    
+    LRLog(@"------------视图大小啊-------------%@",NSStringFromCGSize(self.frame.size));
+    if (isUpdateUI) {
+        [self setNeedsUpdateConstraints];
+    }
+}
+
+@end

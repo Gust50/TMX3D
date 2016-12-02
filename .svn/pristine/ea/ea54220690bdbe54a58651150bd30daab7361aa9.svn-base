@@ -1,0 +1,288 @@
+//
+//  TMXAddPrinterWifiView.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/11/7.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXAddPrinterWifiView.h"
+
+@interface TMXAddPrinterWifiView ()
+{
+    BOOL isSelectWifiV;
+}
+
+@property (nonatomic, strong) UIImageView *icon;
+@property (nonatomic, strong) UIView * loginView;
+@property (nonatomic, strong) UITextField *nameField;
+@property (nonatomic, strong) UIButton *arrowBtn;
+@property (nonatomic, strong) UITextField *passwordField;
+@property (nonatomic, strong) UIButton *showBtn;
+@property (nonatomic, strong) UIView *middleLine;
+
+
+@property (nonatomic, strong) UIButton *rememberBtn;
+@property (nonatomic, strong) UIButton *loginBtn;
+@end
+
+@implementation TMXAddPrinterWifiView
+
+-(UIImageView *)icon{
+    if (!_icon) {
+        _icon=[UIImageView new];
+        _icon.image = [UIImage imageNamed:@"SelectWiFiView"];
+    }
+    return _icon;
+}
+
+-(UITextField *)nameField{
+    if (!_nameField) {
+        _nameField=[UITextField new];
+        _nameField.placeholder = @"请选择需要连接的wifi";
+        _nameField.font = [UIFont systemFontOfSize:13];
+    }
+    return _nameField;
+}
+
+-(UIButton *)arrowBtn{
+    if (!_arrowBtn) {
+        _arrowBtn=[UIButton buttonWithType:0];
+        [_arrowBtn setImage:[UIImage imageNamed:@"BottomArrowIcon"] forState:UIControlStateNormal];
+        [_arrowBtn addTarget:self action:@selector(selectWifiName:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _arrowBtn;
+}
+
+-(UITextField *)passwordField{
+    if (!_passwordField) {
+        _passwordField=[UITextField new];
+        _passwordField.placeholder = @"请输入wifi密码";
+        _passwordField.font = [UIFont systemFontOfSize:13];
+        _passwordField.secureTextEntry = YES;
+    }
+    return _passwordField;
+}
+
+-(UIButton *)showBtn{
+    if (!_showBtn) {
+        _showBtn=[UIButton buttonWithType:0];
+        _showBtn.selected = NO;
+        [_showBtn setImage:[UIImage imageNamed:@"NoDisplayPassword"] forState:UIControlStateNormal];
+        [_showBtn setImage:[UIImage imageNamed:@"DisplayPassword"] forState:UIControlStateSelected];
+        [_showBtn addTarget:self action:@selector(isSeePassword:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _showBtn;
+}
+
+-(UIView *)middleLine{
+    if (!_middleLine) {
+        _middleLine=[UIView new];
+        _middleLine.backgroundColor = RGBColor(236, 237, 237);
+    }
+    return _middleLine;
+}
+
+-(UIButton *)rememberBtn{
+    if (!_rememberBtn) {
+        _rememberBtn=[UIButton buttonWithType:0];
+        _rememberBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+        [_rememberBtn setTitle:@"记住Wi-Fi密码" forState:UIControlStateNormal];
+        [_rememberBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_rememberBtn setImage:[UIImage imageNamed:@"NoSelectIcon"] forState:UIControlStateNormal];
+        [_rememberBtn setImage:[UIImage imageNamed:@"SelectIcon"] forState:UIControlStateSelected];
+        _rememberBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        [_rememberBtn addTarget:self action:@selector(isRememberPassword:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _rememberBtn;
+}
+
+-(UIButton *)loginBtn{
+    if (!_loginBtn) {
+        _loginBtn=[UIButton buttonWithType:0];
+        _loginBtn.backgroundColor=[UIColor orangeColor];
+        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+        [_loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _loginBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        _loginBtn.layer.cornerRadius = 5;
+        _loginBtn.layer.masksToBounds = YES;
+        [_loginBtn addTarget:self action:@selector(loginBtn:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loginBtn;
+}
+
+-(UIView *)loginView
+{
+    if (!_loginView) {
+        _loginView = [UIView new];
+        _loginView.backgroundColor = [UIColor whiteColor];
+        _loginView.layer.cornerRadius = 5;
+        _loginView.layer.masksToBounds = YES;
+    }
+    return _loginView;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    
+    if (self==[super initWithFrame:frame]) {
+        [self initUI];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showBtnDirection) name:@"removeSelectWifiView" object:nil];
+    }
+    return self;
+}
+
+-(void)loginBtn:(UIButton *)btn{
+    if (self.addWifiBlock) {
+        self.addWifiBlock();
+    }
+}
+
+-(void)initUI{
+    [self addSubview:self.icon];
+    
+    [self addSubview:self.loginView];
+    [_loginView addSubview:self.nameField];
+    [_loginView addSubview:self.arrowBtn];
+    [_loginView addSubview:self.middleLine];
+    [_loginView addSubview:self.passwordField];
+    [_loginView addSubview:self.showBtn];
+    
+    [self addSubview:self.rememberBtn];
+    [self addSubview:self.loginBtn];
+}
+
+-(void)updateConstraints{
+    [super updateConstraints];
+    WS(weakSelf);
+   
+    [_icon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.mas_top).with.offset(80);
+        make.centerX.equalTo(weakSelf.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(120, 100));
+    }];
+    
+    [_loginView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakSelf.mas_centerX);
+        make.centerY.equalTo(weakSelf.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(250, 100));
+    }];
+    
+    [_nameField mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_loginView.mas_left).with.offset(10);
+        make.top.equalTo(_loginView.mas_top);
+        make.bottom.equalTo(_middleLine.mas_top);
+        make.right.equalTo(_arrowBtn.mas_left).with.offset(-10);
+    }];
+    
+    [_arrowBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_nameField.mas_centerY);
+        make.right.equalTo(_loginView.mas_right).with.offset(-10);
+        make.size.mas_equalTo(CGSizeMake(20, 18));
+    }];
+    
+    [_middleLine mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_loginView.mas_centerY);
+        make.left.equalTo(_loginView.mas_left).with.offset(10);
+        make.right.equalTo(_loginView.mas_right).with.offset(-10);
+        make.height.mas_equalTo(@(1));
+    }];
+    
+    [_passwordField mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_loginView.mas_left).with.offset(10);
+        make.top.equalTo(_middleLine.mas_bottom);
+        make.bottom.equalTo(_loginView.mas_bottom);
+        make.right.equalTo(_showBtn.mas_left).with.offset(-10);
+    }];
+    
+    [_showBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_passwordField.mas_centerY);
+        make.right.equalTo(_loginView.mas_right).with.offset(-10);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
+    
+    [_rememberBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_loginView.mas_bottom).with.offset(25);
+        make.centerX.equalTo(weakSelf.mas_centerX);
+        make.left.equalTo(_loginView.mas_left);
+        make.right.equalTo(_loginView.mas_right);
+        make.height.mas_equalTo(@(20));
+    }];
+    
+    [_loginBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_rememberBtn.mas_bottom).with.offset(15);
+        make.centerX.equalTo(weakSelf.mas_centerX);
+        make.left.equalTo(_loginView.mas_left);
+        make.right.equalTo(_loginView.mas_right);
+        make.height.mas_equalTo(@(40));
+    }];
+    
+}
+
+-(void)setIsUpdateUI:(BOOL)isUpdateUI{
+    if (isUpdateUI) {
+        [self setNeedsUpdateConstraints];
+    }
+}
+
+//选择wifi
+- (void)selectWifiName:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.arrowBtn.transform=CGAffineTransformMakeRotation(M_PI);
+        }];
+    }else
+    {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.arrowBtn.transform=CGAffineTransformIdentity;
+        }];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickIsSelectWifi:)]) {
+        [self.delegate clickIsSelectWifi:sender.selected];
+    }
+}
+
+- (void)showBtnDirection
+{
+    _showBtn.selected = !_showBtn.selected;
+    if (_showBtn.selected) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.arrowBtn.transform=CGAffineTransformIdentity;
+        }];
+    }else
+    {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.arrowBtn.transform=CGAffineTransformMakeRotation(M_PI);
+        }];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickIsSelectWifi:)]) {
+        [self.delegate clickIsSelectWifi:_showBtn.selected];
+    }
+}
+
+//密码是否可见
+- (void)isSeePassword:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.passwordField.secureTextEntry = NO;
+    }else
+    {
+        self.passwordField.secureTextEntry = YES;
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickIsSeePassword:)]) {
+        [self.delegate clickIsSeePassword:sender.selected];
+    }
+}
+
+//是否记住密码
+- (void)isRememberPassword:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickIsRememPassword:)]) {
+        [self.delegate clickIsRememPassword:sender.selected];
+    }
+}
+
+@end

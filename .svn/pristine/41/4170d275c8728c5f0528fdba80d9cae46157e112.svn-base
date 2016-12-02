@@ -1,0 +1,177 @@
+//
+//  TMXUploadModelCell.m
+//  TMX3DPrinterHD
+//
+//  Created by wutaobo on 16/11/3.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXUploadModelCell.h"
+#import "TMXProfileModel.h"
+
+@interface TMXUploadModelCell ()
+@property (nonatomic, strong) UILabel *modelNameLab;
+@property (nonatomic, strong) UILabel *status;
+@property (nonatomic, strong) UILabel *timeLab;
+@property (nonatomic, strong) UIImageView *modelImgView;
+@property (nonatomic, strong) UIButton *collectBtn;
+@property (nonatomic, strong) UIButton *remarkBtn;
+@end
+@implementation TMXUploadModelCell
+
+-(UILabel *)modelNameLab{
+    if (!_modelNameLab) {
+        _modelNameLab=[UILabel new];
+        _modelNameLab.font = [UIFont systemFontOfSize:14];
+        _modelNameLab.text = @"玩具飞机模型";
+    }
+    return _modelNameLab;
+}
+
+-(UILabel *)status{
+    if (!_status) {
+        _status=[UILabel new];
+        _status.font = [UIFont systemFontOfSize:12];
+        _status.textColor = RGBColor(165, 165, 165);
+        _status.text = @"状态：未公开";
+    }
+    return _status;
+}
+
+-(UILabel *)timeLab{
+    if (!_timeLab) {
+        _timeLab=[UILabel new];
+        _timeLab.font = [UIFont systemFontOfSize:11];
+        _timeLab.textColor = [UIColor lightGrayColor];
+        _timeLab.textAlignment = NSTextAlignmentRight;
+        _timeLab.text = @"2016-11-03";
+    }
+    return _timeLab;
+}
+
+-(UIImageView *)modelImgView{
+    if (!_modelImgView) {
+        _modelImgView=[UIImageView new];
+        _modelImgView.image = [UIImage imageNamed:@"Layer"];
+    }
+    return _modelImgView;
+}
+
+-(UIButton *)collectBtn{
+    if (!_collectBtn) {
+        _collectBtn=[UIButton new];
+        [_collectBtn setImage:[UIImage imageNamed:@"Collect_normal"] forState:UIControlStateNormal];
+        _collectBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+        [_collectBtn setTitleColor:RGBColor(170, 170, 170) forState:UIControlStateNormal];
+        _collectBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        _collectBtn.userInteractionEnabled = NO;
+    }
+    return _collectBtn;
+}
+
+-(UIButton *)remarkBtn{
+    if (!_remarkBtn) {
+        _remarkBtn=[UIButton new];
+        [_remarkBtn setImage:[UIImage imageNamed:@"Remark_normal"] forState:UIControlStateNormal];
+        _remarkBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+        [_remarkBtn setTitleColor:RGBColor(170, 170, 170) forState:UIControlStateNormal];
+        _remarkBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        _remarkBtn.userInteractionEnabled = NO;
+    }
+    return _remarkBtn;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self=[super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor whiteColor];
+        [self initUI];
+    }
+    return self;
+}
+
+-(void)initUI{
+    
+    [self addSubview:self.modelNameLab];
+    [self addSubview:self.status];
+    [self addSubview:self.timeLab];
+    [self addSubview:self.modelImgView];
+    [self addSubview:self.collectBtn];
+    [self addSubview:self.remarkBtn];
+    [self updateConstraints];
+}
+
+-(void)updateConstraints{
+    [super updateConstraints];
+    WS(weakSelf);
+    
+    [_modelNameLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(10);
+        make.top.equalTo(weakSelf.mas_top).with.offset(10);
+        make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+        make.height.mas_equalTo(@(15));
+        
+    }];
+    
+    [_status mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(10);
+        make.top.equalTo(_modelNameLab.mas_bottom).with.offset(5);
+        make.right.equalTo(_timeLab.mas_left).with.offset(-5);
+        make.height.mas_equalTo(@(15));
+    }];
+    
+    [_timeLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+        make.top.equalTo(_modelNameLab.mas_bottom).with.offset(5);
+        make.size.mas_equalTo(CGSizeMake(100, 15));
+    }];
+    
+    [_modelImgView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(10);
+        make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+        make.top.equalTo(_status.mas_bottom).with.offset(10);
+        make.bottom.equalTo(_collectBtn.mas_top);
+    }];
+    
+    [_collectBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(10);
+        make.bottom.equalTo(weakSelf.mas_bottom);
+        make.right.equalTo(weakSelf.mas_centerX);
+        make.height.mas_equalTo(@(30));
+    }];
+    
+    [_remarkBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+        make.bottom.equalTo(weakSelf.mas_bottom);
+        make.left.equalTo(weakSelf.mas_centerX);
+        make.height.mas_equalTo(@(30));
+    }];
+}
+
+-(void)setProfileListModel:(TMXProfileListModel *)profileListModel
+{
+    _profileListModel = profileListModel;
+    [_modelImgView sd_setImageWithURL:[NSURL URLWithString:profileListModel.image] placeholderImage:nil];
+    _modelNameLab.text = profileListModel.name;
+
+    NSString *collectL = [NSString stringWithFormat:@"%ld次收藏", profileListModel.favoriteCnt];
+    [_collectBtn setTitle:collectL forState:UIControlStateNormal];
+    NSString *remarkL = [NSString stringWithFormat:@"%ld次评论", profileListModel.modelCommentCount];
+    [_remarkBtn setTitle:remarkL forState:UIControlStateNormal];
+    if (profileListModel.updatedDate.length) {
+        NSDate *date = [[KBDateFormatter shareInstance]dateFromTimeInterval:([profileListModel.updatedDate doubleValue]/1000.0)];
+        _timeLab.text = [NSDate caculatorTime:date];
+    }else
+    {
+        _timeLab.text = @"";
+    }
+    if (profileListModel.isShare) {
+        _status.text = @"状态：公开";
+    }else
+    {
+        _status.text = @"状态：未公开";
+    }
+    
+    [self updateConstraints];
+}
+
+@end

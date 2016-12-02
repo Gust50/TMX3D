@@ -1,0 +1,19 @@
+//
+//  TMXEditNickNameView.h
+//  TMX3DPrinterHD
+//
+//  Created by wutaobo on 16/11/14.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef void(^TMXEditNickNameViewBlock)(NSString *update);
+@interface TMXEditNickNameView : UIView
+
+@property (nonatomic, copy)TMXEditNickNameViewBlock TMXEditNickNameViewBlock;
+
+@property (nonatomic, copy)NSString *placeHolder;
+@property (nonatomic, copy)NSString *describeStr;
+@property (nonatomic, copy)NSString *nickName;
+@end

@@ -1,0 +1,197 @@
+//
+//  TMXSubReplyCell.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/11/2.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXSubReplyCell.h"
+#import "TMXHomeModelDetailModel.h"
+#import "TMXReplyCommentCell.h"
+
+@interface TMXSubReplyCell ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UIImageView *icon;
+@property (nonatomic, strong) UILabel *userNameLab;
+@property (nonatomic, strong) UILabel *timeLab;
+@property (nonatomic, strong) UIButton *replyBtn;
+@property (nonatomic, strong) UILabel *contentLab;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) CGFloat tableViewH;
+@end
+
+@implementation TMXSubReplyCell
+static NSString *const commentCellID=@"commentCellID";
+
+#pragma mark <lazyLoad>
+-(UIImageView *)icon{
+    if (!_icon) {
+        _icon=[UIImageView new];
+    }
+    return _icon;
+}
+
+-(UILabel *)userNameLab{
+    if (!_userNameLab) {
+        _userNameLab=[UILabel new];
+    }
+    return _userNameLab;
+}
+
+-(UILabel *)timeLab{
+    if (!_timeLab) {
+        _timeLab=[UILabel new];
+    }
+    return _timeLab;
+}
+
+-(UIButton *)replyBtn{
+    if (!_replyBtn) {
+        _replyBtn=[UIButton new];
+    }
+    return _replyBtn;
+}
+
+-(UILabel *)contentLab{
+    if (!_contentLab) {
+        _contentLab=[UILabel new];
+        _contentLab.numberOfLines=0;
+    }
+    return _contentLab;
+}
+
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView=[[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.delegate=self;
+        _tableView.dataSource=self;
+        _tableView.scrollEnabled=NO;
+        _tableView.showsVerticalScrollIndicator=NO;
+        _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    }
+    return _tableView;
+}
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self=[super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self initUI];
+        self.tableViewH=0.0;
+    }
+    return self;
+}
+
+
+-(void)initUI{
+    [self addSubview:self.icon];
+    [self addSubview:self.userNameLab];
+    [self addSubview:self.timeLab];
+    [self addSubview:self.replyBtn];
+    [self addSubview:self.contentLab];
+    [self addSubview:self.tableView];
+    
+    self.lastviewInCell=self.tableView;
+    self.bottomOffsetToCell=5.0;
+    [_tableView registerClass:[TMXReplyCommentCell class] forCellReuseIdentifier:commentCellID];
+}
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _subReplyModel.repliesList.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TMXReplyCommentCell *commentCell=[tableView dequeueReusableCellWithIdentifier:commentCellID forIndexPath:indexPath];
+    TMXHomeModelDetailCommentListModel *tempModel=[_subReplyModel.repliesList objectAtIndexCheck:indexPath.row];
+    commentCell.commentModel=tempModel;
+    return commentCell;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TMXHomeModelDetailCommentListModel *tempModel=[_subReplyModel.repliesList objectAtIndexCheck:indexPath.row];
+    CGFloat h=[TMXReplyCommentCell heightForTableView:tableView config:^(UITableViewCell *cell) {
+        TMXReplyCommentCell *commentCell=(TMXReplyCommentCell *)cell;
+        commentCell.commentModel=tempModel;
+    } cache:^NSDictionary *{
+        NSDictionary *cacheDict=@{cacheUniqueKey:@"",
+                                  cacheStateKey:@"",
+                                  recalculateForStateKey:@(NO)};
+        return cacheDict;
+    }];
+    return h;
+}
+
+
+-(void)setSubReplyModel:(TMXHomeModelDetailCommentSubListModel *)subReplyModel{
+    _subReplyModel=subReplyModel;
+    
+    CGFloat tableViewHeight=0.0;
+    for (TMXHomeModelDetailCommentListModel *tempModel in subReplyModel.repliesList) {
+        
+        CGFloat cellHeight=[TMXReplyCommentCell heightForTableView:_tableView config:^(UITableViewCell *cell) {
+            TMXReplyCommentCell *commentCell=(TMXReplyCommentCell *)cell;
+            commentCell.commentModel=tempModel;
+        } cache:^NSDictionary *{
+            return @{cacheUniqueKey:@"",cacheStateKey:@"",recalculateForStateKey:@(NO)};
+        }];
+        tableViewHeight+=cellHeight;
+    };
+    _tableViewH=tableViewHeight;
+    
+    [self setNeedsUpdateConstraints];
+    [_tableView reloadData];
+}
+
+
+-(void)updateConstraints{
+    [super updateConstraints];
+    
+    WS(weakSelf);
+    [_icon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.mas_top).with.offset(5);
+        make.left.equalTo(weakSelf.mas_left);
+        make.size.mas_equalTo(CGSizeMake(45, 45));
+    }];
+    
+    [_userNameLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_icon.mas_right).with.offset(5);
+        make.bottom.equalTo(_icon.mas_centerY).with.offset(-5);
+        make.width.mas_equalTo(@(120));
+        make.height.mas_equalTo(@(15));
+    }];
+    
+    [_timeLab  mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_icon.mas_centerY).with.offset(5);
+        make.left.equalTo(_icon.mas_right).with.offset(5);
+        make.width.mas_equalTo(@(200));
+        make.height.mas_equalTo(@(15));
+    }];
+    
+    [_replyBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_userNameLab.mas_right).with.offset(5);
+        make.top.equalTo(weakSelf.mas_top).with.offset(5);
+        make.size.mas_equalTo(CGSizeMake(60, 35));
+    }];
+    
+    [_contentLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_icon.mas_bottom).with.offset(5);
+        make.left.equalTo(_icon.mas_right).with.offset(5);
+        make.right.equalTo(weakSelf.mas_right);
+    }];
+    
+    [_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_contentLab.mas_bottom);
+        make.left.equalTo(_contentLab.mas_left);
+        make.right.equalTo(_contentLab.mas_right);
+        make.height.mas_equalTo(@(_tableViewH));
+    }];
+    
+    _contentLab.preferredMaxLayoutWidth=weakSelf.width-10;
+}
+
+@end

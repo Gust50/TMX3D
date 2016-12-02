@@ -1,0 +1,140 @@
+//
+//  TMXLoginVC.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/11/10.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXLoginVC.h"
+#import "TMXAppLoginView.h"
+#import "TMXRegisterVC.h"
+#import "TMXForgetVC.h"
+#import "TMXAccountModel.h"
+
+@interface TMXLoginVC ()<TMXAppLoginViewDelegate, TMXRegisterVCDelegate>
+{
+    TMXAccountLoginModel *tMXAccountLoginModel;
+    NSString *inputUserName;
+    NSString *inputPassword;
+}
+
+@property (nonatomic, strong) TMXAppLoginView *appLoginView;
+@end
+
+@implementation TMXLoginVC
+
+-(TMXAppLoginView *)appLoginView{
+    if (!_appLoginView) {
+        _appLoginView=[TMXAppLoginView new];
+        _appLoginView.delegate = self;
+    }
+    return _appLoginView;
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    _appLoginView.isUpdateUI=YES;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.navigationItem setTitle:@"用户登录"];
+    self.view.backgroundColor=[UIColor whiteColor];
+    [self.view addSubview:self.appLoginView];
+    [self configureRightBarButtonWithTitle:nil icon:@"CancelIcon" action:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"removeController" object:nil];
+    }];
+    tMXAccountLoginModel=[[TMXAccountLoginModel alloc]init];
+    NSMutableDictionary *info=[NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]];
+    if (info.count!=0) {
+        inputUserName = info[@"username"];
+    }
+    
+    WS(weakSelf);
+    //注册
+    _appLoginView.registerblock=^{
+        TMXRegisterVC *registerVC=[TMXRegisterVC new];
+        registerVC.isRegister = YES;
+        registerVC.delegate = weakSelf;
+        [weakSelf.navigationController pushViewController:registerVC animated:YES];
+    };
+    //忘记密码
+    _appLoginView.lostPassWordblock=^{
+        TMXRegisterVC *forgetVC=[TMXRegisterVC new];
+        forgetVC.isRegister = NO;
+        [weakSelf.navigationController pushViewController:forgetVC animated:YES];
+    };
+}
+
+-(void)updateViewConstraints{
+    [super updateViewConstraints];
+    [_appLoginView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+}
+
+#pragma mark <TMXAppLoginViewDelegate>
+//登录
+-(void)clickInputUserName:(NSString *)userName inputPassword:(NSString *)password
+{
+    inputUserName = userName;
+    inputPassword = password;
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    params[@"username"]=[NSString encodeString:inputUserName];
+    params[@"password"]=inputPassword;
+    
+    if ([self ValidateIsSuccess]) {
+        [tMXAccountLoginModel FetchTMXAccountLoginData:params callBack:^(BOOL isSuccess, id  _Nonnull result) {
+            
+            if (isSuccess)
+            {
+                [MBProgressHUD showSuccess:@"登录成功"];
+                
+                //记住登录账号和密码
+                params[@"username"]=inputUserName;
+                [[NSUserDefaults standardUserDefaults]setObject:params forKey:@"userInfo"];
+                [[NSUserDefaults standardUserDefaults]synchronize];
+                
+                //判断此账号是否成功登录过
+                [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogined"];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"removeController" object:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuc" object:nil];
+            }else
+            {
+                [MBProgressHUD showError:result];
+            }
+        }];
+    }
+}
+
+//表单验证
+- (BOOL)ValidateIsSuccess{
+    
+    if (![KBRegexp validateUserName:inputUserName])
+    {
+        [MBProgressHUD showError:@"请输入正确的用户名"];
+        return NO;
+    }else if ([KBRegexp isBlankString:inputPassword])
+    {
+        [MBProgressHUD showError:@"请输入正确的密码"];
+        return NO;
+    }else if (inputPassword.length<5)
+    {
+        [MBProgressHUD showError:@"用户密码的长度至少6位"];
+        return NO;
+    }else
+    {
+        return YES;
+    }
+}
+
+#pragma mark <TMXRegisterVCDelegate>
+-(void)returnBackAccountInfo:(NSDictionary *)dict{
+    
+    inputUserName=dict[@"username"];
+    inputPassword=dict[@"password"];
+}
+
+@end

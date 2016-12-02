@@ -1,0 +1,474 @@
+//
+//  TMXDetailVC.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/10/31.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXDetailVC.h"
+#import "TMXDetailLeftJqueryHeader.h"
+#import "TMXDetailLeftSegmentCell.h"
+#import "TMXHomeIntroductModelCell.h"
+#import "TMXHomeUpLoadUserInfoCell.h"
+#import "TMXHomeModelHeaderView.h"
+#import "TMXHomeModelListCell.h"
+#import "TMXMainReplyCell.h"
+#import "TMXHomeModelDetailModel.h"
+#import "TMXRemarkHeaderView.h"
+#import "TMXPrinterControlVC.h"
+#import "TMXClassifyVC.h"
+#import "TMXDetailSelectPrintView.h"
+#import "TMXProblemFeedbackVC.h"
+#import "TMXModelCommentVC.h"
+
+@interface TMXDetailVC ()<UITableViewDelegate,UITableViewDataSource, TMXHomeModelHeaderViewDelegate, TMXDetailLeftSegmentCellDelegate>
+{
+    TMXHomeModelDetailModel *detailModel;               ///<详情数据模型
+    NSMutableDictionary *params;                        ///<参数
+    TMXHomeCollectModel *collectModel;                  ///<收藏模型
+    TMXHomeLikeModel *likeModel;                        ///<喜欢模型
+    TMXHomeCancelCollectModel *cancelCollectModel;      ///<取消收藏模型
+    TMXHomeCancelLikeModel *cancelLikeModel;            ///<取消喜欢模型
+}
+@property (nonatomic, strong) UITableView *leftTalbleView;
+@property (nonatomic, strong) UITableView *rightTalbleView;
+@property (nonatomic, strong) TMXDetailSelectPrintView *selectPrintView;        ///<选择打印机
+@end
+
+@implementation TMXDetailVC
+static NSString *const JqueryID=@"JqueryID";
+static NSString *const segmentCellID=@"segmentCellID";
+static NSString *const describeCellID=@"describeCellID";
+static NSString *const userCellID=@"userCellID";
+static NSString *const replyCellID=@"replyCellID";
+static NSString *const modelListCellID=@"modelListCellID";
+static NSString *const headerID=@"headerID";
+static NSString *const remarkHeaderID=@"remarkHeaderID";
+
+#pragma mark <lazyLoad>
+-(UITableView *)leftTalbleView{
+    if (!_leftTalbleView) {
+        _leftTalbleView=[[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _leftTalbleView.delegate=self;
+        _leftTalbleView.dataSource=self;
+        _leftTalbleView.showsVerticalScrollIndicator=NO;
+    }
+    return _leftTalbleView;
+}
+
+-(UITableView *)rightTalbleView{
+    if (!_rightTalbleView) {
+        _rightTalbleView=[[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _rightTalbleView.delegate=self;
+        _rightTalbleView.dataSource=self;
+        _rightTalbleView.showsVerticalScrollIndicator=NO;
+    }
+    return _rightTalbleView;
+}
+
+-(TMXDetailSelectPrintView *)selectPrintView
+{
+    if (!_selectPrintView) {
+        _selectPrintView = [[TMXDetailSelectPrintView alloc] initWithFrame:CGRectZero];
+    }
+    return _selectPrintView;
+}
+
+#pragma mark <cycleLife>
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    [self updateViewConstraints];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [self initTableView];
+    [self initModel];
+    
+    
+    [self configureLeftBarButtonWithTitle:@"返回" icon:@"return_back" action:^{
+        if (self.isHome) {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"PopChangeFrame" object:nil userInfo:nil];
+        }else
+        {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"PushChangeFrame" object:nil userInfo:nil];
+        }
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+}
+
+#pragma mark <initAllData>
+-(void)initModel{
+    detailModel = [[TMXHomeModelDetailModel alloc] init];
+    params = [NSMutableDictionary dictionary];
+    collectModel = [[TMXHomeCollectModel alloc] init];
+    likeModel = [[TMXHomeLikeModel alloc] init];
+    cancelCollectModel = [[TMXHomeCancelCollectModel alloc] init];
+    cancelLikeModel = [[TMXHomeCancelLikeModel alloc] init];
+    params[@"modelId"] = @(self.modelId);
+    params[@"userId"] = [FetchAppPublicKeyModel shareAppPublicKeyManager].infoModel.userId;
+    [self loadData];
+}
+
+-(void)initTableView{
+    [self.view addSubview:self.leftTalbleView];
+    [self.view addSubview:self.rightTalbleView];
+    self.view.backgroundColor=backGroundColor;
+    _leftTalbleView.backgroundColor=backGroundColor;
+    _rightTalbleView.backgroundColor=backGroundColor;
+    
+    [_leftTalbleView registerClass:[TMXDetailLeftSegmentCell class] forCellReuseIdentifier:segmentCellID];
+    [_leftTalbleView registerClass:[TMXHomeIntroductModelCell class] forCellReuseIdentifier:describeCellID];
+    [_leftTalbleView registerClass:[TMXHomeUpLoadUserInfoCell class] forCellReuseIdentifier:userCellID];
+    [_leftTalbleView registerClass:[TMXMainReplyCell class] forCellReuseIdentifier:replyCellID];
+    
+    [_leftTalbleView registerClass:[TMXDetailLeftJqueryHeader class] forHeaderFooterViewReuseIdentifier:JqueryID];
+    [_leftTalbleView registerClass:[TMXRemarkHeaderView class] forHeaderFooterViewReuseIdentifier:remarkHeaderID];
+    
+    [_rightTalbleView registerClass:[TMXHomeModelListCell class] forCellReuseIdentifier:modelListCellID];
+    [_rightTalbleView registerClass:[TMXHomeModelHeaderView class] forHeaderFooterViewReuseIdentifier:headerID];
+}
+
+
+#pragma mark - loadData
+- (void)loadData
+{
+    
+    [detailModel FetchTMXHomeModelDetailModel:params callBack:^(BOOL isSuccess, id result) {
+        if (isSuccess) {
+            detailModel = result;
+            if (detailModel.modelCommentCount > 10) {
+//                [self initFooterView];
+            }else
+            {
+                _leftTalbleView.tableFooterView = [[UIView alloc] init];
+            }
+//            toolBar.isLike = detailModel.isUpvoteModel;
+//            [hud hide:YES];
+//            [self.tableView reloadData];
+            [_leftTalbleView reloadData];
+            [_rightTalbleView reloadData];
+        }else
+        {
+//            hud.labelText=NSLocalizedString(@"Load_Fail", nil);
+//            [hud hide:YES afterDelay:2];
+        }
+    }];
+}
+
+//收藏模型
+- (void)loadCollectData
+{
+    [collectModel FetchTMXHomeCollectModel:params callBack:^(BOOL isSuccess, id result) {
+        if (isSuccess) {
+            [MBProgressHUD showSuccess:@"收藏成功！"];
+            [self loadData];
+        }else
+        {
+            [MBProgressHUD showError:@"收藏失败！"];
+        }
+    }];
+    
+}
+
+//喜欢模型
+- (void)loadLikeData
+{
+    [likeModel FetchTMXHomeLikeModel:params callBack:^(BOOL isSuccess, id result) {
+        if (isSuccess) {
+            [MBProgressHUD showSuccess:@"点赞成功！"];
+            [self loadData];
+        }else
+        {
+            [MBProgressHUD showError:@"点赞失败！"];
+        }
+    }];
+}
+
+//取消收藏模型
+- (void)loadCancelCollectData
+{
+    [cancelCollectModel FetchTMXHomeCancelCollectModel:params callBack:^(BOOL isSuccess, id result) {
+        if (isSuccess) {
+            [MBProgressHUD showSuccess:@"取消收藏成功！"];
+            [self loadData];
+        }else
+        {
+            [MBProgressHUD showError:@"取消收藏失败！"];
+        }
+    }];
+}
+
+//取消喜欢模型
+- (void)loadCancelLikeData
+{
+    [cancelLikeModel FetchTMXHomeCancelLikeModel:params callBack:^(BOOL isSuccess, id result) {
+        if (isSuccess) {
+            [MBProgressHUD showSuccess:@"取消点赞成功!"];
+            [self loadData];
+        }else
+        {
+            [MBProgressHUD showError:@"取消点赞失败!"];
+        }
+    }];
+}
+
+#pragma mark <UITableViewDataSource>
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if (tableView==_leftTalbleView) {
+        return 4;
+    }else{
+       return 1;
+    }
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (tableView==_leftTalbleView) {
+        if (section == 3) {
+            return detailModel.modelCommentList.count;
+        }
+        return 1;
+    }else{
+        return detailModel.stlFileList.count;
+    }
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView==_leftTalbleView) {
+        if (indexPath.section==0) {
+            TMXDetailLeftSegmentCell *segmentCell=[tableView dequeueReusableCellWithIdentifier:segmentCellID forIndexPath:indexPath];
+            segmentCell.detailModel = detailModel;
+            segmentCell.delegate = self;
+            segmentCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            segmentCell.isUpdateUI = YES;
+            return segmentCell;
+        }else if (indexPath.section==1){
+            TMXHomeIntroductModelCell *describeCell=[tableView dequeueReusableCellWithIdentifier:describeCellID forIndexPath:indexPath];
+            describeCell.modelInfo = detailModel.intruduction;
+            describeCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return describeCell;
+        }else if (indexPath.section==2){
+             TMXHomeUpLoadUserInfoCell *userCell=[tableView dequeueReusableCellWithIdentifier:userCellID forIndexPath:indexPath];
+            userCell.detailModel = detailModel;
+            userCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return userCell;
+        }else{
+            TMXMainReplyCell *mainReplyCell=[tableView dequeueReusableCellWithIdentifier:replyCellID forIndexPath:indexPath];
+            TMXHomeModelDetailCommentMainListModel *tempMainModel=[detailModel.modelCommentList objectAtIndexCheck:indexPath.row];
+            mainReplyCell.mainReplyModel=tempMainModel;
+            mainReplyCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return mainReplyCell;
+        }
+    }else{
+        
+        TMXHomeModelListCell *modelListCell=[tableView dequeueReusableCellWithIdentifier:modelListCellID forIndexPath:indexPath];
+        TMXHomeModelDetailFileListModel *fileListModel = [detailModel.stlFileList objectAtIndexCheck:indexPath.row];
+        modelListCell.fileListModel = fileListModel;
+        modelListCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        modelListCell.modelDetailPrinterBlock = ^(){
+            TMXPrinterControlVC *printerVC=[TMXPrinterControlVC new];
+            [self.navigationController pushViewController:printerVC animated:YES];
+        };
+        return modelListCell;
+    }
+}
+
+#pragma mark <UITableViewDelegate>
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView==_leftTalbleView) {
+        if (indexPath.section==0) {
+            return 60;
+        }else if (indexPath.section==1){
+            NSString *str = detailModel.intruduction;
+            CGSize size = [NSString sizeWithStr:str font:[UIFont systemFontOfSize:12] width:self.leftTalbleView.width-105];
+            
+            return 40+size.height;
+        }else if (indexPath.section==2){
+            return 50;
+        }else{
+             TMXHomeModelDetailCommentMainListModel *tempMainModel=[detailModel.modelCommentList objectAtIndexCheck:indexPath.row];
+            CGFloat h=[TMXMainReplyCell heightForTableView:tableView config:^(UITableViewCell *cell) {
+                TMXMainReplyCell *mainReplyCell=(TMXMainReplyCell *)cell;
+                mainReplyCell.mainReplyModel=tempMainModel;
+            } cache:^NSDictionary *{
+                return @{cacheUniqueKey:@"",cacheStateKey:@"",recalculateForStateKey:@(NO)};
+            }];
+            return h;
+
+        }
+    }else{
+        
+        return 80;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 2) {
+        TMXClassifyVC *classifyVC = [TMXClassifyVC new];
+        classifyVC.categoryId = detailModel.ownerId;
+        classifyVC.name = detailModel.ownerName;
+        [self.navigationController pushViewController:classifyVC animated:YES];
+    }
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (tableView == _leftTalbleView) {
+        if (section == 0) {
+            TMXDetailLeftJqueryHeader *leftJqueryHeader=[tableView dequeueReusableHeaderFooterViewWithIdentifier:JqueryID];
+            leftJqueryHeader.jqueryArray = detailModel.imageList;
+            leftJqueryHeader.modelName = detailModel.name;
+            return leftJqueryHeader;
+        }else if (section == 3)
+        {
+            TMXRemarkHeaderView *remarkHeaderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:remarkHeaderID];
+            remarkHeaderView.userCount = detailModel.modelCommentCount;
+            return remarkHeaderView;
+        }
+    }else
+    {
+        TMXHomeModelHeaderView *headView = [TMXHomeModelHeaderView new];
+        headView.iconUrl = @"Printer_gray";
+        headView.title = @"选择打印机";
+        headView.subTitle = @"小黄人";
+        headView.isHideArrow = NO;
+        headView.delegate = self;
+        return headView;
+    }
+    return nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (tableView == _leftTalbleView) {
+        if (section == 0) {
+            if (Lanscape) {
+                return 300;
+            }else
+            {
+                return 300;
+            }
+            
+        }else if (section == 3)
+        {
+            return 40;
+        }
+    }else
+    {
+        return 50;
+    }
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01;
+}
+
+#pragma mark <TMXHomeModelHeaderViewDelegate>
+-(void)clickSelectPrinter
+{
+    [ShareApp.window addSubview:self.selectPrintView];
+    [self viewWillLayoutSubviews];
+    
+}
+
+#pragma mark - setter getter
+-(void)setModelId:(NSInteger)modelId
+{
+    _modelId = modelId;
+}
+
+#pragma mark <TMXDetailLeftSegmentCellDelegate>
+-(void)clickSegmentTag:(NSInteger)tag
+{
+    if (tag == 1) {
+        if ([FetchAppPublicKeyModel shareAppPublicKeyManager].isLogin) {
+            if (detailModel.isUpvoteModel) {
+                [self loadCancelLikeData];
+            }else
+            {
+                [self loadLikeData];
+            }
+        }else
+        {
+        
+        }
+    }else if (tag == 2)
+    {
+        if ([FetchAppPublicKeyModel shareAppPublicKeyManager].isLogin) {
+            if (detailModel.isFavoriteModel) {
+                [self loadCancelCollectData];
+            }else
+            {
+                [self loadCollectData];
+            }
+        }else
+        {
+           
+        }
+    }else if (tag == 3)
+    {
+        TMXModelCommentVC *modelCommentVC = [TMXModelCommentVC new];
+        [self.navigationController pushViewController:modelCommentVC animated:YES];
+    }else if (tag == 4)
+    {
+        TMXProblemFeedbackVC *feedbackVC = [TMXProblemFeedbackVC new];
+        [self.navigationController pushViewController:feedbackVC animated:YES];
+    }
+}
+
+-(void)setIsHome:(BOOL)isHome
+{
+    _isHome = isHome;
+}
+
+
+#pragma mark <updataUI>
+-(void)updateViewConstraints{
+    [super updateViewConstraints];
+    
+    WS(weakSelf);
+    
+    if (Lanscape) {
+        [_leftTalbleView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(weakSelf.view.mas_left);
+            make.bottom.equalTo(weakSelf.view.mas_bottom);
+            make.top.equalTo(weakSelf.view.mas_top).with.offset(10);
+            make.width.mas_equalTo(@(self.view.width*3/5));
+        }];
+        
+        [_rightTalbleView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(weakSelf.view.mas_right);
+            make.left.equalTo(_leftTalbleView.mas_right).with.offset(5);
+            make.top.equalTo(weakSelf.view.mas_top).with.offset(64);
+            make.bottom.equalTo(weakSelf.view.mas_bottom);
+        }];
+        
+        [_selectPrintView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+        }];
+        
+    }else{
+        [_leftTalbleView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(weakSelf.view.mas_left);
+            make.top.equalTo(weakSelf.view.mas_top).with.offset(10);
+            make.width.mas_equalTo(@(self.view.width*3/5));
+            make.bottom.equalTo(weakSelf.view.mas_bottom);
+        }];
+        
+        [_rightTalbleView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(weakSelf.view.mas_right);
+            make.left.equalTo(_leftTalbleView.mas_right).with.offset(5);
+            make.top.equalTo(weakSelf.view.mas_top).with.offset(64);
+            make.bottom.equalTo(weakSelf.view.mas_bottom);
+        }];
+        
+        [_selectPrintView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+        }];
+    }
+}
+
+@end

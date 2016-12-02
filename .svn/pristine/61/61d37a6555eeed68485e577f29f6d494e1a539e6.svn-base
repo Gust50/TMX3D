@@ -1,0 +1,73 @@
+//
+//  TMXEditNickNameVC.m
+//  TMX3DPrinterHD
+//
+//  Created by wutaobo on 16/11/14.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXEditNickNameVC.h"
+#import "TMXEditNickNameView.h"
+
+@interface TMXEditNickNameVC ()
+@property (nonatomic, strong) TMXEditNickNameView *nickNameView;
+@end
+
+@implementation TMXEditNickNameVC
+
+-(TMXEditNickNameView *)nickNameView
+{
+    if (!_nickNameView) {
+        _nickNameView = [TMXEditNickNameView new];
+        
+    }
+    return _nickNameView;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.navigationItem setTitle:self.titleStr];
+    self.view.backgroundColor = backGroundColor;
+    [self.view addSubview:self.nickNameView];
+    _nickNameView.describeStr = self.describeStr;
+    _nickNameView.placeHolder = self.placeHolder;
+    WS(weakSelf);
+    self.nickNameView.TMXEditNickNameViewBlock = ^(){
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    };
+    [self configureRightBarButtonWithTitle:nil icon:@"CancelIcon" action:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"removeInfoController" object:nil];
+    }];
+}
+
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    [self updateViewConstraints];
+}
+
+-(void)updateViewConstraints
+{
+    [super updateViewConstraints];
+    [_nickNameView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+}
+
+#pragma mark - setter getter
+-(void)setTitleStr:(NSString *)titleStr
+{
+    _titleStr = titleStr;
+}
+
+-(void)setPlaceHolder:(NSString *)placeHolder
+{
+    _placeHolder = placeHolder;
+}
+
+-(void)setDescribeStr:(NSString *)describeStr
+{
+    _describeStr = describeStr;
+}
+
+@end

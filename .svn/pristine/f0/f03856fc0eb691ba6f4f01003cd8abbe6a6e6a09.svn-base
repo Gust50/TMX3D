@@ -1,0 +1,334 @@
+//
+//  TMXMainReplyCell.m
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/11/2.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXMainReplyCell.h"
+#import "TMXHomeModelDetailModel.h"
+#import "TMXSubReplyCell.h"
+
+
+@interface TMXMainReplyCell ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UIImageView *icon;
+@property (nonatomic, strong) UILabel *userNameLab;
+@property (nonatomic, strong) UILabel *timeLab;
+@property (nonatomic, strong) UIButton *replyBtn;
+@property (nonatomic, strong) UILabel *contentLab;
+@property (nonatomic, strong) UIScrollView *scrollImg;
+@property (nonatomic, strong) UILabel *replyUserNamesLab;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) CGFloat tableViewH;
+
+@property (nonatomic, assign) BOOL isHasImgs;
+@property (nonatomic, assign) BOOL isHasReplyUsers;
+@property (nonatomic, assign) CGFloat replyUserNameH;
+@end
+
+@implementation TMXMainReplyCell
+static NSString *const subReplyCellID=@"subReplyCellID";
+
+-(UIImageView *)icon{
+    if (!_icon) {
+        _icon=[UIImageView new];
+        _icon.layer.masksToBounds=YES;
+        _icon.layer.cornerRadius=45.0/2;
+    }
+    return _icon;
+}
+
+-(UILabel *)userNameLab{
+    if (!_userNameLab) {
+        _userNameLab=[UILabel new];
+        _userNameLab.font = [UIFont systemFontOfSize:14];
+    }
+    return _userNameLab;
+}
+
+-(UILabel *)timeLab{
+    if (!_timeLab) {
+        _timeLab=[UILabel new];
+        _timeLab.font = [UIFont systemFontOfSize:11];
+        _timeLab.textColor = RGBColor(181, 181, 181);
+    }
+    return _timeLab;
+}
+
+-(UIButton *)replyBtn{
+    if (!_replyBtn) {
+        _replyBtn=[UIButton new];
+        _replyBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        [_replyBtn setTitle:@"回复" forState:UIControlStateNormal];
+        [_replyBtn setTitleColor:systemColor forState:UIControlStateNormal];
+    }
+    return _replyBtn;
+}
+
+-(UIScrollView *)scrollImg
+{
+    if (!_scrollImg) {
+        _scrollImg = [UIScrollView new];
+    }
+    return _scrollImg;
+}
+
+-(UILabel *)contentLab{
+    if (!_contentLab) {
+        _contentLab=[UILabel new];
+        _contentLab.font = [UIFont systemFontOfSize:13];
+        _contentLab.numberOfLines = 0;
+    }
+    return _contentLab;
+}
+
+-(UILabel *)replyUserNamesLab
+{
+    if (!_replyUserNamesLab) {
+        _replyUserNamesLab = [UILabel new];
+        _replyUserNamesLab.font = [UIFont systemFontOfSize:11];
+    }
+    return _replyUserNamesLab;
+}
+
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView=[[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.delegate=self;
+        _tableView.dataSource=self;
+        _tableView.scrollEnabled=NO;
+        _tableView.showsVerticalScrollIndicator=NO;
+        _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    }
+    return _tableView;
+}
+
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self==[super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self initUI];
+    };
+    return self;
+}
+
+-(void)initUI{
+    
+    [self addSubview:self.icon];
+    [self addSubview:self.userNameLab];
+    [self addSubview:self.timeLab];
+    [self addSubview:self.replyBtn];
+    [self addSubview:self.contentLab];
+    [self addSubview:self.replyUserNamesLab];
+    [self addSubview:self.scrollImg];
+    [self addSubview:self.tableView];
+    [_tableView registerClass:[TMXSubReplyCell class] forCellReuseIdentifier:subReplyCellID];
+    self.lastviewInCell=self.tableView;
+    self.bottomOffsetToCell=5.0;
+    self.tableViewH=0.0;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _mainReplyModel.commentReplyList.count;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TMXSubReplyCell *subReplyCell=[tableView dequeueReusableCellWithIdentifier:subReplyCellID forIndexPath:indexPath];
+    TMXHomeModelDetailCommentSubListModel *tempModel=[_mainReplyModel.commentReplyList objectAtIndexCheck:indexPath.row];
+    subReplyCell.subReplyModel=tempModel;
+    return subReplyCell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+       TMXHomeModelDetailCommentSubListModel *tempModel=[_mainReplyModel.commentReplyList objectAtIndexCheck:indexPath.row];
+    CGFloat h=[TMXSubReplyCell heightForTableView:_tableView config:^(UITableViewCell *cell) {
+        TMXSubReplyCell *subReplyCell=(TMXSubReplyCell *)cell;
+        subReplyCell.subReplyModel=tempModel;
+    }];
+    return h;
+}
+
+#pragma mark <getter setter>
+-(void)setMainReplyModel:(TMXHomeModelDetailCommentMainListModel *)mainReplyModel{
+    _mainReplyModel=mainReplyModel;
+    _contentLab.preferredMaxLayoutWidth=self.width-10;
+    CGFloat tableViewHeight=0.0;
+    for (TMXHomeModelDetailCommentSubListModel *tempModel in mainReplyModel.commentReplyList) {
+        
+        CGFloat cellHeight=[TMXSubReplyCell heightForTableView:_tableView config:^(UITableViewCell *cell) {
+            TMXSubReplyCell *subReplyCell=(TMXSubReplyCell *)cell;
+            subReplyCell.subReplyModel=tempModel;
+        }];
+        tableViewHeight+=cellHeight;
+    }
+    _tableViewH=tableViewHeight;
+    
+    
+    _contentLab.text=mainReplyModel.comment;
+    _userNameLab.text=mainReplyModel.userName;
+    [_icon sd_setImageWithURL:[NSURL URLWithString:mainReplyModel.userAvatar] placeholderImage:nil];
+     NSDate *date = [[KBDateFormatter shareInstance]dateFromTimeInterval:([mainReplyModel.createdDate doubleValue]/1000.0)];
+    _timeLab.text=[NSDate caculatorTime:date];
+    [self replyUserNameStr:mainReplyModel];
+    [self setNeedsUpdateConstraints];
+    [_tableView reloadData];
+}
+
+-(void)replyUserNameStr:(TMXHomeModelDetailCommentMainListModel *)model{
+    if (model.commentReplyList.count!=0) {
+        self.isHasReplyUsers=YES;
+        self.replyUserNameH=15;
+        NSString *replyUserNameStr;
+        NSInteger tempCount=0;
+        for (TMXHomeModelDetailCommentSubListModel *tempModel in model.commentReplyList) {
+            if (tempCount<5) {
+                if (tempCount==0) {
+                    replyUserNameStr=tempModel.fromUserName;
+                }else{
+                    replyUserNameStr=[NSString stringWithFormat:@"%@、%@",tempModel.fromUserName,replyUserNameStr];
+                }
+                tempCount++;
+            }
+        }
+        
+        if (model.commentReplyList.count>5) {
+            replyUserNameStr=[NSString stringWithFormat:@"%@等回复了评论",replyUserNameStr];
+            
+        }else{
+            replyUserNameStr=[NSString stringWithFormat:@"%@回复了评论",replyUserNameStr];
+        }
+        
+        NSTextAttachment *attach=[NSTextAttachment new];
+        attach.image=[UIImage imageNamed:@"Remark_gray"];
+        attach.bounds=CGRectMake(0, -3, 12, 12);
+        NSAttributedString *replyIcon=[NSAttributedString attributedStringWithAttachment:attach];
+        NSMutableAttributedString *replyNameString=[[NSMutableAttributedString alloc]initWithString:replyUserNameStr];
+        [replyNameString insertAttributedString:replyIcon atIndex:0];
+        if (model.commentReplyList.count>5) {
+            [replyNameString addAttribute:NSForegroundColorAttributeName
+                                    value:systemColor
+                                    range:NSMakeRange(1,replyUserNameStr.length-6)];
+        }else{
+            [replyNameString addAttribute:NSForegroundColorAttributeName
+                                    value:systemColor
+                                    range:NSMakeRange(1,replyUserNameStr.length-5)];
+        }
+        _replyUserNamesLab.attributedText=replyNameString;
+    }else{
+        self.replyUserNameH=0;
+    }
+    
+}
+
+-(void)initScrollviewImg:(TMXHomeModelDetailCommentMainListModel *)model{
+    
+    for (UIImageView *view in _scrollImg.subviews) {
+        [view removeFromSuperview];
+    }
+//    
+//    for (int i=0; i<model.i; <#increment#>) {
+//        <#statements#>
+//    }
+}
+
+-(void)updateConstraints{
+    [super updateConstraints];
+    WS(weakSelf);
+    [_icon mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.mas_top).with.offset(10);
+        make.left.equalTo(weakSelf.mas_left).with.offset(10);
+        make.size.mas_equalTo(CGSizeMake(45, 45));
+    }];
+    
+    [_userNameLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(_icon.mas_centerY).with.offset(-3);;
+        make.left.equalTo(_icon.mas_right).with.offset(8);
+        make.size.mas_equalTo(CGSizeMake(120, 15));
+    }];
+    
+    [_timeLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_icon.mas_right).with.offset(8);
+        make.top.equalTo(_icon.mas_centerY).with.offset(3);
+        make.size.mas_equalTo(CGSizeMake(160, 15));
+    }];
+    
+    [_replyBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+        make.centerY.equalTo(_icon.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(60, 35));
+    }];
+    
+    [_contentLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).with.offset(10);
+        make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+        make.top.equalTo(_icon.mas_bottom).with.offset(5);
+    }];
+    
+    if (_isHasImgs) {
+        [_scrollImg mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(weakSelf.mas_left).with.offset(5);
+            make.right.equalTo(weakSelf.mas_right).with.offset(-5);
+            make.top.equalTo(_contentLab.mas_bottom);
+            make.height.mas_equalTo(@(120));
+        }];
+        
+        if (_isHasReplyUsers) {
+            
+            [_replyUserNamesLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_scrollImg.mas_bottom).with.offset(10);
+                make.left.equalTo(weakSelf.mas_left).with.offset(10);
+                make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+                make.height.mas_equalTo(@(_replyUserNameH));
+            }];
+            
+            [_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_replyUserNamesLab.mas_bottom).with.offset(5);
+                make.left.equalTo(weakSelf.mas_left).with.offset(5);
+                make.right.equalTo(weakSelf.mas_right).with.offset(5);
+                make.height.mas_equalTo(@(_tableViewH));
+            }];
+            
+        }else{
+            [_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_scrollImg.mas_bottom).with.offset(5);
+                make.left.equalTo(weakSelf.mas_left).with.offset(5);
+                make.right.equalTo(weakSelf.mas_right).with.offset(5);
+                make.height.mas_equalTo(@(_tableViewH));
+            }];
+        }
+        
+        
+    }else{
+        
+        if (_isHasReplyUsers) {
+            [_replyUserNamesLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_contentLab.mas_bottom).with.offset(10);
+                make.left.equalTo(weakSelf.mas_left).with.offset(10);
+                make.right.equalTo(weakSelf.mas_right).with.offset(-10);
+                make.height.mas_equalTo(@(_replyUserNameH));
+            }];
+            
+            [_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_replyUserNamesLab.mas_bottom).with.offset(5);
+                make.left.equalTo(weakSelf.mas_left).with.offset(5);
+                make.right.equalTo(weakSelf.mas_right).with.offset(5);
+                make.height.mas_equalTo(@(_tableViewH));
+            }];
+
+        }else{
+            
+            [_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_replyUserNamesLab.mas_bottom).with.offset(5);
+                make.left.equalTo(weakSelf.mas_left).with.offset(5);
+                make.right.equalTo(weakSelf.mas_right).with.offset(5);
+                make.height.mas_equalTo(@(_tableViewH));
+            }];
+        }
+        
+    }
+}
+
+@end

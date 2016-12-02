@@ -1,0 +1,16 @@
+//
+//  TMXEditNickNameVC.h
+//  TMX3DPrinterHD
+//
+//  Created by wutaobo on 16/11/14.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import "TMXBaseVC.h"
+
+@interface TMXEditNickNameVC : TMXBaseVC
+@property (nonatomic, copy)NSString *placeHolder;
+@property (nonatomic, copy)NSString *describeStr;
+@property (nonatomic, copy)NSString *titleStr;
+@property (nonatomic, copy)NSString *nickName;
+@end

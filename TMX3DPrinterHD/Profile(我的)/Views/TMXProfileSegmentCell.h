@@ -1,0 +1,22 @@
+//
+//  TMXProfileSegmentCell.h
+//  TMX3DPrinterHD
+//
+//  Created by kobe on 16/10/26.
+//  Copyright © 2016年 kobe. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class TMXProfileSegmentCell;
+@protocol TMXProfileSegmentCellDelegate <NSObject>
+
+- (void)clickTag:(NSInteger)tag;
+
+@end
+@interface TMXProfileSegmentCell : UIView
+
+@property (nonatomic, weak)id<TMXProfileSegmentCellDelegate>delegate;
+@property (nonatomic, assign) BOOL isUpdateUI;
+
+@end
